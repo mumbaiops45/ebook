@@ -76,7 +76,7 @@ const timeline = [
 
 const FeatureSection = () => {
   return (
-    <>
+    <div id='features'>
      <div className="w-full h-[4px] bg-gradient-to-l from-[var(--primary)] to-transparent"></div>
      <section className="py-10 w-full relative py-10 px-15 overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-l before:from-[var(--primary)]/15 before:to-transparent before:z-0">
      
@@ -181,7 +181,7 @@ const FeatureSection = () => {
               </div>
             </div>
           </section>
-    </>
+    </div>
     
   )
 }

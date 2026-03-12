@@ -65,7 +65,7 @@ export default function Testimonials() {
   const t = testimonials[active];
 
   return (
-    <section className="relative bg-[#fdf8f2] overflow-hidden py-20 px-4 md:px-10 lg:px-16">
+    <section id="testimonials" className="relative bg-[#fdf8f2] overflow-hidden py-20 px-4 md:px-10 lg:px-16">
 
       {/* Subtle background circle */}
       <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-[#c8893c]/5 pointer-events-none" />

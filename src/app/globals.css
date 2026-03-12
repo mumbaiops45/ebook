@@ -127,3 +127,6 @@ body {
   animation-range: entry 20% cover 40%;
 }
 
+html {
+  scroll-behavior: smooth;
+}

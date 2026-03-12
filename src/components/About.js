@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <section className="relative py-10 px-15 overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-l before:from-[var(--primary)]/50 before:to-transparent before:z-0">
+    <section id="about" className="relative py-10 px-15 overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-l before:from-[var(--primary)]/50 before:to-transparent before:z-0">
       
       <div className="relative z-10 grid max-w-screen-xl px-4 mx-auto lg:gap-12 lg:grid-cols-12 items-center">
 
