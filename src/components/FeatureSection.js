@@ -86,7 +86,7 @@ const FeatureSection = () => {
               after:from-[var(--primary)]
               after:to-transparent mb-4"
             >
-              Why Reader <span className="text-[var(--primary)]">Love Our Platform</span>
+              Why Readers <span className="text-[var(--primary)]">Love Our Platform</span>
             </h2>
 
             <p className="max-w-3xl">
