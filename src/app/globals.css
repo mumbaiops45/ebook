@@ -130,3 +130,6 @@ body {
 html {
   scroll-behavior: smooth;
 }
+html {
+  scroll-padding-top: 90px;
+}

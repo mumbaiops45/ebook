@@ -56,7 +56,7 @@ export default function FAQSection() {
 
   return (
     <section
-      className="px-4 md:px-10 lg:px-30 pt-10 md:p-15 relative
+      className="px-8 md:px-15 lg:px-30 pt-10 md:p-15 relative
       before:content-[''] before:absolute before:inset-0
       before:bg-gradient-to-bl
       before:from-[var(--primary)]/20
@@ -76,7 +76,7 @@ export default function FAQSection() {
      {/* Heading */}
         <div className="text-center mb-12">
           <span className="w-fit mx-auto px-4 py-2 rounded-full text-[var(--primary)] bg-[var(--primary)]/20 uppercase tracking-wider block mb-3">
-            Pricing
+            FAQ's
           </span>
 
           <h2

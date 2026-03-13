@@ -13,7 +13,7 @@ button: "Explore eBooks",
 },
 {
 id: 2,
-image: "/book2.jpg",
+image: "/books2.jpg",
 tag: "Listen On-The-Go",
 title: "Audiobooks for Busy Lifestyles",
 description:
@@ -52,7 +52,7 @@ const Hero = () => {
         return () => clearInterval(interval);
       }, []);
   return (
-    <section id="home" className="relative w-full  h-[54vh] md:h-[85vh] overflow-hidden">
+    <section className="relative w-full  h-[58vh] sm:h-[44vh] xl:h-[90vh] 2xl:h-[54vh] overflow-hidden">
 
         {/* Slides */}
         <div

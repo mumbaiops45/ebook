@@ -9,13 +9,13 @@ export default function Navbar() {
   const [active, setActive] = useState("#home");
 
   const navLinks = [
-    { name: "Home", path: "#home" },
-    { name: "About the Book", path: "#about" },
-    { name: "Features", path: "#features" },
-    { name: "Pricing", path: "#pricing" },
-    { name: "Testimonials", path: "#testimonials" },
-    { name: "Contact", path: "#contact" },
-  ];
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/#about" },
+  { name: "Services", path: "/#services" },
+  { name: "Features", path: "/#features" },
+  { name: "Pricing", path: "/#pricing" },
+  { name: "Testimonials", path: "/#testimonials" },
+];
 
   // detect current hash
   useEffect(() => {

@@ -7,22 +7,22 @@ import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube } from "luci
 export default function Footer() {
   const pathname = usePathname();
 
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About the Book", path: "/about" },
-    { name: "Features", path: "/features" },
-    { name: "Pricing", path: "/pricing" },
-    { name: "Testimonials", path: "/testimonials" },
-    { name: "Contact", path: "/contact" },
-  ];
+    const navLinks = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/#about" },
+  { name: "Services", path: "/#services" },
+  { name: "Features", path: "/#features" },
+  { name: "Pricing", path: "/#pricing" },
+  { name: "Testimonials", path: "/#testimonials" },
+];
 
   const productLinks = [
-    { name: "eBook", path: "/ebook" },
-    { name: "Audiobook", path: "/audiobook" },
+    { name: "eBook", path: "/#eBook" },
+    { name: "Audiobook", path: "#audiobook" },
   ];
 
   return (
-    <footer className="bg-[color:var(--primary)] text-white">
+    <footer className="bg-[var(--primary)] text-white">
 
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-10 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -103,16 +103,16 @@ export default function Footer() {
 
           {/* Social Media Links */}
           <div className="mt-12 flex items-center justify-start gap-3">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-white hover:bg-white/20 transition duration-300">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
               <Facebook size={22} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-white hover:bg-white/20 transition duration-300">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
               <Twitter size={22} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-white hover:bg-white/20 transition duration-300">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
               <Instagram size={22} />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-white hover:bg-white/20 transition duration-300">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
               <Youtube size={22} />
             </a>
           </div>

@@ -18,7 +18,7 @@ const books = [
 
 const FeaturedBooks = () => {
   return (
-    <section className="py-16 px-15">
+    <section className="py-16 px-8 md:px-15">
       <div className="max-w-screen-xl mx-auto px-4">
 
         {/* Heading */}

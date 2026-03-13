@@ -65,7 +65,7 @@ export default function Testimonials() {
   const t = testimonials[active];
 
   return (
-    <section id="testimonials" className="relative bg-[#fdf8f2] overflow-hidden py-20 px-4 md:px-10 lg:px-16">
+    <section id="testimonials" className="relative bg-[#fdf8f2] overflow-hidden py-20 px-8 md:px-15 lg:px-16">
 
       {/* Subtle background circle */}
       <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-[#c8893c]/5 pointer-events-none" />
@@ -76,19 +76,11 @@ export default function Testimonials() {
         {/* Section header */}
         <div className=" mb-14">
             <div className=" mb-16">
-                <h2 className="relative inline-block pb-4
-          after:content-['']
-    after:absolute
-    after:left-0
-    after:bottom-0
-    after:w-full
-    after:h-1
-    after:rounded-full
-    after:bg-gradient-to-r
-    after:from-[var(--primary)]
-    after:to-transparent mb-4">
-                    What Our <span className="text-[var(--primary)]">Readers Say</span>
-                </h2>
+               <h2
+  className="relative inline-block pb-4 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:rounded-full after:bg-gradient-to-r after:from-[var(--primary)] after:to-transparent mb-4"
+>
+  What Our <span className="text-[var(--primary)]">Readers Say</span>
+</h2>
                 <p className="  max-w-3xl ">
                  Real experiences from readers who enjoy seamless eBook and audiobook access every day.
                 </p>

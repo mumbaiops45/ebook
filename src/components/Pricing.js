@@ -46,7 +46,7 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-10 px-15">
+    <section id="pricing" className="py-10 px-8 md:px-15">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
@@ -82,7 +82,7 @@ export default function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8">
 
           {plans.map((plan, index) => (
             <div
