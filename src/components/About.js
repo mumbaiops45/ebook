@@ -4,6 +4,8 @@ import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+
 
 const AboutSection = () => {
   // Ref for image
@@ -30,29 +32,20 @@ const AboutSection = () => {
           </span>
 
           <h2 className="text-[var(--primary)] font-bold max-w-2xl mb-4">
-            Read It. Hear It. Experience It.
+            About The Author
           </h2>
 
           <p className="max-w-2xl mb-6">
-            Stories are meant to be experienced in different ways. Through
-            engaging eBooks, readers can dive into powerful narratives,
-            memorable characters, and meaningful ideas anytime, anywhere.
+            Salil Javeri writes stories that explore human emotions, personal growth, and the journey of self-discovery. Through thoughtful storytelling, his work reflects the complexities of life and encourages readers to connect with deeper feelings and experiences.
           </p>
 
-          <p className="max-w-2xl mb-8">
-            For those who prefer listening, the same stories come alive
-            through immersive Audiobooks, bringing every moment to life
-            with voice and emotion—so the story stays with you wherever
-            you go.
+          <p className="flex gap-2 ">
+            <FaQuoteLeft className=" text-[var(--primary)]" />
+            Sometimes the quietest moments reveal revealthe loudest truths.
+            <FaQuoteRight className=" text-[var(--primary)]" />
           </p>
 
-          {/* Buttons */}
-          <div className="flex gap-4">
-            <button className="primary-btn px-6 py-3 rounded-lg">Read It</button>
-            <button className="secondary-btn !border-2 !border-[var(--primary)] px-6 py-3 rounded-lg">
-              Hear It
-            </button>
-          </div>
+          
         </div>
 
         {/* Image with animation */}

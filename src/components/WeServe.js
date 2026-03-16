@@ -59,9 +59,9 @@ const WeServe = () => {
                   Explore digital books across many genres and enjoy a smooth reading experience on any device, anytime and anywhere.
                 </p>
 
-                <button className="w-fit px-6 py-3 primary-btn rounded-xl">
+                {/* <button className="w-fit px-6 py-3 primary-btn rounded-xl">
                   Explore
-                </button>
+                </button> */}
 
               </div>
 
@@ -99,9 +99,9 @@ const WeServe = () => {
                   Experience stories through clear, engaging narration and enjoy your favorite books while commuting, working, or relaxing anytime.
                 </p>
 
-                <button className="w-fit px-6 py-3 primary-btn rounded-xl">
+                {/* <button className="w-fit px-6 py-3 primary-btn rounded-xl">
                   Explore
-                </button>
+                </button> */}
 
               </div>
 

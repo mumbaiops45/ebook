@@ -4,39 +4,29 @@ import Image from "next/image";
 
 const testimonials = [
   {
+    name: "Gahana S",
+    role: "Reader",
+    date: "18 Dec, 2021",
+    comment:
+      "Each chapter feels like a quiet conversation with yourself. Truly inspiring and thought-provoking.",
+    rating: 5,
+  },
+  {
+    name: "Aarav K",
+    role: "Reader",
+    date: "09 March, 2024",
+    comment:
+      "A deeply reflective book that made me pause and think about my own life choices. The writing is simple yet powerful.",
+    rating: 5,
+  },
+  {
     name: "Rahul Sharma",
     role: "Daily Reader",
-    image: "/Rahul Sharma.png",
     comment:
-      "I've used many eBook apps, but this one stands out. The offline reading feature is perfect for my daily metro commute. I can continue my books anywhere without worrying about internet connectivity.",
+      "I've used many eBook apps, but this one stands out. The offline reading feature is perfect for my daily metro commute.",
     rating: 5,
-  },
-  {
-    name: "Ananya Iyer",
-    role: "Audiobook Lover",
-    image: "/Ananya Iyer.webp",
-    comment:
-      "The audiobook quality is fantastic. I usually listen while driving or doing household work, and the narration feels very immersive. It has made finishing books so much easier.",
-    rating: 5,
-  },
-  {
-    name: "Vikram Singh",
-    role: "Book Club Member",
-    image: "/Vikram Singh.avif",
-    comment:
-      "Our reading group started using this platform recently and it has been amazing. I begin reading on my phone during breaks and continue on my laptop at night without losing my progress.",
-    rating: 5,
-  },
-  {
-    name: "Meera Kapoor",
-    role: "Content Writer",
-    image: "/Meera Kapoor.avif",
-    comment:
-      "I love how well the books are curated here. Every recommendation feels relevant to my interests. It saves me time and helps me discover books I might have never found otherwise.",
-    rating: 4,
   },
 ];
-
 const StarIcon = ({ filled }) => (
   <svg
     width="16"
@@ -92,43 +82,7 @@ export default function Testimonials() {
           <div className="flex flex-col md:flex-row ">
 
             {/* ── LEFT: User Image ── */}
-            <div className="relative md:w-[38%] w-full h-64 md:h-auto flex-shrink-0 bg-[#1a0f07] overflow-hidden">
-
-              {/* Image */}
-              <Image
-                key={active}
-                src={t.image}
-                alt={t.name}
-                fill
-                className="object-cover object-center opacity-80 transition-opacity duration-500"
-              />
-
-              {/* Gradient overlay — left to transparent on desktop, bottom on mobile */}
-              <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
-
-              {/* Name badge pinned to bottom-left of image */}
-              <div className="absolute bottom-5 left-5 md:bottom-6 md:left-6">
-                <p className=" text-lg font-semibold text-white leading-tight">
-                  {t.name}
-                </p>
-                <p className="text-[#c8893c] text-xs tracking-widest uppercase mt-0.5">
-                  {t.role}
-                </p>
-              </div>
-
-              {/* Active slide indicator dots — bottom center on mobile */}
-              <div className="absolute bottom-5 right-5 md:hidden flex gap-1.5">
-                {testimonials.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActive(i)}
-                    className={`rounded-full bg-white transition-all duration-300 ${
-                      active === i ? "w-5 h-2 opacity-100" : "w-2 h-2 opacity-40"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
+            
 
             {/* ── RIGHT: Comment ── */}
             <div className="flex-1 flex flex-col justify-between p-8 md:p-12">

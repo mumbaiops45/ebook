@@ -57,10 +57,10 @@ export default function Navbar() {
 
           {/* CTA */}
           <Link
-            href="#download"
-            className="bg-white text-[color:var(--primary)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition"
+            href="#"
+            className="bg-white text-[color:var(--primary)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition cursor-pointer"
           >
-            Download Now
+            Download the App
           </Link>
         </div>
 
@@ -102,7 +102,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
             className="block bg-white text-[color:var(--primary)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition"
           >
-            Download Now
+            Download the App
           </Link>
         </div>
       )}

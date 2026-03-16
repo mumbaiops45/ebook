@@ -21,6 +21,36 @@ const timeline = [
     description:
       "Every audiobook is recorded in professional studios with experienced narrators for an immersive listening experience.",
   },
+
+  /* NEW 3rd FEATURE */
+{
+  icon: (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      width="28"
+      height="28"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3 5.25v13.5A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V5.25A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25Z"
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M10 9.5v5l4-2.5-4-2.5Z"
+      />
+    </svg>
+  ),
+title: "Read & Listen Preview",
+description:
+  "Preview sample pages or play a short audio demo to experience the story before downloading the full book.",
+},
+
+  /* MOVED OLD 3rd FEATURE HERE */
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="28" height="28">
@@ -31,16 +61,29 @@ const timeline = [
     description:
       "Purchase once and download anytime. Your books remain in your personal library permanently.",
   },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="28" height="28">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-      </svg>
-    ),
-    title: "Curated Library",
-    description:
-      "We carefully select powerful stories and knowledge-rich titles so readers get only meaningful content.",
-  },
+
+ {
+  icon: (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      width="28"
+      height="28"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4 19h16M6 19l6-14 6 14M9.5 12h5"
+      />
+    </svg>
+  ),
+  title: "Personalized Reading Experience",
+  description:
+    "Customize fonts, layouts, and themes to match your reading comfort. Adjust the reading environment to suit your style and enjoy a distraction-free experience."
+},
+
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="28" height="28">
@@ -50,17 +93,7 @@ const timeline = [
     title: "Cross-Device Sync",
     description:
       "Switch seamlessly between your phone, tablet, and laptop while your reading progress syncs automatically.",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="28" height="28">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" />
-      </svg>
-    ),
-    title: "Smart Recommendations",
-    description:
-      "Our intelligent system suggests books based on your reading habits so you always discover something new.",
-  },
+  }
 ];
 
 const FeatureSection = () => {

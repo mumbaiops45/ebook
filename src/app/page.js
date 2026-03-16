@@ -7,6 +7,7 @@ import Pricing from '@/components/Pricing'
 import Testimonials from '@/components/Testimonial'
 import FAQSection from '@/components/FAQ'
 import WeServe from '@/components/WeServe'
+import FinalCTA from '@/components/CTA'
 
 
 
@@ -21,6 +22,7 @@ const Home = () => {
     <Pricing />
     <Testimonials />
     <FAQSection />
+    <FinalCTA />
 
     </>
     

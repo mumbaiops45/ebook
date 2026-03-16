@@ -9,7 +9,7 @@ tag: "Read Anywhere",
 title: "Discover Your Next Favorite eBook",
 description:
 "Dive into a world of knowledge and stories with our curated eBooks, available anytime, anywhere.",
-button: "Explore eBooks",
+button: "Download the App",
 },
 {
 id: 2,
@@ -24,10 +24,10 @@ button: "Listen Now",
 id: 3,
 image: "/book3.avif",
 tag: "Curated Collections",
-title: "Handpicked eBooks for Every Reader",
+title: "Handpicked eBooks for Every Reader",  
 description:
 "From fiction to self-help, find eBooks selected by experts to expand your knowledge and entertain.",
-button: "Browse Collection",
+button: "Download the App",
 },
 {
 id: 4,
@@ -91,7 +91,7 @@ const Hero = () => {
                     {slide.description}
                   </p>
 
-                  <button className="mt-6 primary-btn px-6 py-3 rounded-xl">
+                  <button href="#" className="mt-6 primary-btn px-6 py-3 rounded-xl cursor-pointer">
                     {slide.button}
                   </button>
 

@@ -112,18 +112,6 @@ export default function Pricing() {
                 ))}
               </ul>
 
-              <Link href="/signup">
-                <button
-                  className={`w-full py-3 rounded-lg font-medium transition
-                  ${plan.highlight
-                    ? "primary-btn"
-                    : "secondary-btn border border-[var(--primary)]"
-                  }`}
-                >
-                  Get Started
-                </button>
-              </Link>
-
             </div>
           ))}
 

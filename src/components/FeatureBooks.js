@@ -1,18 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaStar } from "react-icons/fa";
 
 const books = [
   {
     title: "The Silent Journey",
     image: "/cover1.avif",
+    rating: 4.7,
   },
   {
-    title: "Echoes of Time",
-    image: "/cover2.avif",
+    title: "Echoes of Truth",
+    image: "/Echoes of Truth1.png",
+    rating: 4.6,
   },
   {
     title: "Beyond the Horizon",
     image: "/coverimage3.avif",
+    rating: 4.4,
   },
 ];
 
@@ -68,37 +72,39 @@ const FeaturedBooks = () => {
 
               <h3 className="mb-2 font-semibold">{book.title}</h3>
 
-              <div className="flex justify-center gap-3 mt-4">
-                <button className="primary-btn px-6 py-2 rounded-md">
-                  Read eBook
-                </button>
+              {/* ⭐ Rating */}
+  <div className="flex justify-center items-center gap-1 text-yellow-400 text-sm mb-3">
+  {[...Array(5)].map((_, i) => (
+    <FaStar key={i} />
+  ))}
+  <span className="text-gray-500 ml-1">{book.rating}</span>
+</div>
 
-                <button className="secondary-btn border-2 border-[var(--primary)] px-6 py-2 rounded-md">
-                  Listen Audio
+              <div className="flex justify-center gap-3 mt-2">
+                <button className="primary-btn px-6 py-2 rounded-md cursor-pointer">
+                  Read on the App
                 </button>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Explore All Button */}
+        {/* Explore Section */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-6">
 
-  {/* Left Text */}
-  <div className="border-l-4 py-3 border-[var(--primary)] pl-4">
-    <p className="text-lg font-medium">
-      Explore our growing collection of engaging eBooks and audiobooks.
-    </p>
-  </div>
+          <div className="border-l-4 py-3 border-[var(--primary)] pl-4">
+            <p className="text-lg font-medium">
+              Explore our growing collection of engaging eBooks and audiobooks.
+            </p>
+          </div>
 
-  {/* Right Button */}
-  <Link href="/books">
-    <button className="primary-btn px-8 py-3 rounded-lg whitespace-nowrap">
-      Explore All Books
-    </button>
-  </Link>
+         
+            <button href="#" className="primary-btn px-8 py-3 rounded-lg whitespace-nowrap cursor-pointer">
+              Download the App
+            </button>
+          
 
-</div>
+        </div>
 
       </div>
     </section>
