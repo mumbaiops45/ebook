@@ -35,6 +35,12 @@ export default function Footer() {
           <p className="text-sm leading-7">
             SALIL JAVERI brings you a curated collection of eBooks and audiobooks for readers and learners everywhere.
           </p>
+          <Link
+            href="#"
+            className="w-fit mt-6 block bg-white text-[color:var(--primary)] px-10 py-2 rounded-md font-semibold hover:opacity-90 transition"
+          >
+            Download the App
+          </Link>
         </div>
 
         {/* Quick Links */}
