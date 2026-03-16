@@ -9,13 +9,13 @@ export default function Navbar() {
   const [active, setActive] = useState("#home");
 
   const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About Us", path: "/#about" },
-  { name: "Services", path: "/#services" },
-  { name: "Features", path: "/#features" },
-  { name: "Pricing", path: "/#pricing" },
-  { name: "Testimonials", path: "/#testimonials" },
-];
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/#about" },
+    { name: "Services", path: "/#services" },
+    { name: "Features", path: "/#features" },
+    { name: "Pricing", path: "/#pricing" },
+    { name: "Testimonials", path: "/#testimonials" },
+  ];
 
   // detect current hash
   useEffect(() => {
@@ -34,9 +34,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
         {/* Logo */}
-        <div className="text-white font-bold text-xl tracking-wide">
-          SALIL JAVERI
-        </div>
+        <Link to="/">
+          <div className="text-white font-bold text-xl tracking-wide">
+            SALIL JAVERI
+          </div>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center space-x-8">
@@ -45,11 +47,10 @@ export default function Navbar() {
               key={link.name}
               href={link.path}
               onClick={() => setActive(link.path)}
-              className={`transition duration-300 pb-1 ${
-                active === link.path
+              className={`transition duration-300 pb-1 ${active === link.path
                   ? "border-b-2 border-white text-white"
                   : "text-white hover:opacity-80"
-              }`}
+                }`}
             >
               {link.name}
             </Link>
@@ -87,11 +88,10 @@ export default function Navbar() {
                 setActive(link.path);
                 setIsOpen(false);
               }}
-              className={`block pb-1 transition duration-300 ${
-                active === link.path
+              className={`block pb-1 transition duration-300 ${active === link.path
                   ? "border-b-2 border-white text-white"
                   : "text-white hover:opacity-80"
-              }`}
+                }`}
             >
               {link.name}
             </Link>
