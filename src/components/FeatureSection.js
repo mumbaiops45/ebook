@@ -132,13 +132,13 @@ const FeatureSection = () => {
             {timeline.map((item, index) => (
               <div
                 key={index}
-                className="relative bg-black/6 backdrop-blur-md rounded-2xl  h-[26vh] xl:h-[33vh] 2xl:h-[20vh] "
+                className="relative bg-black/6 backdrop-blur-md rounded-2xl  h-[20vh] sm:h-[25vh] xl:h-[24vh] 2xl:h-[20vh] "
               >
                 <p className="text-sm p-6">
                   {item.description}
                 </p>
 
-                <div className="absolute bottom-0 left-0 w-full h-[12vh] 2xl:h-[8vh] rounded-b-2xl flex justify-start p-6 text-white  items-center gap-3 bg-[var(--primary)]">
+                <div className="absolute bottom-0 left-0 w-full h-auto  md:h-[12vh] 2xl:h-[8vh] rounded-b-2xl flex justify-start p-6 text-white  items-center gap-3 bg-[var(--primary)]">
                   <div className="inline-block">{item.icon}</div>
                   <h3 className="text-lg font-semibold">
                     {item.title}
