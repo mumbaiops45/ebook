@@ -52,7 +52,7 @@ const Hero = () => {
         return () => clearInterval(interval);
       }, []);
   return (
-    <section className="relative w-full  h-[58vh] sm:h-[44vh] xl:h-[90vh] overflow-hidden">
+    <section className="relative w-full  h-[60vh] md:h-[64vh] xl:h-[90vh] overflow-hidden">
 
         {/* Slides */}
         <div

@@ -98,9 +98,9 @@ export default function Navbar() {
           ))}
 
           <Link
-            href="#download"
+            href="#"
             onClick={() => setIsOpen(false)}
-            className="block bg-white text-[color:var(--primary)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition"
+            className="block w-fit bg-white text-[color:var(--primary)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition"
           >
             Download the App
           </Link>
