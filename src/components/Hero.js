@@ -13,7 +13,7 @@ button: "Download the App",
 },
 {
 id: 2,
-image: "/books2.jpg",
+image: "/book3.jpg",
 tag: "Listen On-The-Go",
 title: "Audiobooks for Busy Lifestyles",
 description:
@@ -22,7 +22,7 @@ button: "Listen Now",
 },
 {
 id: 3,
-image: "/book3.avif",
+image: "/book4.jpg",
 tag: "Curated Collections",
 title: "Handpicked eBooks for Every Reader",  
 description:
@@ -31,7 +31,7 @@ button: "Download the App",
 },
 {
 id: 4,
-image: "/book4.jpg",
+image: "/book3.avif",
 tag: "Premium Audio",
 title: "Engaging Stories in Audio Format",
 description:
