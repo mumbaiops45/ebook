@@ -109,7 +109,7 @@ export default function Testimonials() {
                   <p className=" font-semibold text-[#1a0f07] text-base leading-tight">
                     {t.name}
                   </p>
-                  <p className="text-[#c8893c] text-xs tracking-widest uppercase mt-0.5">
+                  <p className="text-[var(--primary)] text-xs tracking-widest uppercase mt-0.5">
                     {t.role}
                   </p>
                 </div>
@@ -122,7 +122,7 @@ export default function Testimonials() {
                       <button
                         key={i}
                         onClick={() => setActive(i)}
-                        className={`rounded-full bg-[#c8893c] transition-all duration-300 ${
+                        className={`rounded-full bg-[var(--primary)] transition-all duration-300 ${
                           active === i ? "w-6 h-2 opacity-100" : "w-2 h-2 opacity-25"
                         }`}
                       />
