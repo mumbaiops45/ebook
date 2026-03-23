@@ -101,7 +101,7 @@ const FeatureSection = () => {
     <div id="features">
       <div className="w-full bg-gradient-to-l from-[var(--primary)] to-transparent"></div>
 
-      <section className="py-10 w-full relative px-8 md:px-15 overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-l before:from-[var(--primary)]/15 before:to-transparent before:z-0">
+      <section className="py-10 w-full relative px-6 md:px-15 overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-l before:from-[var(--primary)]/15 before:to-transparent before:z-0">
 
         <div className="max-w-7xl mx-auto">
 

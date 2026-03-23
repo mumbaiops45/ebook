@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const WeServe = () => {
   return (
-    <section id="services" className="py-16 px-8 md:px-15 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-t before:from-[var(--primary)]/30 before:to-transparent before:z-0">
+    <section id="services" className="py-16 px-6 md:px-15 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-t before:from-[var(--primary)]/30 before:to-transparent before:z-0">
       <div className="max-w-screen-xl mx-auto px-4">
 
         {/* Heading */}

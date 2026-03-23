@@ -23,7 +23,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="relative py-10 px-8 md:px-15 overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-l before:from-[var(--primary)]/30 before:to-transparent before:z-0"
+      className="relative py-10 px-6 md:px-15 overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-l before:from-[var(--primary)]/30 before:to-transparent before:z-0"
     >
       <div className="relative z-10 grid max-w-screen-xl px-4 mx-auto lg:gap-12 lg:grid-cols-12 items-center">
 
