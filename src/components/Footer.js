@@ -17,6 +17,7 @@ export default function Footer() {
 ];
 
   const productLinks = [
+    { name: "Book", path: "/#Book" },
     { name: "eBook", path: "/#eBook" },
     { name: "Audiobook", path: "#audiobook" },
   ];
@@ -149,9 +150,12 @@ export default function Footer() {
           <div>
             © {new Date().getFullYear()} SALIL JAVERI. All Rights Reserved.
           </div>
-          <div>
+          <div className="flex gap-3">
             <Link href="/terms-and-conditions" className="hover:underline">
               Terms & Conditions
+            </Link>
+            <Link href="privacy-policy" className="hover:underline">
+              Privacy Policy
             </Link>
           </div>
         </div>

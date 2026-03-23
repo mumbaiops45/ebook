@@ -29,9 +29,9 @@ const WeServe = () => {
 
         <div className="flex flex-col gap-6">
 
-          {/* Card 1 - Slide From Left */}
+          {/* Card 2 - Slide From Left */}
           <motion.div
-          id="eBook"
+          id="Book"
             initial={{ x: -250, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
@@ -39,6 +39,45 @@ const WeServe = () => {
             className="bg-white/40 backdrop-blur-md rounded-xl"
           >
             <div className="rounded-lg overflow-hidden flex flex-col md:flex-row shadow-lg">
+
+              <div className="md:w-1/4 relative min-h-[250px]">
+                <Image
+                  src="/book.png"
+                  alt="Ebook"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="p-8 flex flex-col justify-center">
+
+                <h3 className="font-semibold text-[var(--primary)] mb-4">
+                  Physical Books, Feel Every Page
+                </h3>
+
+                <p className="text-black/70 mb-6 leading-relaxed">
+                  Enjoy the charm of printed books and hold your favorite stories in your hands.
+                </p>
+
+                {/* <button className="w-fit px-6 py-3 primary-btn rounded-xl">
+                  Explore
+                </button> */}
+
+              </div>
+
+            </div>
+          </motion.div>
+
+          {/* Card 2 - Slide From Left */}
+          <motion.div
+          id="eBook"
+            initial={{ x: 250, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="bg-white/40 backdrop-blur-md rounded-xl"
+          >
+            <div className="rounded-lg overflow-hidden flex flex-col md:flex-row-reverse shadow-lg">
 
               <div className="md:w-1/4 relative min-h-[250px]">
                 <Image
@@ -69,16 +108,16 @@ const WeServe = () => {
           </motion.div>
 
 
-          {/* Card 2 - Slide From Right */}
+          {/* Card 3 - Slide From Right */}
           <motion.div
           id="audiobook"
-            initial={{ x: 250, opacity: 0 }}
+            initial={{ x: -250, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
             className="bg-white/40 backdrop-blur-md rounded-xl"
           >
-            <div className="rounded-lg overflow-hidden flex flex-col md:flex-row-reverse shadow-lg">
+            <div className="rounded-lg overflow-hidden flex flex-col md:flex-row shadow-lg">
 
               <div className="md:w-1/4 relative min-h-[250px]">
                 <Image
@@ -107,6 +146,8 @@ const WeServe = () => {
 
             </div>
           </motion.div>
+
+           
 
         </div>
 

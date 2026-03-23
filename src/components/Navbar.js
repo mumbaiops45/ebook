@@ -11,7 +11,8 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/#about" },
-    { name: "Services", path: "/#services" },
+    { name: "What We Offer", path: "/#services" },
+    { name: "Books", path: "/#Books" },
     { name: "Features", path: "/#features" },
     { name: "Pricing", path: "/#pricing" },
     { name: "Testimonials", path: "/#testimonials" },
@@ -41,7 +42,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-6">
           {navLinks.map((link) => (
             <Link
               key={link.name}
