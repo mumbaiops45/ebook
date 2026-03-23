@@ -2,43 +2,43 @@ import Link from "next/link";
 
 const plans = [
   {
-    name: "Basic",
-    price: "₹199",
-    period: "/month",
-    description: "Perfect for casual readers who enjoy a few stories each month.",
+    name: "Hard Copy Book",
+    price: "₹399",
+    period: "",
+    description:
+      "Get the physical copy of the book delivered to your doorstep. Ideal for readers who love printed books.",
     features: [
-      "Access to eBooks",
-      "5 Audiobooks / month",
-      "Offline Reading",
-      "Basic Recommendations",
-    ],
-    highlight: false,
-  },
-  {
-    name: "Pro",
-    price: "₹499",
-    period: "/month",
-    description: "Best for passionate readers who want more stories and audio.",
-    features: [
-      "Unlimited eBooks",
-      "15 Audiobooks / month",
-      "Offline Reading",
-      "Cross-Device Sync",
-      "Priority Recommendations",
+      "Premium Print Quality",
+      "Perfect for Gifting",
+      "Long-lasting Physical Copy",
     ],
     highlight: true,
   },
   {
-    name: "Premium",
-    price: "₹799",
-    period: "/month",
-    description: "Unlimited access to the entire library with premium features.",
+    name: "eBook",
+    price: "₹299",
+    period: "",
+    description:
+      "Read the digital version anytime, anywhere on your mobile, tablet, or laptop.",
     features: [
-      "Unlimited eBooks",
-      "Unlimited Audiobooks",
-      "Offline Access",
-      "AI Book Recommendations",
-      "Early Access to New Titles",
+      "Instant Access",
+      
+      "Lightweight & Portable",
+      "Eco-Friendly",
+    ],
+    highlight: false,
+  },
+  {
+    name: "Audio Book",
+    price: "₹299",
+    period: "",
+    description:
+      "Listen to the book with immersive narration — perfect for multitasking.",
+    features: [
+      "High-Quality Audio",
+      "Listen Anytime",
+      "Hands-Free Experience",
+      "Great for Travel & Work",
     ],
     highlight: false,
   },
@@ -101,7 +101,7 @@ export default function Pricing() {
                 <span className="text-gray-400">{plan.period}</span>
               </div>
 
-              <p className="text-gray-400 mb-6">{plan.description}</p>
+              <p className="text-gray-550 mb-6">{plan.description}</p>
 
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature, i) => (

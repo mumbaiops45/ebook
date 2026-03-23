@@ -8,6 +8,7 @@ import Testimonials from '@/components/Testimonial'
 import FAQSection from '@/components/FAQ'
 import WeServe from '@/components/WeServe'
 import FinalCTA from '@/components/CTA'
+import GiftingSection from '@/components/gifting'
 
 
 
@@ -19,6 +20,7 @@ const Home = () => {
     <WeServe />
     <FeaturedBooks />
     <FeaturesSection />
+    <GiftingSection />
     <Pricing />
     <Testimonials />
     <FAQSection />

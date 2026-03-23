@@ -4,26 +4,19 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Gahana S",
-    role: "Reader",
+    name: "Smita Pathak",
+    role: "Retired Police Officer(Maharashtra Police)",
     date: "18 Dec, 2021",
     comment:
-      "Each chapter feels like a quiet conversation with yourself. Truly inspiring and thought-provoking.",
+      "समानता सामाजिक विचारांची by Salil Javeri offers thoughtful insights into society, human behavior, and everyday realities. Through simple observations and meaningful examples, the author highlights the importance of values, relationships, and positive thinking. It encourages readers to reflect deeply and bring positive changes in their mindset and lifestyle.",
     rating: 5,
   },
   {
-    name: "Aarav K",
-    role: "Reader",
+    name: "Rajiv Nandkar",
+    role: "Atirikt Zilladhikari (Additional District Magistrate, Yavat, Pune)",
     date: "09 March, 2024",
     comment:
-      "A deeply reflective book that made me pause and think about my own life choices. The writing is simple yet powerful.",
-    rating: 5,
-  },
-  {
-    name: "Rahul Sharma",
-    role: "Daily Reader",
-    comment:
-      "I've used many eBook apps, but this one stands out. The offline reading feature is perfect for my daily metro commute.",
+      "समानता सामाजिक विचारांची by Salil Javeri presents deep insights into social thinking, human behavior, and values. The book reflects practical observations of everyday life and highlights the importance of संस्कार, relationships, and positive mindset. It encourages readers to think responsibly and bring meaningful change in their perspective.",
     rating: 5,
   },
 ];

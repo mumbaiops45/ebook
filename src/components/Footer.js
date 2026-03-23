@@ -33,7 +33,7 @@ export default function Footer() {
             SALIL JAVERI
           </div>
           <p className="text-sm leading-7">
-            SALIL JAVERI brings you a curated collection of eBooks and audiobooks for readers and learners everywhere.
+           Salil Javeri bringing you a collection of Samanta Samajik Vicharanchi eBooks & Audio books in different languages very soon for readers everywhere.
           </p>
           <Link
             href="#"
@@ -90,39 +90,57 @@ export default function Footer() {
         </div>
 
         {/* Contact Information */}
-        <div>
-          <h3 className="text-white text-lg font-semibold mb-6">
-            Contact Information
-          </h3>
+       {/* Contact Information */}
+<div>
+  <h3 className="text-white text-lg font-semibold mb-6">
+    Contact Information
+  </h3>
 
-          <ul className="space-y-4">
-            <li className="flex justify-start items-center gap-2">
-              <MapPin size={22} className="text-white flex-shrink-0" /> Mysore, Karnataka, India
-            </li>
-            <li className="flex justify-start items-center gap-2">
-              <Phone size={22} className="text-white flex-shrink-0" /> +91 12345 67890
-            </li>
-            <li className="flex justify-start items-center gap-2">
-              <Mail size={22} className="text-white flex-shrink-0" /> info@saliljaveri.com
-            </li>
-          </ul>
+  <ul className="space-y-4">
+    <li className="flex items-center gap-2">
+      <MapPin size={22} className="text-white flex-shrink-0" />
+      Mumbai, Maharashtra, India
+    </li>
 
-          {/* Social Media Links */}
-          <div className="mt-12 flex items-center justify-start gap-3">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
-              <Facebook size={22} />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
-              <Twitter size={22} />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
-              <Instagram size={22} />
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
-              <Youtube size={22} />
-            </a>
-          </div>
-        </div>
+    {/* ✅ Clickable Phone */}
+    <li className="flex items-center gap-2">
+      <Phone size={22} className="text-white flex-shrink-0" />
+      <a
+        href="tel:+918329928955"
+        className="hover:underline hover:text-gray-200"
+      >
+        +91 8329928955
+      </a>
+    </li>
+
+    {/* ✅ Clickable Email */}
+    <li className="flex items-center gap-2">
+      <Mail size={22} className="text-white flex-shrink-0" />
+      <a
+        href="mailto:saliljaveri27@gmail.com"
+        className="hover:underline hover:text-gray-200"
+      >
+        saliljaveri27@gmail.com
+      </a>
+    </li>
+  </ul>
+
+  {/* Social Media Links */}
+  <div className="mt-12 flex items-center justify-start gap-3">
+    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
+      <Facebook size={22} />
+    </a>
+    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
+      <Twitter size={22} />
+    </a>
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
+      <Instagram size={22} />
+    </a>
+    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
+      <Youtube size={22} />
+    </a>
+  </div>
+</div>
       </div>
 
       {/* Bottom Copyright Section */}

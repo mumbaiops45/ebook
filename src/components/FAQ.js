@@ -20,14 +20,14 @@ export default function FAQSection() {
       q: "Are audiobooks available on the platform?",
       a: "Absolutely! Along with eBooks, we provide high-quality audiobooks that you can listen to while commuting, exercising, or relaxing."
     },
-    {
-      q: "Can I access my books on multiple devices?",
-      a: "Yes. Your reading progress automatically syncs across devices, so you can start reading on your phone and continue on your tablet or laptop seamlessly."
-    },
-    {
-      q: "Do you offer different pricing plans?",
-      a: "Yes, we offer flexible pricing plans so readers can choose the option that fits their needs. Each plan provides access to a wide range of eBooks and audiobooks."
-    }
+    // {
+    //   q: "Can I access my books on multiple devices?",
+    //   a: "Yes. Your reading progress automatically syncs across devices, so you can start reading on your phone and continue on your tablet or laptop seamlessly."
+    // },
+    // {
+    //   q: "Do you offer different pricing plans?",
+    //   a: "Yes, we offer flexible pricing plans so readers can choose the option that fits their needs. Each plan provides access to a wide range of eBooks and audiobooks."
+    // }
   ];
 
   useEffect(() => {
