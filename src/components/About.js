@@ -56,7 +56,7 @@ const AboutSection = () => {
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={controls}
-            className="grid grid-cols-2 gap-4"
+            className="grid  md:grid-cols-2 grid-cols-1 gap-4"
           >
             {/* Column 1 */}
             <div className="">
