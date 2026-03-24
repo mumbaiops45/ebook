@@ -4,7 +4,7 @@ import React from 'react'
 import Hero from '@/components/Hero'
 import AboutSection from '@/components/About'
 import FeaturedBooks from '@/components/FeatureBooks'
-import FeaturesSection from '@/components/FeatureSection'
+// import FeaturesSection from '@/components/FeatureSection'
 import Testimonials from '@/components/Testimonial'
 import FAQSection from '@/components/FAQ'
 import WeServe from '@/components/WeServe'
@@ -27,7 +27,6 @@ const Home = () => {
       <AboutSection />
       <WeServe />
       <FeaturedBooks />
-      <FeaturesSection />
       <Testimonials />
       <FAQSection />
       <FinalCTA />

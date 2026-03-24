@@ -33,7 +33,7 @@ export default function WeServe() {
               className="rounded-2xl p-4 flex flex-col  hover:shadow-lg transition"
             >
               {/* Image */}
-              <div className="w-full h-[70vh] md:h-75 relative mb-4">
+              <div className="w-full h-[70vh] md:h-100 relative mb-4">
                 <Image
                   src={book.image}
                   alt={book.title}
