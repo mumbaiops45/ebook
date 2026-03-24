@@ -87,23 +87,7 @@ export default function WeServe() {
                 Download the App
               </Link>
               {/* ✅ New Paragraph */}
-              <p className="text-xl font-bold text-[var(--primery)] mb-3 text-center">
-                Listen to sample chapters below to experience the audiobook.
-              </p>
-
-              {/* 🎧 Audio Grid */}
-              <div className="grid grid-cols-6 gap-3">
-                {audioFiles.map((audio, i) => (
-                  <button
-                    key={i}
-                    onClick={() => playAudio(audio)}
-                    className="w-full aspect-square rounded-lg flex items-center justify-center text-white font-semibold text-sm cursor-pointer"
-                    style={{ backgroundColor: "var(--primary)" }}
-                  >
-                    {i + 1}
-                  </button>
-                ))}
-              </div>
+            
 
             </div>
           ))}
