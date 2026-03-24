@@ -18,7 +18,7 @@ tag: "Listen On-The-Go",
 title: "Audiobooks for Busy Lifestyles",
 description:
 "Enjoy professionally narrated audiobooks while commuting, exercising, or relaxing at home.",
-button: "Listen Now",
+button: "Download the App",
 },
 {
 id: 3,
@@ -36,7 +36,7 @@ tag: "Premium Audio",
 title: "Engaging Stories in Audio Format",
 description:
 "High-quality audiobooks narrated by professional voice artists for a rich listening experience.",
-button: "Start Listening",
+button: "Download the App",
 },
 ];
 

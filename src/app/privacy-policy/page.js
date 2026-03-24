@@ -1,6 +1,9 @@
 "use client";
-
+import { useEffect } from "react";
 const PrivacyPolicy = () => {
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="max-w-4xl mx-auto px-6 py-16">
       
@@ -28,7 +31,6 @@ const PrivacyPolicy = () => {
           <p className="mb-2 font-medium">Personal Information:</p>
           <ul className="list-disc pl-5 space-y-1 mb-4">
             <li>Name, email address, and phone number (at registration)</li>
-            <li>Billing information (processed by Razorpay — not stored by us)</li>
             <li>Device information and IP address</li>
           </ul>
 
@@ -53,15 +55,7 @@ const PrivacyPolicy = () => {
           </ul>
         </div>
 
-        {/* 4 */}
-        <div>
-          <h2 className="text-xl mb-2">4. Payment Data</h2>
-          <p>
-            All payment transactions are handled by Razorpay Payment Gateway.
-            We do not store credit card, debit card, UPI, or banking information
-            on our servers. Razorpay's Privacy Policy applies to payment data.
-          </p>
-        </div>
+      
 
         {/* 5 */}
         <div>
@@ -70,7 +64,7 @@ const PrivacyPolicy = () => {
             We do not sell or rent your personal data. We may share data with:
           </p>
           <ul className="list-disc pl-5 space-y-1">
-            <li>Razorpay (for payment processing)</li>
+          
             <li>Cloud hosting providers (for data storage)</li>
             <li>Analytics tools (for usage insights, in anonymized form)</li>
             <li>Legal authorities (if required by law)</li>
@@ -145,7 +139,7 @@ const PrivacyPolicy = () => {
         <div>
           <h2 className="text-xl mb-2">12. Contact</h2>
           <p>
-            Email: info@saliljaveri.com <br />
+            Email: saliljaveri27@gmail.com <br />
             Location: Mumbai, Maharashtra, India
           </p>
         </div>

@@ -30,13 +30,6 @@ export default function FinalCTA() {
               Download the App
             </button>
           </Link>
-
-          <Link href="#features">
-            <button className="secondary-btn px-8 py-3 rounded-lg cursor-pointer">
-              Explore Features
-            </button>
-          </Link>
-
         </div>
 
       </div>

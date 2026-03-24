@@ -12,10 +12,7 @@ export default function FAQSection() {
       q: "What is this platform about?",
       a: "Our platform allows you to read eBooks and listen to audiobooks anytime, anywhere. We provide a wide range of books across multiple genres for an enjoyable reading and listening experience."
     },
-    {
-      q: "Can I read books offline?",
-      a: "Yes, you can download your favorite eBooks and audiobooks for offline access. This makes it easy to enjoy your content even without an internet connection."
-    },
+   
     {
       q: "Are audiobooks available on the platform?",
       a: "Absolutely! Along with eBooks, we provide high-quality audiobooks that you can listen to while commuting, exercising, or relaxing."
@@ -24,10 +21,10 @@ export default function FAQSection() {
     //   q: "Can I access my books on multiple devices?",
     //   a: "Yes. Your reading progress automatically syncs across devices, so you can start reading on your phone and continue on your tablet or laptop seamlessly."
     // },
-    // {
-    //   q: "Do you offer different pricing plans?",
-    //   a: "Yes, we offer flexible pricing plans so readers can choose the option that fits their needs. Each plan provides access to a wide range of eBooks and audiobooks."
-    // }
+    {
+      q: "Do you offer different pricing plans?",
+      a: "Yes."
+    }
   ];
 
   useEffect(() => {
@@ -55,7 +52,7 @@ export default function FAQSection() {
   }, []);
 
   return (
-    <section
+    <section id="faq"
       className="px-8 md:px-15 lg:px-30 pt-10 md:p-15 relative
       before:content-[''] before:absolute before:inset-0
       before:bg-gradient-to-bl

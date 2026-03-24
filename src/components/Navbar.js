@@ -13,9 +13,10 @@ export default function Navbar() {
     { name: "About Us", path: "/#about" },
     { name: "What We Offer", path: "/#services" },
     { name: "Books", path: "/#Books" },
-    { name: "Features", path: "/#features" },
-    { name: "Pricing", path: "/#pricing" },
+    // { name: "Features", path: "/#features" },
+    
     { name: "Testimonials", path: "/#testimonials" },
+    { name: "FAQ", path: "/#faq" },
   ];
 
   // detect current hash

@@ -17,7 +17,7 @@ export default function Footer() {
 ];
 
   const productLinks = [
-    { name: "Book", path: "/#Book" },
+    { name: "Book", path: "#" },
     { name: "eBook", path: "/#eBook" },
     { name: "Audiobook", path: "#audiobook" },
   ];
@@ -26,7 +26,7 @@ export default function Footer() {
     <footer className="bg-[var(--primary)] text-white">
 
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-10 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-10 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
 
         {/* Left Section - Logo + About */}
         <div>
@@ -34,7 +34,7 @@ export default function Footer() {
             SALIL JAVERI
           </div>
           <p className="text-sm leading-7">
-           Salil Javeri bringing you a collection of Samanta Samajik Vicharanchi eBooks & Audio books in different languages very soon for readers everywhere.
+           Salil Javeri writes stories that explore human emotions, personal growth, and the journey of self-discovery.
           </p>
           <Link
             href="#"
@@ -68,7 +68,7 @@ export default function Footer() {
         </div>
 
         {/* Products / eBook Section */}
-        <div>
+        {/* <div>
           <h3 className="text-white text-lg font-semibold mb-6">
             Our Products
           </h3>
@@ -88,7 +88,7 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
 
         {/* Contact Information */}
        {/* Contact Information */}
@@ -127,20 +127,7 @@ export default function Footer() {
   </ul>
 
   {/* Social Media Links */}
-  <div className="mt-12 flex items-center justify-start gap-3">
-    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
-      <Facebook size={22} />
-    </a>
-    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
-      <Twitter size={22} />
-    </a>
-    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
-      <Instagram size={22} />
-    </a>
-    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-white hover:text-[var(--primary)] hover:bg-[var(--secondary)] transition duration-300">
-      <Youtube size={22} />
-    </a>
-  </div>
+ 
 </div>
       </div>
 
@@ -151,10 +138,10 @@ export default function Footer() {
             © {new Date().getFullYear()} SALIL JAVERI. All Rights Reserved.
           </div>
           <div className="flex gap-3">
-            <Link href="/terms-and-conditions" className="hover:underline">
+            <Link scroll={false} href="/terms-and-conditions" className="hover:underline">
               Terms & Conditions
             </Link>
-            <Link href="privacy-policy" className="hover:underline">
+            <Link scroll={false} href="privacy-policy" className="hover:underline">
               Privacy Policy
             </Link>
           </div>

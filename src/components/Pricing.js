@@ -2,19 +2,6 @@ import Link from "next/link";
 
 const plans = [
   {
-    name: "Hard Copy Book",
-    price: "₹399",
-    period: "",
-    description:
-      "Get the physical copy of the book delivered to your doorstep. Ideal for readers who love printed books.",
-    features: [
-      "Premium Print Quality",
-      "Perfect for Gifting",
-      "Long-lasting Physical Copy",
-    ],
-    highlight: true,
-  },
-  {
     name: "eBook",
     price: "₹299",
     period: "",
@@ -22,11 +9,11 @@ const plans = [
       "Read the digital version anytime, anywhere on your mobile, tablet, or laptop.",
     features: [
       "Instant Access",
-      
       "Lightweight & Portable",
       "Eco-Friendly",
     ],
     highlight: false,
+    link: "#", // update this
   },
   {
     name: "Audio Book",
@@ -41,6 +28,7 @@ const plans = [
       "Great for Travel & Work",
     ],
     highlight: false,
+    link: "#", // update this
   },
 ];
 
@@ -50,8 +38,6 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
-        <div className="text-center mb-14">
-           {/* Heading */}
         <div className="text-center mb-12">
           <span className="w-fit mx-auto px-4 py-2 rounded-full text-[var(--primary)] bg-[var(--primary)]/20 uppercase tracking-wider block mb-3">
             Pricing
@@ -71,7 +57,7 @@ export default function Pricing() {
             after:to-transparent mb-4
             w-fit"
           >
-           Flexible <span className="text-[var(--primary)]">Pricing Plans</span>
+            Flexible <span className="text-[var(--primary)]">Pricing Plans</span>
           </h2>
 
           <p className="max-w-2xl mx-auto">
@@ -79,39 +65,46 @@ export default function Pricing() {
             stories through eBooks and immersive audiobooks.
           </p>
         </div>
-        </div>
 
         {/* Pricing Cards */}
-        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8">
 
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`p-8 rounded-2xl border transition-all duration-300 hover:scale-105 
+              className={`p-8 rounded-2xl border flex flex-col justify-between transition-all duration-300 hover:scale-105 
               ${plan.highlight
                 ? "border-[var(--primary)] bg-[var(--primary)]/10"
                 : "border-[var(--primary)] bg-[var(--primary)]/5"
               }`}
             >
+              <div>
+                <h3 className="text-xl font-semibold mb-2">{plan.name}</h3>
 
-              <h3 className="text-xl font-semibold mb-2">{plan.name}</h3>
+                <div className="flex items-end gap-1 mb-4">
+                  <span className="text-3xl font-bold">{plan.price}</span>
+                  <span className="text-gray-400">{plan.period}</span>
+                </div>
 
-              <div className="flex items-end gap-1 mb-4">
-                <span className="text-3xl font-bold">{plan.price}</span>
-                <span className="text-gray-400">{plan.period}</span>
+                <p className="text-gray-550 mb-6">{plan.description}</p>
+
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm">
+                      <span className="text-[var(--primary)]">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <p className="text-gray-550 mb-6">{plan.description}</p>
-
-              <ul className="space-y-3 mb-8">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-2 text-sm">
-                    <span className="text-[var(--primary)]">✓</span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
+              {/* Buy Now Button */}
+              {/* Buy Now Button */}
+<Link href={plan.link}>
+  <button className="primary-btn w-full py-3 rounded-xl font-medium">
+    Buy Now
+  </button>
+</Link>
             </div>
           ))}
 

@@ -1,6 +1,10 @@
 "use client";
-
+import { useEffect } from "react";
 const TermsAndConditions = () => {
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="max-w-4xl mx-auto px-6 py-16">
       
@@ -149,7 +153,7 @@ const TermsAndConditions = () => {
           <h2 className="text-xl mb-2">14. Governing Law</h2>
           <p>
             These Terms are governed by Indian law. Jurisdiction lies in
-            Mysore, Karnataka.
+            Mumbai, Maharashtra.
           </p>
         </div>
 
