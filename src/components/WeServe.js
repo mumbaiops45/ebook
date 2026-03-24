@@ -33,12 +33,12 @@ export default function WeServe() {
               className="rounded-2xl p-4 flex flex-col  hover:shadow-lg transition"
             >
               {/* Image */}
-              <div className="w-full h-[70vh] md:h-100 relative mb-4">
+              <div className="w-full h-[70vh] md:h-110 relative mb-4">
                 <Image
                   src={book.image}
                   alt={book.title}
                   fill
-                  className="object-fit rounded-xl"
+                  className="object-cover rounded-xl"
                 />
               </div>
 
