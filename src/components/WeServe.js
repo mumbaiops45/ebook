@@ -7,21 +7,13 @@ import { useRef } from "react";
 const books = [
   {
     title: "Samanata",
-    image: "/samanata.png",
+    image: "/Samanata3.png",
     price: 299,
     description: "A powerful book focused on social thoughts and equality.",
   },
 ];
 
-// ✅ FIXED paths
-const audioFiles = [
-  "/Chapter 1.mp3",
-  "/Chapter 2.mp3",
-  "/Chapter 3.mp3",
-  "/Chapter 4.mp3",
-  "/Chapter 5.mp3", // fixed
-  "/Chapter 6.mp3",
-];
+
 
 export default function WeServe() {
   const audioRef = useRef(null);
@@ -60,7 +52,7 @@ export default function WeServe() {
                   src={book.image}
                   alt={book.title}
                   fill
-                  className="object-cover rounded-xl"
+                  className="object-cover object-top rounded-xl"
                 />
               </div>
 

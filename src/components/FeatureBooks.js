@@ -5,7 +5,7 @@ import Link from "next/link";
 const books = [
   {
     title: "Samanata",
-    image: "/samanata.png",
+    image: "/Samanata3.png",
     rating: 4.7,
     pdf: "/index.pdf",
     description: "Right now our Samanta – Samajik Vicharanchi book  is published in Marathi languages and in the very near future our ebooks and audio books will be published in English, Hindi, and other regional languages too.",
