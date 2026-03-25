@@ -18,7 +18,7 @@ const TermsAndConditions = () => {
 
         {/* 1 */}
         <div>
-          <h2 className="text-xl mb-2">1. Introduction</h2>
+          <h2 className=" mb-2">1. Introduction</h2>
           <p>
             These Terms and Conditions ("Terms") govern your access to and use
             of the Salil Javeri platform (website and mobile application).
@@ -29,7 +29,7 @@ const TermsAndConditions = () => {
 
         {/* 2 */}
         <div>
-          <h2 className="text-xl mb-2">2. Platform Overview</h2>
+          <h2 className=" mb-2">2. Platform Overview</h2>
           <p>
             The platform provides access to eBooks and Audiobooks authored or
             curated by Salil Javeri. Content is available through subscription-based
@@ -39,7 +39,7 @@ const TermsAndConditions = () => {
 
         {/* 3 */}
         <div>
-          <h2 className="text-xl mb-2">3. Eligibility</h2>
+          <h2 className=" mb-2">3. Eligibility</h2>
           <p>
             Users must be at least 13 years old. Users under 18 must have
             parental or guardian consent. By using the platform, you confirm
@@ -49,7 +49,7 @@ const TermsAndConditions = () => {
 
         {/* 4 */}
         <div>
-          <h2 className="text-xl mb-2">4. User Account</h2>
+          <h2 className=" mb-2">4. User Account</h2>
           <ul className="list-disc pl-5 space-y-1">
             <li>You must provide accurate and current information.</li>
             <li>You are responsible for your account credentials.</li>
@@ -60,7 +60,7 @@ const TermsAndConditions = () => {
 
         {/* 5 */}
         <div>
-          <h2 className="text-xl mb-2">5. Subscription</h2>
+          <h2 className=" mb-2">5. Subscription</h2>
           <ul className="list-disc pl-5 space-y-1">
             <li>Subscriptions auto-renew monthly unless cancelled.</li>
             <li>Plan benefits are non-transferable.</li>
@@ -70,7 +70,7 @@ const TermsAndConditions = () => {
 
         {/* 6 */}
         <div>
-          <h2 className="text-xl mb-2">6. Payment</h2>
+          <h2 className=" mb-2">6. Payment</h2>
           <ul className="list-disc pl-5 space-y-1">
             <li>All payments are securely processed via Razorpay.</li>
             <li>Prices include applicable taxes unless stated otherwise.</li>
@@ -80,7 +80,7 @@ const TermsAndConditions = () => {
 
         {/* 7 */}
         <div>
-          <h2 className="text-xl mb-2">7. Cancellation & Refund</h2>
+          <h2 className=" mb-2">7. Cancellation & Refund</h2>
           <ul className="list-disc pl-5 space-y-1">
             <li>You can cancel anytime from account settings.</li>
             <li>Access continues until billing period ends.</li>
@@ -91,7 +91,7 @@ const TermsAndConditions = () => {
 
         {/* 8 */}
         <div>
-          <h2 className="text-xl mb-2">8. Content Access & Restrictions</h2>
+          <h2 className=" mb-2">8. Content Access & Restrictions</h2>
           <ul className="list-disc pl-5 space-y-1">
             <li>Content is licensed, not sold.</li>
             <li>For personal, non-commercial use only.</li>
@@ -102,7 +102,7 @@ const TermsAndConditions = () => {
 
         {/* 9 */}
         <div>
-          <h2 className="text-xl mb-2">9. Intellectual Property</h2>
+          <h2 className=" mb-2">9. Intellectual Property</h2>
           <p>
             All books, audio, graphics, logos, and platform design are the
             intellectual property of Salil Javeri. Unauthorized use is prohibited.
@@ -111,7 +111,7 @@ const TermsAndConditions = () => {
 
         {/* 10 */}
         <div>
-          <h2 className="text-xl mb-2">10. Prohibited Conduct</h2>
+          <h2 className=" mb-2">10. Prohibited Conduct</h2>
           <ul className="list-disc pl-5 space-y-1">
             <li>Sharing account credentials</li>
             <li>Bypassing platform security</li>
@@ -123,7 +123,7 @@ const TermsAndConditions = () => {
 
         {/* 11 */}
         <div>
-          <h2 className="text-xl mb-2">11. Availability</h2>
+          <h2 className=" mb-2">11. Availability</h2>
           <p>
             We strive for uninterrupted service but do not guarantee it.
             Maintenance updates will be communicated when possible.
@@ -132,7 +132,7 @@ const TermsAndConditions = () => {
 
         {/* 12 */}
         <div>
-          <h2 className="text-xl mb-2">12. Termination</h2>
+          <h2 className=" mb-2">12. Termination</h2>
           <p>
             We may suspend or terminate accounts that violate these Terms
             without prior notice.
@@ -141,7 +141,7 @@ const TermsAndConditions = () => {
 
         {/* 13 */}
         <div>
-          <h2 className="text-xl mb-2">13. Limitation of Liability</h2>
+          <h2 className=" mb-2">13. Limitation of Liability</h2>
           <p>
             The platform is provided "as is." We are not liable for any
             indirect or consequential damages.
@@ -150,7 +150,7 @@ const TermsAndConditions = () => {
 
         {/* 14 */}
         <div>
-          <h2 className="text-xl mb-2">14. Governing Law</h2>
+          <h2 className=" mb-2">14. Governing Law</h2>
           <p>
             These Terms are governed by Indian law. Jurisdiction lies in
             Mumbai, Maharashtra.
@@ -159,7 +159,7 @@ const TermsAndConditions = () => {
 
         {/* 15 */}
         <div>
-          <h2 className="text-xl mb-2">15. Contact</h2>
+          <h2 className=" mb-2">15. Contact</h2>
           <p>
             Email: saliljaveri27@gmail.com <br />
             Phone: 8329928955 <br />

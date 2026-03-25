@@ -29,7 +29,7 @@ const AboutSection = () => {
 
         {/* Text Content */}
         <div className="lg:col-span-7">
-          <span className="w-fit px-4 py-2 rounded-full text-[var(--primary)] bg-[var(--primary)]/20 uppercase tracking-wider mb-3 block">
+        <span className="text-[13px] w-fit px-4 py-2 rounded-full text-[var(--primary)] bg-[var(--primary)]/20 uppercase tracking-wider mb-3 block">
             About Us
           </span>
 

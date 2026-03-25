@@ -72,7 +72,7 @@ export default function FAQSection() {
 
      {/* Heading */}
         <div className="text-center mb-12">
-          <span className="w-fit mx-auto px-4 py-2 rounded-full text-[var(--primary)] bg-[var(--primary)]/20 uppercase tracking-wider block mb-3">
+          <span className="w-fit text-[13px] mx-auto px-4 py-2 rounded-full text-[var(--primary)] bg-[var(--primary)]/20 uppercase tracking-wider block mb-3">
             FAQ's
           </span>
 

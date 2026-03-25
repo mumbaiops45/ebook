@@ -7,7 +7,7 @@ export default function GiftingSection() {
     <section className="relative w-full py-20 px-6 md:px-20 before:absolute before:inset-0 before:bg-gradient-to-l before:from-[var(--primary)]/30 before:to-transparent before:z-0">
         <div className="text-center mb-12">
             
-            <span className="flex items-center gap-2 w-fit mx-auto px-4 py-2 rounded-full text-[var(--primary)] bg-[var(--primary)]/20 uppercase tracking-wider block mb-3"> <Gift className="w-6 h-6 text-[var(--primery)]" />
+            <span className="text-[13px] flex items-center gap-2 w-fit mx-auto px-4 py-2 rounded-full text-[var(--primary)] bg-[var(--primary)]/20 uppercase tracking-wider block mb-3"> <Gift className="w-6 h-6 text-[var(--primery)]" />
             Gifting 
           </span>
           <h2

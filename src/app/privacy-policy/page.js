@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
   return (
     <section className="max-w-4xl mx-auto px-6 py-16">
       
-      <h1 className="text-3xl font-bold mb-2 text-[var(--primary)]">
+      <h1 className="font-bold mb-2 text-[var(--primary)]">
         Privacy Policy
       </h1>
 
@@ -16,7 +16,7 @@ const PrivacyPolicy = () => {
 
         {/* 1 */}
         <div>
-          <h2 className="text-xl mb-2">1. Introduction</h2>
+          <h2 className=" mb-2">1. Introduction</h2>
           <p>
             Salil Javeri ("we," "our," "us") is committed to protecting your
             personal information. This Privacy Policy explains how we collect,
@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
 
         {/* 2 */}
         <div>
-          <h2 className="text-xl mb-2">2. Information We Collect</h2>
+          <h2 className=" mb-2">2. Information We Collect</h2>
           
           <p className="mb-2 font-medium">Personal Information:</p>
           <ul className="list-disc pl-5 space-y-1 mb-4">
@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
 
         {/* 3 */}
         <div>
-          <h2 className="text-xl mb-2">3. How We Use Your Information</h2>
+          <h2 className=" mb-2">3. How We Use Your Information</h2>
           <ul className="list-disc pl-5 space-y-1">
             <li>To create and manage your account</li>
             <li>To process payments via Razorpay</li>
@@ -59,7 +59,7 @@ const PrivacyPolicy = () => {
 
         {/* 5 */}
         <div>
-          <h2 className="text-xl mb-2">5. Data Sharing</h2>
+          <h2 className=" mb-2">5. Data Sharing</h2>
           <p className="mb-2">
             We do not sell or rent your personal data. We may share data with:
           </p>
@@ -73,7 +73,7 @@ const PrivacyPolicy = () => {
 
         {/* 6 */}
         <div>
-          <h2 className="text-xl mb-2">6. Cookies</h2>
+          <h2 className=" mb-2">6. Cookies</h2>
           <p>
             Our website uses cookies for session management, analytics, and
             personalization. You can control cookies through your browser
@@ -83,7 +83,7 @@ const PrivacyPolicy = () => {
 
         {/* 7 */}
         <div>
-          <h2 className="text-xl mb-2">7. Data Retention</h2>
+          <h2 className=" mb-2">7. Data Retention</h2>
           <p>
             We retain your account data for as long as your account is active.
             Upon account deletion, data is removed within 30 days, except where
@@ -93,7 +93,7 @@ const PrivacyPolicy = () => {
 
         {/* 8 */}
         <div>
-          <h2 className="text-xl mb-2">8. Your Rights</h2>
+          <h2 className=" mb-2">8. Your Rights</h2>
           <p className="mb-2">You have the right to:</p>
           <ul className="list-disc pl-5 space-y-1 mb-2">
             <li>Access the personal data we hold about you</li>
@@ -108,7 +108,7 @@ const PrivacyPolicy = () => {
 
         {/* 9 */}
         <div>
-          <h2 className="text-xl mb-2">9. Data Security</h2>
+          <h2 className=" mb-2">9. Data Security</h2>
           <p>
             We implement industry-standard security measures including SSL
             encryption. However, no method of transmission over the internet
@@ -118,7 +118,7 @@ const PrivacyPolicy = () => {
 
         {/* 10 */}
         <div>
-          <h2 className="text-xl mb-2">10. Children's Privacy</h2>
+          <h2 className=" mb-2">10. Children's Privacy</h2>
           <p>
             The platform is not intended for children below 13 years of age.
             We do not knowingly collect data from children. If discovered,
@@ -128,7 +128,7 @@ const PrivacyPolicy = () => {
 
         {/* 11 */}
         <div>
-          <h2 className="text-xl mb-2">11. Changes to this Policy</h2>
+          <h2 className=" mb-2">11. Changes to this Policy</h2>
           <p>
             We may update this Privacy Policy periodically. Users will be
             notified of significant changes via email or in-app notification.
@@ -137,7 +137,7 @@ const PrivacyPolicy = () => {
 
         {/* 12 */}
         <div>
-          <h2 className="text-xl mb-2">12. Contact</h2>
+          <h2 className=" mb-2">12. Contact</h2>
           <p>
             Email: saliljaveri27@gmail.com <br />
             Location: Mumbai, Maharashtra, India

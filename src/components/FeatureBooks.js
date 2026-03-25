@@ -19,7 +19,7 @@ const FeaturedBooks = () => {
       <div className="max-w-screen-xl mx-auto px-4">
 
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center text-[13px] mb-12">
           <span className="w-fit mx-auto px-4 py-2 rounded-full text-[var(--primary)] bg-[var(--primary)]/20 uppercase tracking-wider block mb-3">
             Featured Books
           </span>
