@@ -91,7 +91,7 @@ export default function Navbar() {
                 setIsOpen(false);
               }}
               className={`block pb-1 transition duration-300 ${active === link.path
-                  ? "border-b-2 border-white text-white"
+                  ? "inline-block border-b-2 border-white text-white"
                   : "text-white hover:opacity-80"
                 }`}
             >

@@ -45,8 +45,8 @@ const StarIcon = ({ filled }) => (
     width="16"
     height="16"
     viewBox="0 0 24 24"
-   fill={filled ? "var(--primary)" : "none"}
-stroke="var(--primary)"
+    fill={filled ? "var(--primary)" : "none"}
+    stroke="var(--primary)"
     strokeWidth="1.5"
   >
     <path
@@ -78,16 +78,16 @@ export default function Testimonials() {
 
         {/* Section header */}
         <div className=" mb-14">
-            <div className=" mb-16">
-               <h2
-  className="relative inline-block pb-4 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:rounded-full after:bg-gradient-to-r after:from-[var(--primary)] after:to-transparent mb-4"
->
-  What Our <span className="text-[var(--primary)]">Readers Say</span>
-</h2>
-                <p className="  max-w-3xl ">
-                 Real experiences from readers who enjoy seamless eBook and audiobook access every day.
-                </p>
-              </div>
+          <div className=" mb-16">
+            <h2
+              className="relative inline-block pb-4 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:rounded-full after:bg-gradient-to-r after:from-[var(--primary)] after:to-transparent mb-4"
+            >
+              What Our <span className="text-[var(--primary)]">Readers Say</span>
+            </h2>
+            <p className="  max-w-3xl ">
+              Real experiences from readers who enjoy seamless eBook and audiobook access every day.
+            </p>
+          </div>
         </div>
 
         {/* Main two-column card */}
@@ -95,7 +95,7 @@ export default function Testimonials() {
           <div className="flex flex-col md:flex-row ">
 
             {/* ── LEFT: User Image ── */}
-            
+
 
             {/* ── RIGHT: Comment ── */}
             <div className="flex-1 flex flex-col justify-between p-8 md:p-12">
@@ -128,25 +128,29 @@ export default function Testimonials() {
                 </div>
 
                 {/* Navigation — desktop */}
-                <div className="hidden md:flex items-center gap-3">
+                {/* Navigation — NOW visible on mobile */}
+                <div className="flex items-center justify-center md:justify-end gap-3 w-full md:w-auto">
+
                   {/* Dots */}
                   <div className="flex gap-1.5 mr-2">
                     {testimonials.map((_, i) => (
                       <button
                         key={i}
                         onClick={() => setActive(i)}
-                        className={`rounded-full bg-[var(--primary)] transition-all duration-300 ${
-                          active === i ? "w-6 h-2 opacity-100" : "w-2 h-2 opacity-25"
-                        }`}
+                        className={`rounded-full bg-[var(--primary)] transition-all duration-300 ${active === i ? "w-6 h-2 opacity-100" : "w-2 h-2 opacity-25"
+                          }`}
                       />
                     ))}
                   </div>
 
                   {/* Prev */}
                   <button
-                    onClick={() => setActive((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
-                    className="w-10 h-10 rounded-full border border-[var(--primary)]/30 flex items-center justify-center text-[var(--primary)] hover:bg-[var(--primary)]/10
-hover:border-[var(--primary)] transition-all duration-200"
+                    onClick={() =>
+                      setActive((prev) =>
+                        prev === 0 ? testimonials.length - 1 : prev - 1
+                      )
+                    }
+                    className="w-9 h-9 md:w-10 md:h-10 rounded-full border border-[var(--primary)]/30 flex items-center justify-center text-[var(--primary)] hover:bg-[var(--primary)]/10 hover:border-[var(--primary)] transition-all duration-200"
                   >
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
@@ -155,8 +159,12 @@ hover:border-[var(--primary)] transition-all duration-200"
 
                   {/* Next */}
                   <button
-                    onClick={() => setActive((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
-                    className="w-10 h-10 rounded-full bg-[var(--primary)] flex items-center justify-center text-white hover:opacity-90 transition-all duration-200"
+                    onClick={() =>
+                      setActive((prev) =>
+                        prev === testimonials.length - 1 ? 0 : prev + 1
+                      )
+                    }
+                    className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-[var(--primary)] flex items-center justify-center text-white hover:opacity-90 transition-all duration-200"
                   >
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />

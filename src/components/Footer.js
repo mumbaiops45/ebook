@@ -10,10 +10,10 @@ export default function Footer() {
     const navLinks = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/#about" },
-  { name: "Services", path: "/#services" },
-  { name: "Features", path: "/#features" },
-  { name: "Pricing", path: "/#pricing" },
+  { name: "What We Offer", path: "/#services" },
+  { name: "Books", path: "/#Books" },
   { name: "Testimonials", path: "/#testimonials" },
+  { name: "FAQ", path: "/#faq" },
 ];
 
   const productLinks = [
