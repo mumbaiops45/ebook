@@ -61,7 +61,7 @@ const AboutSection = () => {
             {/* Column 1 */}
             <div className="">
               <Image
-                src="/about1.png"
+                src="/writter1.png"
                 alt="author image 1"
                 width={300}
                 height={200}
@@ -73,7 +73,7 @@ const AboutSection = () => {
             {/* Column 2 */}
             <div className="">
               <Image
-                src="/about2.png"
+                src="/writter2.png"
                 alt="author image 3"
                 width={300}
                 height={200}
