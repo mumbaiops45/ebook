@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 const books = [
   {
-    title: "Samanata",
+    title: "Samanat",
     image: "/Samanata3.png",
     price: 299,
     description: "A powerful book focused on social thoughts and equality.",
