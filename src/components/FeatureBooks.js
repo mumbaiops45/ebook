@@ -53,7 +53,7 @@ const FeaturedBooks = () => {
 
         <h3 className="mb-2 text-center font-semibold">{book.title}</h3>
 
-        <p className="text-sm text-gray-600 mb-3 px-2 ">
+        <p className=" text-gray-600 mb-3 px-2 ">
           {book.description}
         </p>
 
@@ -84,7 +84,7 @@ const FeaturedBooks = () => {
         {/* Explore Section */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="border-l-4 py-3 border-[var(--primary)] pl-4">
-            <p className="text-lg font-medium">
+            <p className="font-medium">
               Explore our growing collection of engaging eBooks and audiobooks.
             </p>
           </div>

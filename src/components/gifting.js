@@ -34,23 +34,23 @@ export default function GiftingSection() {
         
 
         {/* Content */}
-        <p className="text-gray-600 text-lg leading-relaxed max-w-3xl ">
+        <p className="text-gray-600  leading-relaxed ">
           If you gift someone a bouquet of flowers, it lasts for just a day or two.
           But if you gift a book, it stays with them for a lifetime.
         </p>
 
-        <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mt-4">
+        <p className="text-gray-600  leading-relaxed mt-4">
           It is not just a gift, but a source of knowledge that helps in improving
           and enriching their life.
         </p>
 
-        <p className="text-gray-700 text-lg font-medium leading-relaxed max-w-3xl mt-4">
+        <p className="text-gray-700  font-medium leading-relaxed mt-4">
           Such a thoughtful gesture reflects your positive and meaningful personality.
         </p>
 
         {/* Highlight Box */}
        <div className="border-l-4 py-3 border-[var(--primary)] mt-6 pl-4">
-            <p className="text-lg font-medium">
+            <p className=" font-medium">
               
 Discover inspiring thoughts, listen to studio-quality audiobooks, preview chapters before downloading, and enjoy a personalized reading. 
 

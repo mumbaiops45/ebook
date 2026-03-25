@@ -75,7 +75,7 @@ export default function WeServe() {
               </p>
 
               {/* Description */}
-              <p className="text-gray-600 text-sm mb-4 flex-grow">
+              <p className="text-gray-600  mb-4 flex-grow">
                 {book.description}
               </p>
 

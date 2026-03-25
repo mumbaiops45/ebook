@@ -104,7 +104,7 @@ export default function Testimonials() {
               <div>
                 <QuoteIcon />
 
-                <p className="mt-5 text-[#3a2510]/80 text-base md:text-lg leading-[1.8] font-light ">
+                <p className="mt-5 text-[#3a2510]/80  leading-[1.8] font-light ">
                   {t.comment}
                 </p>
               </div>
