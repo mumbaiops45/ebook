@@ -8,9 +8,9 @@ const books = [
     image: "/SAmanata3.png",
     rating: 4.7,
     pdf: "/index.pdf",
-    description: "Right now our Samanta – Samajik Vicharanchi book  is published in Marathi languages and in the very near future our ebooks and audio books will be published in English, Hindi, and other regional languages too.",
+    description:
+      "Right now our Samanta – Samajik Vicharanchi book is published in Marathi languages and in the very near future our ebooks and audio books will be published in English, Hindi, and other regional languages too.",
   },
-  
 ];
 
 const FeaturedBooks = () => {
@@ -35,51 +35,69 @@ const FeaturedBooks = () => {
           </p>
         </div>
 
-       {/* Books Grid */}
-<div className="flex justify-center">
-  <div className="flex flex-wrap justify-center gap-10 max-w-4xl">
-    {books.map((book, index) => (
-      <div
-        key={index}
-        className="w-full sm:w-[330px] relative bg-gradient-to-b from-[var(--primary)]/10 to-transparent p-6 rounded-xl transition-all duration-300 hover:scale-102 hover:from-[var(--primary)]/15"
-      >
-        <Image
-          src={book.image}
-          alt={book.title}
-          width={250}
-          height={350}
-          className="mx-auto mb-4 transition-transform duration-300 hover:scale-105"
-        />
+        {/* Desktop: Two-column layout; Mobile: stacked */}
+        <div className="flex flex-col lg:flex-row gap-10 items-start justify-center">
 
-        <h3 className="mb-2 text-center font-semibold">{book.title}</h3>
+          {/* Left: Books */}
+          <div className="flex flex-wrap justify-center gap-10 lg:max-w-xl w-full">
+            {books.map((book, index) => (
+              <div
+                key={index}
+                className="w-full sm:w-[330px] relative bg-gradient-to-b from-[var(--primary)]/10 to-transparent p-6 rounded-xl transition-all duration-300 hover:scale-102 hover:from-[var(--primary)]/15"
+              >
+                <Image
+                  src={book.image}
+                  alt={book.title}
+                  width={250}
+                  height={350}
+                  className="mx-auto mb-4 transition-transform duration-300 hover:scale-105"
+                />
 
-        <p className=" text-gray-600 mb-3 px-2 ">
-          {book.description}
-        </p>
+                <h3 className="mb-2 text-center font-semibold">{book.title}</h3>
 
-        {/* ⭐ Rating */}
-        <div className="flex justify-center items-center gap-1 text-yellow-400 text-sm mb-3">
-          {[...Array(5)].map((_, i) => (
-            <FaStar key={i} />
-          ))}
-          <span className="text-gray-500 ml-1">{book.rating}</span>
+                <p className="text-gray-600 mb-3 px-2">{book.description}</p>
+
+                {/* ⭐ Rating */}
+                <div className="flex justify-center items-center gap-1 text-yellow-400 text-sm mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} />
+                  ))}
+                  <span className="text-gray-500 ml-1">{book.rating}</span>
+                </div>
+
+                {/* Button */}
+                <div className="flex justify-center mt-2">
+                  <a
+                    href={book.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="primary-btn px-6 py-2 rounded-md cursor-pointer inline-block"
+                  >
+                    Preview Book
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Right: YouTube video */}
+          <div className="w-full lg:w-[480px] flex flex-col items-center">
+            <h3 className="text-center text-[var(--primary)] font-semibold mb-4 text-lg">
+              Paresh Bhanushali, Correspondent, India Times News
+            </h3>
+
+            <div className="w-full aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/TH55u5JSIKk?autoplay=1&mute=1&rel=0&modestbranding=1"
+                title="YouTube video"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                className="w-full h-full rounded-xl shadow-lg"
+              ></iframe>
+            </div>
+          </div>
+
         </div>
-
-        {/* Button */}
-        <div className="flex justify-center mt-2">
-          <a
-            href={book.pdf}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="primary-btn px-6 py-2 rounded-md cursor-pointer inline-block"
-          >
-            Preview Book
-          </a>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
 
         {/* Explore Section */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -95,7 +113,6 @@ const FeaturedBooks = () => {
             </button>
           </Link>
         </div>
-
       </div>
     </section>
   );

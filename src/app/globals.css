@@ -129,3 +129,95 @@ body {
 html {
   scroll-padding-top: 90px;
 }
+
+/* Hides the Google Translate Top Bar */
+.VIpgJd-ZVi9od-ORHb {
+    display: none !important;
+}
+
+/* Optional: Removes the top padding Google adds to the body */
+body {
+    top: 0 !important;
+}
+
+/* Hides the 'original' text tooltips when hovering */
+.VIpgJd-ZVi9od-ORHb {
+    display: none !important;
+    opacity: 0;
+}
+
+
+/* ── Google Translate Customization ── */
+
+/* Hide the Google branding bar that appears at top of page */
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+/* The select dropdown itself */
+.goog-te-gadget-simple {
+  background-color: transparent !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 8px !important;
+  padding: 5px 10px !important;
+  cursor: pointer !important;
+  transition: border-color 0.2s !important;
+}
+
+.goog-te-gadget-simple:hover {
+  border-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* The text inside the dropdown trigger */
+.goog-te-gadget-simple span,
+.goog-te-gadget-simple .goog-te-menu-value span {
+  color: white !important;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  text-decoration: none !important;
+}
+
+/* Hide the ugly google icon/logo text */
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+/* The little arrow */
+.goog-te-menu-value span:last-child {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 11px !important;
+}
+
+/* The dropdown menu popup */
+.goog-te-menu2 {
+  background: #6d3300 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+  padding: 4px !important;
+}
+
+/* Each language option */
+.goog-te-menu2-item div,
+.goog-te-menu2-item:link div,
+.goog-te-menu2-item:visited div {
+  color: #fce8e1 !important;
+  font-size: 13px !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  transition: background 0.15s !important;
+}
+
+/* Hover state on option */
+.goog-te-menu2-item:hover div,
+.goog-te-menu2-item-selected div {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: white !important;
+}

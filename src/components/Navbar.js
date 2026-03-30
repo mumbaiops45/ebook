@@ -1,8 +1,8 @@
 "use client";
-
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import LanguageSwitcher from "./LanguageSwitcher"; // ✅ import new component
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,28 +13,22 @@ export default function Navbar() {
     { name: "About Us", path: "/#about" },
     { name: "What We Offer", path: "/#services" },
     { name: "Books", path: "/#Books" },
-    // { name: "Features", path: "/#features" },
-    
     { name: "Testimonials", path: "/#testimonials" },
     { name: "FAQ", path: "/#faq" },
   ];
 
-  // detect current hash
   useEffect(() => {
     const handleHashChange = () => {
       setActive(window.location.hash || "#home");
     };
-
     handleHashChange();
     window.addEventListener("hashchange", handleHashChange);
-
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
   return (
     <nav className="text-[13px] sticky top-0 z-50 bg-[var(--primary)]">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-
         {/* Logo */}
         <Link href="/">
           <div className="text-white font-bold text-xl tracking-wide">
@@ -49,14 +43,18 @@ export default function Navbar() {
               key={link.name}
               href={link.path}
               onClick={() => setActive(link.path)}
-              className={`transition duration-300 pb-1 ${active === link.path
+              className={`transition duration-300 pb-1 ${
+                active === link.path
                   ? "border-b-2 border-white text-white"
                   : "text-white hover:opacity-80"
-                }`}
+              }`}
             >
               {link.name}
             </Link>
           ))}
+
+          {/* ✅ Custom language dropdown (replaces GoogleTranslate) */}
+          <LanguageSwitcher />
 
           {/* CTA */}
           <Link
@@ -90,15 +88,19 @@ export default function Navbar() {
                 setActive(link.path);
                 setIsOpen(false);
               }}
-              className={`block pb-1 transition duration-300 ${active === link.path
+              className={`block pb-1 transition duration-300 ${
+                active === link.path
                   ? "inline-block border-b-2 border-white text-white"
                   : "text-white hover:opacity-80"
-                }`}
+              }`}
             >
               {link.name}
             </Link>
           ))}
-
+          {/* Optional: Add language switcher in mobile menu too */}
+          <div className="pt-2">
+            <LanguageSwitcher />
+          </div>
           <Link
             href="#"
             onClick={() => setIsOpen(false)}

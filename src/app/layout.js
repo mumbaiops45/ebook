@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollProgress from "@/components/ScrollProgress";
+import GoogleTranslate from "@/components/GoogleTranslate";
+import WhatsappChat from "@/components/WhatsappChat";
 
 
 export const metadata = {
@@ -21,7 +23,9 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <ScrollToTop/>
+         
         <Footer />
+          <WhatsappChat/>
       </body>
     </html>
   );
