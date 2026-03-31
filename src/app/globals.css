@@ -132,7 +132,7 @@ html {
 
 /* Hides the Google Translate Top Bar */
 .VIpgJd-ZVi9od-ORHb {
-    display: none !important;
+    display: hidden !important;
 }
 
 /* Optional: Removes the top padding Google adds to the body */
@@ -140,11 +140,6 @@ body {
     top: 0 !important;
 }
 
-/* Hides the 'original' text tooltips when hovering */
-.VIpgJd-ZVi9od-ORHb {
-    display: none !important;
-    opacity: 0;
-}
 
 
 /* ── Google Translate Customization ── */
@@ -177,7 +172,7 @@ body {
 /* The text inside the dropdown trigger */
 .goog-te-gadget-simple span,
 .goog-te-gadget-simple .goog-te-menu-value span {
-  color: white !important;
+  
   font-family: inherit !important;
   font-size: 13px !important;
   text-decoration: none !important;
@@ -190,7 +185,7 @@ body {
 
 /* The little arrow */
 .goog-te-menu-value span:last-child {
-  color: rgba(255, 255, 255, 0.7) !important;
+  
   font-size: 11px !important;
 }
 
@@ -208,7 +203,7 @@ body {
 .goog-te-menu2-item div,
 .goog-te-menu2-item:link div,
 .goog-te-menu2-item:visited div {
-  color: #fce8e1 !important;
+ 
   font-size: 13px !important;
   padding: 8px 16px !important;
   border-radius: 6px !important;
@@ -219,5 +214,45 @@ body {
 .goog-te-menu2-item:hover div,
 .goog-te-menu2-item-selected div {
   background: rgba(255, 255, 255, 0.12) !important;
-  color: white !important;
+ 
 }
+
+/* 
+after */
+/* 1. Hide the main white bar container */
+.VIpgJd-ZVi9od-ORHb, 
+.skiptranslate, 
+#goog-gt-tt, 
+.goog-te-banner-frame {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+}
+
+/* 2. Google often adds 40px padding to the top of the body */
+/* This forces your website to stay at the very top */
+body {
+    top: 0 !important;
+    position: static !important;
+}
+
+/* 3. Hide the "original text" tooltips that appear when you hover over translated text */
+.VIpgJd-ZVi9od-aZ2w3d-wNcP6B {
+    display: none !important;
+}
+
+/* 4. If the white bar still shows, target the iframe directly by its ID */
+iframe#\:1\.container, 
+iframe#\:2\.container {
+    visibility: hidden !important;
+    display: none !important;
+    opacity: 0 !important;
+}
+
+
+/* Select */
+/* select option:nth-child(2),
+select option:nth-child(3) {
+  color: black;
+} */
