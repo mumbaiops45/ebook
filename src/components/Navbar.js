@@ -66,7 +66,8 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <div className="lg:hidden">
+        <div className="lg:hidden flex gap-4">
+           <LanguageSwitcher />
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
               <FaTimes size={22} className="text-white" />
@@ -98,9 +99,7 @@ export default function Navbar() {
             </Link>
           ))}
           {/* Optional: Add language switcher in mobile menu too */}
-          <div className="pt-2">
-            <LanguageSwitcher />
-          </div>
+          
           <Link
             href="#"
             onClick={() => setIsOpen(false)}
