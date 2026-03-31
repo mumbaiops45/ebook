@@ -4,35 +4,47 @@ import { useEffect, useState } from "react";
 export default function LanguageSwitcher() {
   const [scriptLoaded, setScriptLoaded] = useState(false);
 
-  useEffect(() => {
-    // Check if script already exists
-    if (document.querySelector("#google-translate-script")) {
-      setScriptLoaded(true);
-      return;
-    }
+ useEffect(() => {
+  // ✅ Set default language (English) if no cookie exists
+  const cookie = document.cookie;
+  if (!cookie.includes("googtrans")) {
+    document.cookie = "googtrans=/en/en; path=/";
+  }
 
-    // Load Google Translate script
-    const script = document.createElement("script");
-    script.id = "google-translate-script";
-    script.src = "//translate.google.com/translate_a/element.js?cb=initGoogleTranslate";
-    script.async = true;
-    document.body.appendChild(script);
+  // Check if script already exists
+  if (document.querySelector("#google-translate-script")) {
+    setScriptLoaded(true);
+    return;
+  }
 
-    window.initGoogleTranslate = () => {
-      new window.google.translate.TranslateElement(
-        {
-          pageLanguage: "en",
-          includedLanguages: "en,mr",
-          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
-        },
-        "google_translate_element"
-      );
-      setScriptLoaded(true);
-    };
-  }, []);
+  // Load Google Translate script
+  const script = document.createElement("script");
+  script.id = "google-translate-script";
+  script.src =
+    "//translate.google.com/translate_a/element.js?cb=initGoogleTranslate";
+  script.async = true;
+  document.body.appendChild(script);
+
+  window.initGoogleTranslate = () => {
+    new window.google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+        includedLanguages: "en,mr",
+        layout:
+          window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+      },
+      "google_translate_element"
+    );
+    setScriptLoaded(true);
+  };
+}, []);
 
 const changeLanguage = (langCode) => {
+  const domain = window.location.hostname;
+
+  document.cookie = `googtrans=/en/${langCode}; path=/; domain=${domain}`;
   document.cookie = `googtrans=/en/${langCode}; path=/`;
+
   window.location.reload();
 };
 
