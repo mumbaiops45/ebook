@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  
-  /* config options here */
   reactCompiler: true,
+
+  images: {
+    domains: ["picsum.photos"], // ✅ allow external images
+  },
 };
 
 export default nextConfig;
