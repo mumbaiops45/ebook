@@ -4,11 +4,13 @@ import { useEffect, useState } from "react";
 export default function LanguageSwitcher() {
   const [scriptLoaded, setScriptLoaded] = useState(false);
 
- useEffect(() => {
-  // ✅ Set default language (English) if no cookie exists
-  const cookie = document.cookie;
-  if (!cookie.includes("googtrans")) {
-    document.cookie = "googtrans=/en/en; path=/";
+useEffect(() => {
+  const domain = window.location.hostname;
+
+  // ✅ Default English only first time
+  if (!document.cookie.includes("googtrans")) {
+    document.cookie = `googtrans=/en/en; path=/; domain=${domain}`;
+    document.cookie = `googtrans=/en/en; path=/`;
   }
 
   // Check if script already exists
