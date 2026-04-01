@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import LanguageSwitcher from "./LanguageSwitcher"; // ✅ import new component
+import LangText from "./LangText";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,39 +11,39 @@ export default function Navbar() {
   const [lang, setLang] = useState("en");
 
   const navLinks = [
-    { name: "Home", path: "/" },
+    { name: <LangText en="Home" mr="मुख पृष्ठ" />, path: "/" },
     { name: "About Us", path: "/#about" },
     { name: "What We Offer", path: "/#services" },
     { name: "Books", path: "/#Books" },
     { name: "Our Gallery", path: "/our-gallery" },
     { name: "FAQ", path: "/#faq" },
   ];
-const getCurrentLang = () => {
-  const match = document.cookie.match(/googtrans=\/en\/(\w+)/);
-  return match ? match[1] : "en";
-};
-useEffect(() => {
-  const handleHashChange = () => {
-    setActive(window.location.hash || "#home");
+  const getCurrentLang = () => {
+    const match = document.cookie.match(/googtrans=\/en\/(\w+)/);
+    return match ? match[1] : "en";
   };
+  useEffect(() => {
+    const handleHashChange = () => {
+      setActive(window.location.hash || "#home");
+    };
 
-  handleHashChange();
+    handleHashChange();
 
-  // 🔥 Detect language initially
-  setLang(getCurrentLang());
-
-  // 🔥 Detect language change (important)
-  const interval = setInterval(() => {
+    // 🔥 Detect language initially
     setLang(getCurrentLang());
-  }, 500);
 
-  window.addEventListener("hashchange", handleHashChange);
+    // 🔥 Detect language change (important)
+    const interval = setInterval(() => {
+      setLang(getCurrentLang());
+    }, 500);
 
-  return () => {
-    window.removeEventListener("hashchange", handleHashChange);
-    clearInterval(interval);
-  };
-}, []);
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
     <nav className="text-[13px] sticky top-0 z-50 bg-[var(--primary)]">
@@ -50,11 +51,11 @@ useEffect(() => {
         {/* Logo */}
         <Link href="/">
           <div
-  className="text-white font-bold text-xl tracking-wide notranslate"
-  translate="no"
->
-  {lang === "mr" ? "सलील जव्हेरी" : "SALIL JAVERI"}
-</div>
+            className="text-white font-bold text-xl tracking-wide notranslate"
+            translate="no"
+          >
+            {lang === "mr" ? "सलील जव्हेरी" : "SALIL JAVERI"}
+          </div>
         </Link>
 
         {/* Desktop Menu */}
@@ -64,11 +65,10 @@ useEffect(() => {
               key={link.name}
               href={link.path}
               onClick={() => setActive(link.path)}
-              className={`transition duration-300 pb-1 ${
-                active === link.path
+              className={`transition duration-300 pb-1 ${active === link.path
                   ? "border-b-2 border-white text-white"
                   : "text-white hover:opacity-80"
-              }`}
+                }`}
             >
               {link.name}
             </Link>
@@ -88,7 +88,7 @@ useEffect(() => {
 
         {/* Mobile Toggle */}
         <div className="lg:hidden flex gap-4">
-           <LanguageSwitcher />
+          <LanguageSwitcher />
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
               <FaTimes size={22} className="text-white" />
@@ -110,17 +110,16 @@ useEffect(() => {
                 setActive(link.path);
                 setIsOpen(false);
               }}
-              className={`block pb-1 transition duration-300 ${
-                active === link.path
+              className={`block pb-1 transition duration-300 ${active === link.path
                   ? "inline-block border-b-2 border-white text-white"
                   : "text-white hover:opacity-80"
-              }`}
+                }`}
             >
               {link.name}
             </Link>
           ))}
           {/* Optional: Add language switcher in mobile menu too */}
-          
+
           <Link
             href="#"
             onClick={() => setIsOpen(false)}
