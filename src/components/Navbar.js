@@ -7,6 +7,7 @@ import LanguageSwitcher from "./LanguageSwitcher"; // ✅ import new component
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState("#home");
+  const [lang, setLang] = useState("en");
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -16,24 +17,44 @@ export default function Navbar() {
     { name: "Our Gallery", path: "/our-gallery" },
     { name: "FAQ", path: "/#faq" },
   ];
+const getCurrentLang = () => {
+  const match = document.cookie.match(/googtrans=\/en\/(\w+)/);
+  return match ? match[1] : "en";
+};
+useEffect(() => {
+  const handleHashChange = () => {
+    setActive(window.location.hash || "#home");
+  };
 
-  useEffect(() => {
-    const handleHashChange = () => {
-      setActive(window.location.hash || "#home");
-    };
-    handleHashChange();
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
-  }, []);
+  handleHashChange();
+
+  // 🔥 Detect language initially
+  setLang(getCurrentLang());
+
+  // 🔥 Detect language change (important)
+  const interval = setInterval(() => {
+    setLang(getCurrentLang());
+  }, 500);
+
+  window.addEventListener("hashchange", handleHashChange);
+
+  return () => {
+    window.removeEventListener("hashchange", handleHashChange);
+    clearInterval(interval);
+  };
+}, []);
 
   return (
     <nav className="text-[13px] sticky top-0 z-50 bg-[var(--primary)]">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <div className="text-white font-bold text-xl tracking-wide">
-            SALIL JAVERI
-          </div>
+          <div
+  className="text-white font-bold text-xl tracking-wide notranslate"
+  translate="no"
+>
+  {lang === "mr" ? "सलील जव्हेरी" : "SALIL JAVERI"}
+</div>
         </Link>
 
         {/* Desktop Menu */}

@@ -5,6 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import LangText from "./LangText";
 
 const AboutSection = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -38,7 +39,7 @@ const AboutSection = () => {
           </h2>
 
           <p className="max-w-2xl mb-6">
-            Salil Javeri writes stories that explore human emotions, personal growth, and the journey of self-discovery.
+            <LangText en="SALIL JAVERI" mr="सलील जव्हेरी" /> writes stories that explore human emotions, personal growth, and the journey of self-discovery.
           </p>
 
           <p className="flex gap-2">

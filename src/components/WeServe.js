@@ -44,10 +44,11 @@ export default function WeServe() {
           {books.map((book, index) => (
             <div
               key={index}
-              className="rounded-2xl p-4 flex flex-col hover:shadow-lg transition"
+              className="rounded-2xl p-10 flex flex-col hover:shadow-lg transition"
             >
               {/* Image */}
-              <div className="w-full h-[70vh] md:h-110 relative mb-4">
+              <div className="flex justify-center">
+                 <div className="w-[50vw] h-[80vh] md:h-93 md:w-[22vw] relative mb-4">
                 <Image
                   src={book.image}
                   alt={book.title}
@@ -55,8 +56,10 @@ export default function WeServe() {
                   className="object-cover object-top rounded-xl"
                 />
               </div>
+              </div>
 
-              {/* Title */}
+             
+            <div className="md:max-w-[20vw]">
               <h3 className="text-xl font-semibold mb-1">
                 {book.title}
               </h3>
@@ -71,6 +74,9 @@ export default function WeServe() {
                 {book.description}
               </p>
 
+            </div>
+              {/* Title */}
+              
               {/* Button */}
               <Link
                 href="#"

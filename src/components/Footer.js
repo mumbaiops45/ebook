@@ -1,20 +1,36 @@
 "use client";
 
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import LangText from "./LangText";
 
 export default function Footer() {
   const pathname = usePathname();
+  const [lang, setLang] = useState("en");
+  const getCurrentLang = () => {
+    const match = document.cookie.match(/googtrans=\/en\/(\w+)/);
+    return match ? match[1] : "en";
+  };
+  useEffect(() => {
+    setLang(getCurrentLang());
 
-    const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About Us", path: "/#about" },
-  { name: "What We Offer", path: "/#services" },
-  { name: "Books", path: "/#Books" },
-  { name: "Testimonials", path: "/#testimonials" },
-  { name: "FAQ", path: "/#faq" },
-];
+    const interval = setInterval(() => {
+      setLang(getCurrentLang());
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/#about" },
+    { name: "What We Offer", path: "/#services" },
+    { name: "Books", path: "/#Books" },
+    { name: "Testimonials", path: "/#testimonials" },
+    { name: "FAQ", path: "/#faq" },
+  ];
 
   const productLinks = [
     { name: "Book", path: "#" },
@@ -30,11 +46,14 @@ export default function Footer() {
 
         {/* Left Section - Logo + About */}
         <div>
-          <div className="text-white font-bold text-xl tracking-wide mb-5">
-            SALIL JAVERI
+          <div
+            className="text-white font-bold text-xl tracking-wide mb-5 notranslate"
+            translate="no"
+          >
+            {lang === "mr" ? "सलील जव्हेरी" : "SALIL JAVERI"}
           </div>
           <p className="text-sm leading-7">
-           Salil Javeri writes stories that explore human emotions, personal growth, and the journey of self-discovery.
+            <LangText en="SALIL JAVERI" mr="सलील जव्हेरी" />  writes stories that explore human emotions, personal growth, and the journey of self-discovery.
           </p>
           <Link
             href="#"
@@ -54,11 +73,10 @@ export default function Footer() {
               <li key={link.name}>
                 <Link
                   href={link.path}
-                  className={`transition duration-300 pb-1 ${
-                    pathname === link.path
+                  className={`transition duration-300 pb-1 ${pathname === link.path
                       ? "border-b-2 border-white text-white"
                       : "hover:opacity-80"
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -91,51 +109,51 @@ export default function Footer() {
         </div> */}
 
         {/* Contact Information */}
-       {/* Contact Information */}
-<div>
-  <h3 className="text-white text-lg font-semibold mb-6">
-    Contact Information
-  </h3>
+        {/* Contact Information */}
+        <div>
+          <h3 className="text-white text-lg font-semibold mb-6">
+            Contact Information
+          </h3>
 
-  <ul className="space-y-4">
-    <li className="flex items-center gap-2">
-      <MapPin size={22} className="text-white flex-shrink-0" />
-      Mumbai, Maharashtra, India
-    </li>
+          <ul className="space-y-4">
+            <li className="flex items-center gap-2">
+              <MapPin size={22} className="text-white flex-shrink-0" />
+              Mumbai, Maharashtra, India
+            </li>
 
-    {/* ✅ Clickable Phone */}
-    <li className="flex items-center gap-2">
-      <Phone size={22} className="text-white flex-shrink-0" />
-      <a
-        href="tel:+918329928955"
-        className="hover:underline hover:text-gray-200"
-      >
-        +91 8329928955
-      </a>
-    </li>
+            {/* ✅ Clickable Phone */}
+            <li className="flex items-center gap-2">
+              <Phone size={22} className="text-white flex-shrink-0" />
+              <a
+                href="tel:+918329928955"
+                className="hover:underline hover:text-gray-200"
+              >
+                +91 8329928955
+              </a>
+            </li>
 
-    {/* ✅ Clickable Email */}
-    <li className="flex items-center gap-2">
-      <Mail size={22} className="text-white flex-shrink-0" />
-      <a
-        href="mailto:saliljaveri27@gmail.com"
-        className="hover:underline hover:text-gray-200"
-      >
-        saliljaveri27@gmail.com
-      </a>
-    </li>
-  </ul>
+            {/* ✅ Clickable Email */}
+            <li className="flex items-center gap-2">
+              <Mail size={22} className="text-white flex-shrink-0" />
+              <a
+                href="mailto:saliljaveri27@gmail.com"
+                className="hover:underline hover:text-gray-200"
+              >
+                saliljaveri27@gmail.com
+              </a>
+            </li>
+          </ul>
 
-  {/* Social Media Links */}
- 
-</div>
+          {/* Social Media Links */}
+
+        </div>
       </div>
 
       {/* Bottom Copyright Section */}
       <div className="border-t border-white/30">
         <div className="max-w-7xl mx-auto px-10 py-5 flex items-center justify-between text-sm text-white/70">
-          <div>
-            © {new Date().getFullYear()} SALIL JAVERI. All Rights Reserved.
+          <div className="notranslate" translate="no">
+            © {new Date().getFullYear()} {lang === "mr" ? "सलील जव्हेरी" : "SALIL JAVERI"}.
           </div>
           <div className="flex gap-3">
             <Link scroll={false} href="/terms-and-conditions" className="hover:underline">

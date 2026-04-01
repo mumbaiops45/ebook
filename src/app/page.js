@@ -34,7 +34,7 @@ const Home = () => {
       <div className="text-center bg-gradient-to-r from-[var(--primary)]/10 to-transparent border border-[var(--primary)]/20 rounded-xl px-6 py-5">
   <p className=" text-gray-700 leading-relaxed">
    <span className="text-[var(--primary)] font-semibold">
-      {" "} Salil Javeri{" "}
+      {" "} we{" "}
     </span> bringing you a collection of 
     <span className="text-[var(--primary)] font-semibold">
       {" "}Samanta Samajik Vicharanchi eBooks & Audio books{" "}
