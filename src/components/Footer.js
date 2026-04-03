@@ -24,7 +24,7 @@ export default function Footer() {
   }, []);
 
   const navLinks = [
-    { name: "Home", path: "/" },
+    { name: <LangText en="Home" mr="मुख पृष्ठ" />, path: "/" },
     { name: "About Us", path: "/#about" },
     { name: "What We Offer", path: "/#services" },
     { name: "Books", path: "/#Books" },
