@@ -53,8 +53,7 @@ export default function FAQSection() {
 
   return (
     <section id="faq"
-      className="px-8 md:px-15 lg:px-30 pt-10 md:p-15 relative
-      before:content-[''] before:absolute before:inset-0
+      className="px-8 md:px-15 lg:px-30 pt-10 md:p-15 relative before:content-[''] before:absolute before:inset-0
       before:bg-gradient-to-bl
       before:from-[var(--primary)]/20
       before:to-transparent

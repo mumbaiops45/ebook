@@ -5,14 +5,22 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollProgress from "@/components/ScrollProgress";
 import GoogleTranslateScript from "@/components/GoogleTranslateScript";
-
 import WhatsappChat from "@/components/WhatsappChat";
+import { cookies } from "next/headers";
+import { getServerTranslation } from "@/lib/getServerTranslation";
 
 
-export const metadata = {
-  title: "SALIL JAVERI",
-  description: "Salil Javeri writes stories that explore human emotions, personal growth, and the journey of self-discovery",
-};
+export async function generateMetadata() {
+    const { t } = await getServerTranslation("home");
+
+ return {
+    title: t("meta_title"),
+    description: t("meta_description"),
+  };
+  // read Google translate cookie
+
+  
+}
 
 export default function RootLayout({ children }) {
   return (

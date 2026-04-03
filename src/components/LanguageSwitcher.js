@@ -46,6 +46,7 @@ const changeLanguage = (langCode) => {
 
   document.cookie = `googtrans=/en/${langCode}; path=/; domain=${domain}`;
   document.cookie = `googtrans=/en/${langCode}; path=/`;
+    document.cookie = `app_lang=${langCode}; path=/`;
 
   window.location.reload();
 };

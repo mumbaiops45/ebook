@@ -5,6 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import LanguageSwitcher from "./LanguageSwitcher"; // ✅ import new component
 import LangText from "./LangText";
 
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState("#home");

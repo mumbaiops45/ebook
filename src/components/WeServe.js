@@ -3,10 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
+import LangText from "./LangText";
 
 const books = [
   {
-    title: "Samanat",
+    title:  <LangText en="Samanta Samajik Vicharanchi" mr="समानता - सामाजिक विचारांची  "  />,
     image: "/SAmanata3.png",
     price: 299,
     description: "A powerful book focused on social thoughts and equality.",
@@ -34,8 +35,8 @@ export default function WeServe() {
 
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-2xl font-semibold">
-            What <span className="text-[var(--primary)]">We Offer</span>
+          <h2 className="text-2xl font-semibold text-[var(--primary)] notranslate ">
+            <LangText en="What WE Offer" mr="आम्ही काय देऊ शकतो "  />
           </h2>
         </div>
 

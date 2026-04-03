@@ -39,7 +39,7 @@ const AboutSection = () => {
           </h2>
 
           <p className="max-w-2xl mb-6">
-            <LangText en="SALIL JAVERI" mr="सलील जव्हेरी" /> writes stories that explore human emotions, personal growth, and the journey of self-discovery.
+            <LangText en="SALIL JAVERI" mr="सलील जव्हेरी" /> <LangText en="SALIL JAVERI" mr="सलील जव्हेरी" /> writes stories that explore human emotions, personal growth, and the journey of self-discovery.
           </p>
 
           <p className="flex gap-2">

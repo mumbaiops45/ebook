@@ -249,6 +249,9 @@ iframe#\:2\.container {
     display: none !important;
     opacity: 0 !important;
 }
+title{
+  translate: "no";
+}
 
 
 /* Select */
