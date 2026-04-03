@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import Link from "next/link";
+import LangText from "./LangText";
 
 const books = [
   {
@@ -9,7 +10,7 @@ const books = [
     rating: 4.7,
     pdf: "/index.pdf",
     description:
-      "Right now our Samanta – Samajik Vicharanchi book is published in Marathi languages and in the very near future our ebooks and audio books will be published in English, Hindi, and other regional languages too.",
+      `Right now our Samanta – Samajik Vicharanchi book is published in Marathi languages and in the very near future our ebooks and audio books will be published in English, Hindi, and other regional languages too.`,
   },
 ];
 
