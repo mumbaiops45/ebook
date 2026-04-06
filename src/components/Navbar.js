@@ -14,7 +14,7 @@ export default function Navbar() {
   const navLinks = [
     { name: <LangText en="Home" mr="मुख पृष्ठ" />, path: "/" },
     { name: "About Us", path: "/#about" },
-    { name: "What We Offer", path: "/#services" },
+    { name: <LangText en="What We Offer" mr="आम्ही काय देऊ शकतो" className="notranslate" />, path: "/#services" },
     { name: "Books", path: "/#Books" },
     { name: "Our Gallery", path: "/our-gallery" },
     { name: "FAQ", path: "/#faq" },
@@ -61,9 +61,9 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center space-x-6">
-          {navLinks.map((link) => (
+          {navLinks.map((link,index) => (
             <Link
-              key={link.name}
+              key={index}
               href={link.path}
               onClick={() => setActive(link.path)}
               className={`transition duration-300 pb-1 ${active === link.path
@@ -103,9 +103,9 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden px-6 pb-4 space-y-4 bg-[color:var(--primary)]">
-          {navLinks.map((link) => (
+          {navLinks.map((link,index) => (
             <Link
-              key={link.name}
+              key={index}
               href={link.path}
               onClick={() => {
                 setActive(link.path);

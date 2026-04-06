@@ -26,7 +26,7 @@ export default function Footer() {
   const navLinks = [
     { name: <LangText en="Home" mr="मुख पृष्ठ" />, path: "/" },
     { name: "About Us", path: "/#about" },
-    { name: "What We Offer", path: "/#services" },
+    { name: <LangText en="What We Offer" mr="आम्ही काय देऊ शकतो" className="notranslate" />, path: "/#services" },
     { name: "Books", path: "/#Books" },
     { name: "Testimonials", path: "/#testimonials" },
     { name: "FAQ", path: "/#faq" },
@@ -66,11 +66,11 @@ export default function Footer() {
         {/* Quick Links */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-6">
-            Quick Links
+            <LangText en="Quick Links" mr="द्रुत लिंक" />
           </h3>
           <ul className="space-y-3">
-            {navLinks.map((link) => (
-              <li key={link.name}>
+            {navLinks.map((link,index) => (
+              <li key={index}>
                 <Link
                   href={link.path}
                   className={`transition duration-300 pb-1 ${pathname === link.path

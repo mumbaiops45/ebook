@@ -5,12 +5,19 @@ import LangText from "./LangText";
 
 const books = [
   {
-    title: "Samanata",
+    title: <LangText en="Samanta Samajik Vicharanchi" mr="समानता - सामाजिक विचारांची" />,
     image: "/SAmanata3.png",
     rating: 4.7,
     pdf: "/index.pdf",
     description:
-      `Right now our Samanta – Samajik Vicharanchi book is published in Marathi languages and in the very near future our ebooks and audio books will be published in English, Hindi, and other regional languages too.`,
+    (
+      <>
+        Right now our{" "}
+        <LangText en="Samanta Samajik Vicharanchi" mr="समानता - सामाजिक विचारांची" />{" "}
+        book is published in Marathi language and in the very near future our ebooks and
+        audiobooks will be published in English, Hindi, and other regional languages too.
+      </>
+    ),
   },
 ];
 
