@@ -49,7 +49,7 @@ export default function WeServe() {
             >
               {/* Image */}
               <div className="flex justify-center">
-                 <div className="w-[50vw] h-[80vh] md:h-93 md:w-[22vw] relative mb-4">
+                 <div className="w-[80vw] h-[80vh] md:h-93 md:w-[22vw] relative mb-4">
                 <Image
                   src={book.image}
                   alt={book.title}
