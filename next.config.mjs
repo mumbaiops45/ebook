@@ -2,8 +2,11 @@
 const nextConfig = {
   reactCompiler: true,
 
+  // ✅ static export (creates /out folder)
+
+
   images: {
-    domains: ["picsum.photos"], // ✅ allow external images
+    unoptimized: true, // ✅ required for export
   },
 };
 

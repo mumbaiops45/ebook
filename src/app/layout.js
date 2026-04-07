@@ -6,7 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import ScrollProgress from "@/components/ScrollProgress";
 import GoogleTranslateScript from "@/components/GoogleTranslateScript";
 import WhatsappChat from "@/components/WhatsappChat";
-import { cookies } from "next/headers";
+
 import { getServerTranslation } from "@/lib/getServerTranslation";
 
 
