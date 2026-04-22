@@ -79,12 +79,14 @@ export default function Navbar() {
           <LanguageSwitcher />
 
           {/* CTA */}
-          <Link
-            href="#"
-            className="bg-white text-[color:var(--primary)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition cursor-pointer"
-          >
-            Download the App
-          </Link>
+          <a
+  href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-white text-[color:var(--primary)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition cursor-pointer"
+>
+  Download the App
+</a>
         </div>
 
         {/* Mobile Toggle */}
@@ -121,13 +123,15 @@ export default function Navbar() {
           ))}
           {/* Optional: Add language switcher in mobile menu too */}
 
-          <Link
-            href="#"
-            onClick={() => setIsOpen(false)}
-            className="block w-fit bg-white text-[color:var(--primary)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition"
-          >
-            Download the App
-          </Link>
+          <a
+  href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => setIsOpen(false)}
+  className="block w-fit bg-white text-[color:var(--primary)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition"
+>
+  Download the App
+</a>
         </div>
       )}
     </nav>

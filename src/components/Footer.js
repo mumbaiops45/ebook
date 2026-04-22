@@ -55,12 +55,14 @@ export default function Footer() {
           <p className="text-sm leading-7">
             <LangText en="SALIL JAVERI" mr="सलील जव्हेरी" />  writes stories that explore human emotions, personal growth, and the journey of self-discovery.
           </p>
-          <Link
-            href="#"
-            className="w-fit mt-6 block bg-white text-[color:var(--primary)] px-10 py-2 rounded-md font-semibold hover:opacity-90 transition"
-          >
-            Download the App
-          </Link>
+         <a
+  href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-fit mt-6 block bg-white text-[color:var(--primary)] px-10 py-2 rounded-md font-semibold hover:opacity-90 transition"
+>
+  Download the App
+</a>
         </div>
 
         {/* Quick Links */}

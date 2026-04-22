@@ -25,11 +25,14 @@ export default function FinalCTA() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-4">
 
-          <Link href="#">
-            <button className="primary-btn px-8 py-3 rounded-lg cursor-pointer">
-              Download the App
-            </button>
-          </Link>
+          <a
+  href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="primary-btn px-8 py-3 rounded-lg cursor-pointer inline-block"
+>
+  Download the App
+</a>
         </div>
 
       </div>

@@ -10,14 +10,14 @@ const books = [
     rating: 4.7,
     pdf: "/index.pdf",
     description:
-    (
-      <>
-        Right now our{" "}
-        <LangText en="Samanta Samajik Vicharanchi" mr="समानता - सामाजिक विचारांची" />{" "}
-        book is published in Marathi language and in the very near future our ebooks and
-        audiobooks will be published in English, Hindi, and other regional languages too.
-      </>
-    ),
+      (
+        <>
+          Right now our{" "}
+          <LangText en="Samanta Samajik Vicharanchi" mr="समानता - सामाजिक विचारांची" />{" "}
+          book is published in Marathi language and in the very near future our ebooks and
+          audiobooks will be published in English, Hindi, and other regional languages too.
+        </>
+      ),
   },
 ];
 
@@ -115,11 +115,15 @@ const FeaturedBooks = () => {
             </p>
           </div>
 
-          <Link href="#">
-            <button className="primary-btn px-8 py-3 rounded-lg">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="primary-btn px-8 py-3 rounded-lg cursor-pointer">
               Download the App
             </button>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

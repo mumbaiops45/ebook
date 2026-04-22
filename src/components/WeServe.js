@@ -143,12 +143,14 @@ export default function WeServe() {
                   </p>
                 </div>
 
-                <Link
-                  href="#"
-                  className="primary-btn px-6 py-2 rounded-lg text-center mb-4"
-                >
-                  Download the App
-                </Link>
+                <a
+  href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="primary-btn px-6 py-2 rounded-lg text-center mb-4"
+>
+  Download the App
+</a>
               </div>
             ))}
           </div>
