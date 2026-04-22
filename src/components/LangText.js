@@ -20,7 +20,7 @@ export default function LangText({ en, mr, className, ...props }) {
   }, []);
 
   return (
-    <span className={className} {...props}>
+    <span className={className} {...props} >
       {lang === "mr" ? mr : en}
     </span>
   );

@@ -4,7 +4,7 @@ import Image from "next/image";
 import LangText from "./LangText";
 
 const testimonials = [
-   {
+  {
     name: `
 श्री राजीव नंदकर`,
     role: <LangText en="अतिरिक्त जिल्हाधिकारी यशदा, पुणे" mr="अतिरिक्त जिल्हाधिकारी यशदा, पुणे" className="notranslate" />,
@@ -25,8 +25,8 @@ const testimonials = [
   },
   {
     name: `
-श्री स्मिता पाठक`,
-    role: `निवृत्त पोलीस प्रतिबंधक (महाराष्ट्र पोलीस)`,
+श्रीमती स्मिता पाठक`,
+    role: <LangText en="निवृत्त सहाय्याक पोलिस आयुक्त महाराष्ट्र पोलीस" mr="निवृत्त सहाय्याक पोलिस आयुक्त महाराष्ट्र पोलीस" className="notranslate" />,
     date: "18 Dec, 2021",
     description:
       `श्री. सलील जव्हेरी लिखित 'समानता सामाजिक विचारांची' हे पुस्तक वाचले. समाजात वावरत असताना त्यांना ज्या ज्या गोष्टी खटकल्या, त्या त्या विषयांवर त्यांनी आपले विचार मांडले आहेत.\n
@@ -40,7 +40,7 @@ const testimonials = [
 असे अनेक विषय थोडक्यात मांडून श्री. सलील यांनी वाचकांना विचार करायला लावले आहे. नवीन नवीन विचार घेऊन हे पुस्तक समाजापुढे आले आहे. यातून समाजबोधन होण्यासाठी खूप वाव आहे. त्यांच्या या धाडसी लिखाणासाठी आणि समाजप्रबोधनासाठी अनेक शुभेच्छा.`,
     rating: 5,
   },
- 
+
 ];
 const StarIcon = ({ filled }) => (
   <svg
@@ -103,21 +103,21 @@ export default function Testimonials() {
             <div className="flex-1 flex flex-col justify-between p-8 md:p-12">
 
               {/* Quote + description */}
-              
-              <div>
-  <QuoteIcon />
 
-  <div className="">
-    {t.description
-      .split("\n")
-      .filter(line => line.trim() !== "")
-      .map((line, i) => (
-        <p key={i} className="m-2 text-justify leading-relaxed">
-          {line}
-        </p>
-      ))}
-  </div>
-</div>
+              <div>
+                <QuoteIcon />
+
+                <div className="">
+                  {t.description
+                    .split("\n")
+                    .filter(line => line.trim() !== "")
+                    .map((line, i) => (
+                      <p key={i} className="m-2 text-justify leading-relaxed">
+                        {line}
+                      </p>
+                    ))}
+                </div>
+              </div>
 
               {/* Bottom: stars + name row + nav */}
               <div className="mt-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6">

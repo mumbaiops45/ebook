@@ -10,6 +10,9 @@ import WhatsappChat from "@/components/WhatsappChat";
 import { getServerTranslation } from "@/lib/getServerTranslation";
 
 
+
+
+
 export async function generateMetadata() {
     const { t } = await getServerTranslation("home");
 

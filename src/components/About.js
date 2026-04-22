@@ -2,14 +2,25 @@
 
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import LangText from "./LangText";
 
 const AboutSection = () => {
+  const [lang, setLang] = useState("en");
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
   const controls = useAnimation();
+  useEffect(() => {
+    const cookies = document.cookie.split("; ");
+    const langCookie = cookies.find((row) =>
+      row.startsWith("app_lang=")
+    );
+
+    if (langCookie) {
+      setLang(langCookie.split("=")[1]);
+    }
+  }, []);
 
   useEffect(() => {
     if (inView) {
@@ -30,7 +41,7 @@ const AboutSection = () => {
 
         {/* Text Content */}
         <div className="lg:col-span-7">
-        <span className="text-[13px] w-fit px-4 py-2 rounded-full text-[var(--primary)] bg-[var(--primary)]/20 uppercase tracking-wider mb-3 block">
+          <span className="text-[13px] w-fit px-4 py-2 rounded-full text-[var(--primary)] bg-[var(--primary)]/20 uppercase tracking-wider mb-3 block">
             About Us
           </span>
 
@@ -62,25 +73,25 @@ const AboutSection = () => {
             {/* Column 1 */}
             <div className="">
               <Image
-                src="/writter1.png"
+                src={lang === "mr" ? "/writter1.png" : "/WritterEnglish1.jpg"}
                 alt="author image 1"
                 width={300}
                 height={200}
-                className=" h-[55vh] w-full object-fit"
+                className={`h-[55vh] w-full object-fit`}
               />
-              
+
             </div>
 
             {/* Column 2 */}
             <div className="">
               <Image
-                src="/writter2.png"
-                alt="author image 3"
+                src={lang === "mr" ? "/writter2.png" : "/WritterEnglish2.jpg"}
+                alt="author image 1"
                 width={300}
                 height={200}
-                className=" h-[55vh] w-full object-fit"
+                className="h-[55vh] w-full object-fit"
               />
-             
+
             </div>
           </motion.div>
         </div>

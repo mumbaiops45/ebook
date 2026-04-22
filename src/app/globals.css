@@ -6,6 +6,7 @@
   --secondary: #fce8e1; /* white color for text/buttons */
 }
 
+
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
@@ -103,8 +104,8 @@ strong {
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
-body {
-  overflow-x: hidden;
+html, body {
+  overflow-x: clip;
 }
 
 /* industry */
