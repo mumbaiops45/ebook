@@ -4,52 +4,52 @@ import { useEffect, useState } from "react";
 export default function LanguageSwitcher() {
   const [scriptLoaded, setScriptLoaded] = useState(false);
 
-useEffect(() => {
-  const domain = window.location.hostname;
+  useEffect(() => {
+    const domain = window.location.hostname;
 
-  // ✅ Default English only first time
-  if (!document.cookie.includes("googtrans")) {
-    document.cookie = `googtrans=/en/en; path=/; domain=${domain}`;
-    document.cookie = `googtrans=/en/en; path=/`;
-  }
+    // ✅ Default English only first time
+    if (!document.cookie.includes("googtrans")) {
+      document.cookie = `googtrans=/en/en; path=/; domain=${domain}`;
+      document.cookie = `googtrans=/en/en; path=/`;
+    }
 
-  // Check if script already exists
-  if (document.querySelector("#google-translate-script")) {
-    setScriptLoaded(true);
-    return;
-  }
+    // Check if script already exists
+    if (document.querySelector("#google-translate-script")) {
+      setScriptLoaded(true);
+      return;
+    }
 
-  // Load Google Translate script
-  const script = document.createElement("script");
-  script.id = "google-translate-script";
-  script.src =
-    "//translate.google.com/translate_a/element.js?cb=initGoogleTranslate";
-  script.async = true;
-  document.body.appendChild(script);
+    // Load Google Translate script
+    const script = document.createElement("script");
+    script.id = "google-translate-script";
+    script.src =
+      "//translate.google.com/translate_a/element.js?cb=initGoogleTranslate";
+    script.async = true;
+    document.body.appendChild(script);
 
-  window.initGoogleTranslate = () => {
-    new window.google.translate.TranslateElement(
-      {
-        pageLanguage: "en",
-        includedLanguages: "en,mr",
-        layout:
-          window.google.translate.TranslateElement.InlineLayout.SIMPLE,
-      },
-      "google_translate_element"
-    );
-    setScriptLoaded(true);
-  };
-}, []);
+    window.initGoogleTranslate = () => {
+      new window.google.translate.TranslateElement(
+        {
+          pageLanguage: "en",
+          includedLanguages: "en,hi",
+          layout:
+            window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+        },
+        "google_translate_element"
+      );
+      setScriptLoaded(true);
+    };
+  }, []);
 
-const changeLanguage = (langCode) => {
-  const domain = window.location.hostname;
+  const changeLanguage = (langCode) => {
+    const domain = window.location.hostname;
 
-  document.cookie = `googtrans=/en/${langCode}; path=/; domain=${domain}`;
-  document.cookie = `googtrans=/en/${langCode}; path=/`;
+    document.cookie = `googtrans=/en/${langCode}; path=/; domain=${domain}`;
+    document.cookie = `googtrans=/en/${langCode}; path=/`;
     document.cookie = `app_lang=${langCode}; path=/`;
 
-  window.location.reload();
-};
+    window.location.reload();
+  };
 
   return (
     <div className="relative">
@@ -74,7 +74,7 @@ const changeLanguage = (langCode) => {
       >
         <option className="text-black hidden" value="" disabled>Language</option>
         <option className="text-black" value="en">English</option>
-        <option className="text-black" value="mr">मराठी (Marathi)</option>
+        <option className="text-black" value="hi">हिंदी (Hindi)</option>
       </select>
     </div>
   );

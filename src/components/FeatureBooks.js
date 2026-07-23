@@ -2,26 +2,36 @@ import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import Link from "next/link";
 import LangText from "./LangText";
-
+import { useEffect, useState } from "react";
 const books = [
   {
     title: <LangText en="Samanta Samajik Vicharanchi" mr="समानता - सामाजिक विचारांची" />,
-    image: "/SAmanata3.png",
+    image: "/WeServe/hindi.png",
     rating: 4.7,
     pdf: "/index.pdf",
     description:
       (
         <>
-          Right now our{" "}
-          <LangText en="Samanta Samajik Vicharanchi" mr="समानता - सामाजिक विचारांची" />{" "}
-          book is published in Marathi language and in the very near future our ebooks and
-          audiobooks will be published in English, Hindi, and other regional languages too.
+          <LangText
+            en="Currently, the Audio Book and E-book of 'Samanta Samajik Vicharanchi' are available in Marathi, Hindi and English languages."
+            hi="वर्तमान में 'समानता सामाजिक विचारांची' पुस्तक की ऑडियोबुक और ई-बुक मराठी, हिंदी और अंग्रेज़ी भाषाओं में उपलब्ध हैं।"
+          />
         </>
       ),
   },
 ];
 
 const FeaturedBooks = () => {
+  const [lang, setLang] = useState("en");
+
+  useEffect(() => {
+    const cookies = document.cookie.split("; ");
+    const langCookie = cookies.find((row) => row.startsWith("app_lang="));
+
+    if (langCookie) {
+      setLang(langCookie.split("=")[1]);
+    }
+  }, []);
   return (
     <section id="Books" className="py-16 px-6 md:px-15">
       <div className="max-w-screen-xl mx-auto px-4">
@@ -76,7 +86,7 @@ const FeaturedBooks = () => {
                 {/* Button */}
                 <div className="flex justify-center mt-2">
                   <a
-                    href={book.pdf}
+                    href={lang === "mr" ? "/Hindi_index.pdf" : "/English_index.pdf"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="primary-btn px-6 py-2 rounded-md cursor-pointer inline-block"
@@ -110,9 +120,12 @@ const FeaturedBooks = () => {
         {/* Explore Section */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="border-l-4 py-3 border-[var(--primary)] pl-4">
-            <p className="font-medium">
-              Explore our growing collection of engaging eBooks and audiobooks.
-            </p>
+           <p className="font-medium">
+  <LangText
+    en="Explore our growing collection of engaging eBooks and audiobooks."
+    hi="हमारे आकर्षक ई-पुस्तकों और ऑडियोबुक्स के निरंतर बढ़ते संग्रह का अन्वेषण करें।"
+  />
+</p>
           </div>
 
           <a

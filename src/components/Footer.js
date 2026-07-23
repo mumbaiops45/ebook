@@ -22,13 +22,12 @@ export default function Footer() {
 
     return () => clearInterval(interval);
   }, []);
-
   const navLinks = [
-    { name: <LangText en="Home" mr="मुख पृष्ठ" />, path: "/" },
+    { name: <LangText en="Home" hi="होम" />, path: "/" },
     { name: "About Us", path: "/#about" },
-    { name: <LangText en="What We Offer" mr="आम्ही काय देऊ शकतो" className="notranslate" />, path: "/#services" },
-    { name: "Books", path: "/#Books" },
-    { name: "Testimonials", path: "/#testimonials" },
+    { name: <LangText en="What We Offer" hi="हम क्या प्रदान करते हैं" className="notranslate" />, path: "/#services" },
+    { name: <LangText en="Books" hi="पुस्तकें" className="notranslate" />, path: "/#Books" },
+    { name: <LangText en="Testimonials" hi="पाठकों की प्रतिक्रियाएँ" className="notranslate" />, path: "/#testimonials" },
     { name: "FAQ", path: "/#faq" },
   ];
 
@@ -50,34 +49,34 @@ export default function Footer() {
             className="text-white font-bold text-xl tracking-wide mb-5 notranslate"
             translate="no"
           >
-            {lang === "mr" ? "सलील जव्हेरी" : "SALIL JAVERI"}
+            {lang === "hi" ? "सलील जव्हेरी" : "SALIL JAVERI"}
           </div>
           <p className="text-sm leading-7">
-            <LangText en="SALIL JAVERI" mr="सलील जव्हेरी" />  writes stories that explore human emotions, personal growth, and the journey of self-discovery.
+            <LangText en="SALIL JAVERI" hi="सलील जव्हेरी" />  writes stories that explore human emotions, personal growth, and the journey of self-discovery.
           </p>
-         <a
-  href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="w-fit mt-6 block bg-white text-[color:var(--primary)] px-10 py-2 rounded-md font-semibold hover:opacity-90 transition"
->
-  Download the App
-</a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-fit mt-6 block bg-white text-[color:var(--primary)] px-10 py-2 rounded-md font-semibold hover:opacity-90 transition"
+          >
+            Download the App
+          </a>
         </div>
 
         {/* Quick Links */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-6">
-            <LangText en="Quick Links" mr="द्रुत लिंक" />
+            <LangText en="Quick Links" hi="द्रुत लिंक" />
           </h3>
           <ul className="space-y-3">
-            {navLinks.map((link,index) => (
+            {navLinks.map((link, index) => (
               <li key={index}>
                 <Link
                   href={link.path}
                   className={`transition duration-300 pb-1 ${pathname === link.path
-                      ? "border-b-2 border-white text-white"
-                      : "hover:opacity-80"
+                    ? "border-b-2 border-white text-white"
+                    : "hover:opacity-80"
                     }`}
                 >
                   {link.name}
@@ -155,7 +154,7 @@ export default function Footer() {
       <div className="border-t border-white/30">
         <div className="max-w-7xl mx-auto px-10 py-5 flex items-center justify-between text-sm text-white/70">
           <div className="notranslate" translate="no">
-            © {new Date().getFullYear()} {lang === "mr" ? "सलील जव्हेरी" : "SALIL JAVERI"}.
+            © {new Date().getFullYear()} {lang === "hi" ? "सलील जव्हेरी" : "SALIL JAVERI"}.
           </div>
           <div className="flex gap-3">
             <Link scroll={false} href="/terms-and-conditions" className="hover:underline">

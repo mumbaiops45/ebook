@@ -12,10 +12,10 @@ export default function Navbar() {
   const [lang, setLang] = useState("en");
 
   const navLinks = [
-    { name: <LangText en="Home" mr="मुख पृष्ठ" />, path: "/" },
+    { name: <LangText en="Home" hi="होम" />, path: "/" },
     { name: "About Us", path: "/#about" },
-    { name: <LangText en="What We Offer" mr="आम्ही काय देऊ शकतो" className="notranslate" />, path: "/#services" },
-    { name: "Books", path: "/#Books" },
+    { name: <LangText en="What We Offer" hi="हम क्या प्रदान करते हैं" className="notranslate" />, path: "/#services" },
+      { name: <LangText en="Books" hi="पुस्तकें" className="notranslate" />, path: "/#Books" },
     { name: "Our Gallery", path: "/our-gallery" },
     { name: "FAQ", path: "/#faq" },
   ];
@@ -55,7 +55,7 @@ export default function Navbar() {
             className="text-white font-bold text-xl tracking-wide notranslate"
             translate="no"
           >
-            {lang === "mr" ? "सलील जव्हेरी" : "SALIL JAVERI"}
+            {lang === "hi" ? "सलील जव्हेरी" : "SALIL JAVERI"}
           </div>
         </Link>
 

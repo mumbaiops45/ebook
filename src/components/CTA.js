@@ -1,4 +1,5 @@
 "use client";
+import LangText from "./LangText";
 import Link from "next/link";
 
 export default function FinalCTA() {
@@ -16,12 +17,12 @@ export default function FinalCTA() {
         </h2>
 
         {/* Description */}
-        <p className="max-w-2xl mx-auto text-gray-600 mb-10 leading-relaxed">
-          Discover inspiring stories, listen to studio-quality audiobooks,
-          preview chapters before downloading, and enjoy a personalized reading
-          experience across all your devices.
-        </p>
-
+       <p className="max-w-2xl mx-auto text-gray-600 mb-10 leading-relaxed">
+  <LangText
+    en="Discover inspiring stories, listen to studio-quality audiobooks, preview chapters before downloading, and enjoy a personalized reading experience across all your devices."
+    hi="प्रेरणादायक कहानियाँ खोजें, स्टूडियो-गुणवत्ता वाली ऑडियोबुक्स सुनें, डाउनलोड करने से पहले अध्यायों का पूर्वावलोकन करें और अपने सभी उपकरणों पर व्यक्तिगत एवं सहज पठन अनुभव का आनंद लें।"
+  />
+</p>
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-4">
 

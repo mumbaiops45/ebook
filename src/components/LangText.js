@@ -1,15 +1,15 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export default function LangText({ en, mr, className, ...props }) {
+export default function LangText({ en, hi, className = "" }) {
   const [lang, setLang] = useState("en");
 
-  const getCurrentLang = () => {
-    const match = document.cookie.match(/googtrans=\/en\/(\w+)/);
-    return match ? match[1] : "en";
-  };
-
   useEffect(() => {
+    const getCurrentLang = () => {
+      const match = document.cookie.match(/googtrans=\/en\/(\w+)/);
+      return match ? match[1] : "en";
+    };
+
     setLang(getCurrentLang());
 
     const interval = setInterval(() => {
@@ -19,9 +19,9 @@ export default function LangText({ en, mr, className, ...props }) {
     return () => clearInterval(interval);
   }, []);
 
-  return (
-    <span className={className} {...props} >
-      {lang === "mr" ? mr : en}
-    </span>
-  );
+  if (lang === "hi" && hi) {
+    return <span className={`notranslate ${className}`}>{hi}</span>;
+  }
+
+  return <span className={className}>{en}</span>;
 }

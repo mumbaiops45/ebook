@@ -50,7 +50,7 @@ const AboutSection = () => {
           </h2>
 
           <p className="max-w-2xl mb-6">
-            <LangText en="SALIL JAVERI" mr="सलील जव्हेरी" />  writes stories that explore human emotions, personal growth, and the journey of self-discovery.
+            <LangText en="SALIL JAVERI" hi="सलील जव्हेरी" />  writes stories that explore human emotions, personal growth, and the journey of self-discovery.
           </p>
 
           <p className="flex gap-2">
@@ -73,7 +73,7 @@ const AboutSection = () => {
             {/* Column 1 */}
             <div className="">
               <Image
-                src={lang === "mr" ? "/writter1.png" : "/WritterEnglish1.jpg"}
+                src={lang === "hi" ? "/aboutHindi1.png" : "/WritterEnglish1.jpg"}
                 alt="author image 1"
                 width={300}
                 height={200}
@@ -85,7 +85,7 @@ const AboutSection = () => {
             {/* Column 2 */}
             <div className="">
               <Image
-                src={lang === "mr" ? "/writter2.png" : "/WritterEnglish2.jpg"}
+                src={lang === "hi" ? "/aboutHindi2.png" : "/WritterEnglish2.jpg"}
                 alt="author image 1"
                 width={300}
                 height={200}
