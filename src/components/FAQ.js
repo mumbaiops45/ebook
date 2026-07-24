@@ -1,5 +1,5 @@
 "use client";
-
+import LangText from "./LangText";
 import { useState, useEffect, useRef } from "react";
 
 export default function FAQSection() {
@@ -7,26 +7,60 @@ export default function FAQSection() {
   const [visible, setVisible] = useState([]);
   const cardsRef = useRef([]);
 
-  const faqs = [
-    {
-      q: "What is this platform about?",
-      a: "Our platform allows you to read eBooks and listen to audiobooks anytime, anywhere. We provide a wide range of books across multiple genres for an enjoyable reading and listening experience."
-    },
-   
-    {
-      q: "Are audiobooks available on the platform?",
-      a: "Absolutely! Along with eBooks, we provide high-quality audiobooks that you can listen to while commuting, exercising, or relaxing."
-    },
-    // {
-    //   q: "Can I access my books on multiple devices?",
-    //   a: "Yes. Your reading progress automatically syncs across devices, so you can start reading on your phone and continue on your tablet or laptop seamlessly."
-    // },
-    {
-      q: "Do you offer different pricing plans?",
-      a: "Yes."
-    }
-  ];
 
+const faqs = [
+  {
+    q: (
+      <LangText
+        en="What is this platform about?"
+        hi="यह प्लेटफ़ॉर्म किस बारे में है?"
+      />
+    ),
+    a: (
+      <LangText
+        en="Our platform allows you to read eBooks and listen to audiobooks anytime, anywhere. We provide a wide range of books across multiple genres for an enjoyable reading and listening experience."
+        hi="हमारा प्लेटफ़ॉर्म आपको कभी भी, कहीं भी ई-पुस्तकें पढ़ने और ऑडियोबुक्स सुनने की सुविधा प्रदान करता है। हम विभिन्न विधाओं की पुस्तकों का विस्तृत संग्रह उपलब्ध कराते हैं, ताकि आपको पढ़ने और सुनने का आनंददायक अनुभव मिल सके।"
+      />
+    ),
+  },
+  {
+    q: (
+      <LangText
+        en="Are audiobooks available on the platform?"
+        hi="क्या इस प्लेटफ़ॉर्म पर ऑडियोबुक्स उपलब्ध हैं?"
+      />
+    ),
+    a: (
+      <LangText
+        en="Absolutely! Along with eBooks, we provide high-quality audiobooks that you can listen to while commuting, exercising, or relaxing."
+        hi="हाँ, बिल्कुल! ई-पुस्तकों के साथ-साथ हम उच्च-गुणवत्ता वाली ऑडियोबुक्स भी उपलब्ध कराते हैं, जिन्हें आप यात्रा के दौरान, व्यायाम करते समय या आराम करते हुए आसानी से सुन सकते हैं।"
+      />
+    ),
+  },
+  // {
+  //   q: (
+  //     <LangText
+  //       en="Can I access my books on multiple devices?"
+  //       hi="क्या मैं अपने उपकरणों पर अपनी पुस्तकों तक पहुंच सकता हूं?"
+  //     />
+  //   ),
+  //   a: (
+  //     <LangText
+  //       en="Yes. Your reading progress automatically syncs across devices, so you can start reading on your phone and continue on your tablet or laptop seamlessly."
+  //       hi="हाँ। आपकी पढ़ने की प्रगति स्वचालित रूप से उपकरणों में सिंक हो जाती है।"
+  //     />
+  //   ),
+  // },
+  {
+    q: (
+      <LangText
+        en="Do you offer different pricing plans?"
+        hi="क्या आप विभिन्न मूल्य योजनाएँ प्रदान करते हैं?"
+      />
+    ),
+    a: <LangText en="Yes." hi="हाँ।" />,
+  },
+];
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

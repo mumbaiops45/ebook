@@ -5,7 +5,7 @@ import LangText from "./LangText";
 
 const testimonials = [
   {
-    name: `श्री राजीव नंदकर`,
+   name: <LangText en="Shri Rajiv Nandkar" hi="श्री राजीव नंदकर" />,
     role: (
       <LangText
         en="Additional District Collector YASHADA, Pune, India"
@@ -21,7 +21,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: `श्रीमती स्मिता पाठक`,
+    name: <LangText en="Mrs. Smita Pathak" hi="श्रीमती स्मिता पाठक" />,
     role: (
       <LangText
         en="Retired Assistant Commissioner of Police Maharashtra Police, India"

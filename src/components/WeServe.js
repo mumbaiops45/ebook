@@ -44,8 +44,8 @@ const books = [
   {
     title: (
       <LangText
-        en="Samanta Samajik Vicharanchi"
-        hi="समानता - सामाजिक विचारों की"
+        en="Thoughts on Social Equality"
+        hi="सामाजिक समानता पर विचार"
       />
     ),
     imageEn: "/WeServe/english.png",       // English Image Path
@@ -188,7 +188,7 @@ export default function WeServe() {
           {/* LEFT COLUMN */}
           <div className="shadow-lg p-6 rounded-2xl">
             <h3 className="text-xl font-semibold text-[var(--primary)] mb-4">
-              <LangText en="Index" hi="अनुक्रमणिका" />
+              <LangText en="INDEX (Thoughts on Social Equality)" hi="अनुक्रमणिका (सामाजिक समानता पर विचार)" />
             </h3>
 
             {/* Inner 2 column for chapters */}

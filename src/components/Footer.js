@@ -67,7 +67,7 @@ export default function Footer() {
         {/* Quick Links */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-6">
-            <LangText en="Quick Links" hi="द्रुत लिंक" />
+            <LangText en="Quick Links" hi="त्वरित लिंक" />
           </h3>
           <ul className="space-y-3">
             {navLinks.map((link, index) => (
