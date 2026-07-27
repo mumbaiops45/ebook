@@ -17,22 +17,13 @@ const books = [
     imageHi: "/WeServe/hindi.png",
     imageMr: "/SAmanata3.png",
     rating: 4.7,
-    description: (
-      <>
-        <LangText
-          en="Currently, the Audio Book and E-book of 'Samanta Samajik Vicharanchi(Thoughts on Social Equality)' are available in Hindi and English languages."
-          hi="वर्तमान में 'समानता सामाजिक विचारांची(सामाजिक समानता पर विचार)' पुस्तक की ऑडियोबुक और ई-बुक हिंदी और अंग्रेज़ी भाषाओं में उपलब्ध हैं।"
-          mr={
-            <span className="translate">
-              Right now our{" "}
-              <LangText en="Samanta Samajik Vicharanchi" mr="समानता - सामाजिक विचारांची" />{" "}
-              book is published in Marathi language and in the very near future our ebooks and
-              audiobooks will be published in English, Hindi, and other regional languages too.
-            </span>
-          }
-        />
-      </>
-    ),
+description: (
+  <LangText
+    en="Currently, the Audio Book and E-book of 'Samanta Samajik Vicharanchi(Thoughts on Social Equality)' are available in Hindi and English languages."
+    hi="वर्तमान में 'समानता सामाजिक विचारांची(सामाजिक समानता पर विचार)' पुस्तक की ऑडियोबुक और ई-बुक हिंदी और अंग्रेज़ी भाषाओं में उपलब्ध हैं।"
+    mr="सध्या 'समांता सामाजिक विचारांची' या पुस्तकाचे ऑडिओबुक आणि ई-बुक मराठी, हिंदी आणि इंग्रजी भाषांमध्ये उपलब्ध आहेत."
+  />
+),
   },
 ];
 
