@@ -6,17 +6,30 @@ import { useEffect, useState } from "react";
 
 const books = [
   {
-    title: <LangText en="Thoughts on Social Equality" hi="
-सामाजिक समानता पर विचार" />,
+    title: (
+      <LangText
+        en="Thoughts on Social Equality"
+        hi="सामाजिक समानता पर विचार"
+        mr="समानता - सामाजिक विचारांची"
+      />
+    ),
     imageEn: "/WeServe/english.png",
     imageHi: "/WeServe/hindi.png",
+    imageMr: "/SAmanata3.png",
     rating: 4.7,
-    pdf: "/index.pdf",
     description: (
       <>
         <LangText
           en="Currently, the Audio Book and E-book of 'Samanta Samajik Vicharanchi(Thoughts on Social Equality)' are available in Hindi and English languages."
           hi="वर्तमान में 'समानता सामाजिक विचारांची(सामाजिक समानता पर विचार)' पुस्तक की ऑडियोबुक और ई-बुक हिंदी और अंग्रेज़ी भाषाओं में उपलब्ध हैं।"
+          mr={
+            <span className="translate">
+              Right now our{" "}
+              <LangText en="Samanta Samajik Vicharanchi" mr="समानता - सामाजिक विचारांची" />{" "}
+              book is published in Marathi language and in the very near future our ebooks and
+              audiobooks will be published in English, Hindi, and other regional languages too.
+            </span>
+          }
         />
       </>
     ),
@@ -42,13 +55,14 @@ const FeaturedBooks = () => {
         {/* Heading */}
         <div className="text-center text-[13px] mb-12">
           <span className="w-fit mx-auto px-4 py-2 rounded-full text-[var(--primary)] bg-[var(--primary)]/20 uppercase tracking-wider block mb-3">
-            <LangText en="Featured Books" hi="प्रमुख पुस्तकें" />
+            <LangText en="Featured Books" hi="प्रमुख पुस्तकें" mr="Featured Books" />
           </span>
 
           <h2 className="relative inline-block pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:rounded-full after:bg-gradient-to-r after:from-[var(--primary)] after:to-transparent mb-4 w-fit">
             <LangText
               en={<>Discover <span className="text-[var(--primary)]"> the Stories </span></>}
               hi={<>कहानियों की <span className="text-[var(--primary)]"> खोज करें </span></>}
+              mr={<div className="translate">Discover <span className="text-[var(--primary)]"> the Stories </span></div>}
             />
           </h2>
 
@@ -56,6 +70,7 @@ const FeaturedBooks = () => {
             <LangText
               en="Explore a collection of powerful stories available in both eBook and Audiobook formats."
               hi="ई-बुक और ऑडियोबुक दोनों प्रारूपों में उपलब्ध प्रभावशाली कहानियों के संग्रह का अन्वेषण करें।"
+              mr="Explore a collection of powerful stories available in both eBook and Audiobook formats."
             />
           </p>
         </div>
@@ -66,8 +81,21 @@ const FeaturedBooks = () => {
           {/* Left: Books */}
           <div className="flex flex-wrap justify-center gap-10 lg:max-w-xl w-full">
             {books.map((book, index) => {
-              // हिंदी होने पर Hindi Image, अन्यथा English Image
-              const currentImage = lang === "hi" ? book.imageHi : book.imageEn;
+              // Get current image according to selected language
+              let currentImage = book.imageEn;
+              if (lang === "hi") {
+                currentImage = book.imageHi;
+              } else if (lang === "mr") {
+                currentImage = book.imageMr;
+              }
+
+              // Get preview PDF according to selected language
+              let currentPdf = "/English_index.pdf";
+              if (lang === "hi") {
+                currentPdf = "/Hindi_index.pdf";
+              } else if (lang === "mr") {
+                currentPdf = "/index.pdf";
+              }
 
               return (
                 <div
@@ -97,12 +125,12 @@ const FeaturedBooks = () => {
                   {/* Button */}
                   <div className="flex justify-center mt-2">
                     <a
-                      href={lang === "hi" ? "/Hindi_index.pdf" : "/English_index.pdf"}
+                      href={currentPdf}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="primary-btn px-6 py-2 rounded-md cursor-pointer inline-block"
                     >
-                      <LangText en="Preview Book" hi="पुस्तक का पूर्वावलोकन" />
+                      <LangText en="Preview Book" hi="पुस्तक का पूर्वावलोकन" mr="Preview Book" />
                     </a>
                   </div>
                 </div>
@@ -116,6 +144,7 @@ const FeaturedBooks = () => {
               <LangText
                 en="Paresh Bhanushali, Correspondent, India Times News"
                 hi="परेश भानुशाली, संवाददाता, इंडिया टाइम्स न्यूज"
+                mr="Paresh Bhanushali, Correspondent, India Times News"
               />
             </h3>
 
@@ -139,6 +168,7 @@ const FeaturedBooks = () => {
               <LangText
                 en="Explore our growing collection of engaging eBooks and audiobooks."
                 hi="हमारे आकर्षक ई-पुस्तकों और ऑडियोबुक्स के निरंतर बढ़ते संग्रह का अन्वेषण करें।"
+                mr="आमच्या आकर्षक ई-बुक्स आणि ऑडिओबुक्सच्या वाढत्या संग्रहाचा शोध घ्या."
               />
             </p>
           </div>
@@ -149,7 +179,7 @@ const FeaturedBooks = () => {
             rel="noopener noreferrer"
           >
             <button className="primary-btn px-8 py-3 rounded-lg cursor-pointer">
-              <LangText en="Download the App" hi="ऐप डाउनलोड करें" />
+              <LangText en="Download the App" hi="ऐप डाउनलोड करें" mr="Download the App" />
             </button>
           </a>
         </div>

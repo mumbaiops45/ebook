@@ -5,34 +5,104 @@ import LangText from "./LangText";
 
 const testimonials = [
   {
-   name: <LangText en="Shri Rajiv Nandkar" hi="श्री राजीव नंदकर" />,
+   name: (
+      <LangText
+        en="Mr. Rajiv Nandkar"
+        mr="श्री राजीव नंदकर"
+        hi="श्री राजीव नंदकर"
+      />
+    ),
     role: (
       <LangText
-        en="Additional District Collector YASHADA, Pune, India"
+        en="Additional Collector, YASHADA, Pune"
+        mr="अतिरिक्त जिल्हाधिकारी यशदा, पुणे"
         hi="अतिरिक्त जिल्हाधिकारी यशदा, पुणे"
         className="notranslate"
       />
     ),
     date: "09 March, 2024",
     description: {
-      en: `It is often said that human beings are social by nature. However, in today’s fast-paced, competitive, and social media-driven world, meaningful communication, within oneself, within families, and within society, is gradually fading. Changing lifestyles, increasing competition and the influence of social traditions all give rise to new challenges. Addressing these issues with a positive approach has become a necessity of our times.\n\nMy friend, Mr. Salil Javeri, through his book “Thoughts on Social Equality”, has gone beyond merely presenting ideas. This book offers a comprehensive perspective for society as a whole. Its scope extends from childhood to old age, and from personal life to social responsibility. The book thoughtfully examines traditions such as gender discrimination, dowry, and kanyadaan, bringing out their social realities. It also offers guidance on building a happy married life, focusing on mutual expectations, sensitivity, and equality between partners.\n\nOne of the book’s most significant aspects is its emphasis on counselling. It addresses various forms of guidance, pre-marital, post-marital, for children, athletes, workplaces, and even residential communities, highlighting the importance of mental well-being at every stage of life. Through discussions on traffic discipline, cleanliness, and positive work culture, the book outlines a path toward becoming responsible citizens. Even in the later stages of life, it inspires readers through the noble concept of body donation, showing how one can give back to society.\n\nThis book encourages readers, students, parents, and every member of society to introspect. It instills a positive outlook toward life’s small yet meaningful aspects, reinforcing the belief that such a perspective can help build a happy and cultured society. I am confident that this book will serve as a trusted guide in the reader’s life journey.`,
-      hi: `मनुष्य एक समाजप्रिय प्राणी है, ऐसा हम कहते हैं। लेकिन, आजकल के भागदौड़ और प्रतियोगिता के सोशल मीडिया के युग में मनुष्य का खुद से, परिवार से और समाज से जो संवाद था वह कहीं लुप्त होता हुआ दिखाई दे रहा है। रिश्ते-नातों की उलझन, बदलती जीवनशैली, बढ़ती हुई प्रतियोगिता और सामाजिक प्रथा-परंपराओं का प्रभाव और इसके कारण पैदा होने वाले सवालों का सकारात्मक दृष्टिकोण से कैसे सामना करें, इसके बारे में मार्गदर्शन करना समय के चलते आवश्यक हो गया है।\n\nहमारे मित्र श्री सलील जव्हेरी जी ने स्वानुभव पर आधारित लिखी 'सामाजिक समानता के विचार' यह पुस्तक केवल विचारों का संचय नहीं, बल्कि मजबूत समाज निर्माण के लिए प्रस्तुत किया गया वस्तुनिष्ठ दृष्टिकोण है। इस पुस्तक की व्यापकता बच्चों से लेकर वृद्धों तक और व्यक्तिगत जीवन से लेकर सामाजिक जिम्मेदारी तक फैली हुई है। इस पुस्तक में बेटा-बेटी भेदभाव, दहेज पीड़िता, कन्यादान और विवाह जैसी सभी परंपराओं पर विवेचन करते हुए समाज की वास्तविकता का दर्शन कराया गया है। पति-पत्नी के बीच की अपेक्षाएँ, संवेदनशीलता और समानता इन बातों पर जोर देते हुए वैवाहिक जीवन सुखी करने के उपाय सुझाए गए हैं।\n\nइस पुस्तक की सबसे महत्त्वपूर्ण बात है, 'काउंसलिंग विवाहपूर्व, विवाह के पश्चात, बच्चों, खिलाड़ियों, यहाँ तक कि ऑफिस और गृहनिर्माण सोसायटी इन सभी का काउंसलिंग' ऐसे विविध स्तरों पर मार्गदर्शन करते हुए, मनुष्य के मन का स्वास्थ्य सुरक्षित रखने का प्रयास किया गया है। ट्रैफिक अनुशासन, साफ-सफाई, और सकारात्मक कार्यसंस्कृति ऐसे अनेक विषयों के माध्यम से एक जिम्मेदार नागरिक निर्माण के सूत्र प्रस्तुत किए गए हैं। जीवन के अंतिम पड़ाव पर भी 'देहदान' जैसी महान अवधारणा के माध्यम से समाज का ऋण कैसे चुका सकते हैं, इसका प्रेरणादायी विवेचन इस पुस्तक में दिखाई देता है।\n\nयह पुस्तक पाठक, विद्यार्थी, माता-पिता और समाज के प्रत्येक सदस्य को आत्मनिरीक्षण करने पर मजबूर करने वाली है। जीवन की छोटी-छोटी बातों की तरफ देखने का दृष्टिकोण सकारात्मक हो, तो हम एक आनंदमय और सुसंस्कृत समाज निर्माण कर सकते हैं, यह विश्वास इस पुस्तक से हमें मिलता है। पाठकों के लिए यह पुस्तक उनके जीवन के सफर में निश्चित ही मार्गदर्शक साबित होगी, इसका मुझे पूरा विश्वास है।`,
+      mr: `माणूस हा समाजप्रिय प्राणी आहे, असे आपण म्हणतो; मात्र, आजच्या धावपळीच्या आणि स्पर्धेच्या सोशल मीडियाच्या युगात माणसाचा स्वतःशी, कुटुंबाशी आणि समाजाशी असलेला संवाद कुठेतरी हरवत चालला आहे. नातेसंबंधांमधील गुंतागुंत, बदलती जीवनशैली, वाढत चाललेली स्पर्धा आणि सामाजिक कढी-परंपरांचा प्रभाव यामुळे निर्माण होणाऱ्या प्रश्नांना सकारात्मकरित्या कसे हाताळायचे, याचे मार्गदर्शन करणे ही काळाची गरज बनली आहे.\n
+
+आमचे मित्र श्री. सलील जव्हेरी यांनी स्वानुभवावर लिहिलेले 'समानता सामाजिक विचारांची' हे पुस्तक केवळ विचारांचे संकलन नसून, सुदृढ समाजनिर्मितीसाठी मांडलेला एक बहुस्तरीय दृष्टिकोन आहे. या पुस्तकाची व्याप्ती बालपणापासून वृद्धत्वापर्यंत आणि वैयक्तिक यशापासून सामाजिक जबाबदारीपर्यंत पसरलेली आहे.\n
+
+या पुस्तकात मुलगा-मुलगी भेदभाव, हुंडाबळी, कन्यादान आणि लग्न यांसारख्या परंपरांवर विवेचन करून सामाजिक वास्तवाचे दर्शन घडवण्यात आले आहे. पती-पत्नीमधील अपेक्षा, संवेदनशीलता आणि समानता या बाबींवर भर देऊन वैवाहिक आयुष्य सुखी करण्याचे मार्ग सुचवले आहेत.\n
+
+या पुस्तकाचे सर्वात महत्त्वाचे वैशिष्ट्य म्हणजे 'समुपदेशन'. विद्यार्थी, पालक आणि कुटुंब यांना विविध स्तरांवर मार्गदर्शन करून माणसाच्या मनाचे आरोग्य जपण्याचा प्रयत्न केला गेला आहे. ट्रॅफिक सिग्नल, स्वच्छता आणि सामाजिक कार्यक्रमांसारख्या विषयांवर एक जबाबदार नागरिक घडवण्याचे सूत्र मांडले आहे.\n
+
+आयुष्याच्या शेवटच्या टप्प्यावरही 'देहदान' सारख्या थोर संकल्पनेतून समाजाचे ऋण कसे फेडता येईल, याचे प्रेरणादायी विवेचन या पुस्तकात आहे.\n
+
+हे पुस्तक वाचक, विद्यार्थी, पालक आणि समाजातील प्रत्येक घटकाला अंतर्मुख करायला लावणारे आहे. आयुष्यातील छोट्या-छोट्या गोष्टींकडे सकारात्मक दृष्टिकोन ठेवून आपण एक चांगला आणि सुसंस्कृत समाज घडवू शकतो, हा विश्वास हे पुस्तक देते. वाचकांना हे पुस्तक त्यांच्या जीवनप्रवासात नक्कीच मार्गदर्शक ठरेल, याची मला खात्री आहे.`,
+      hi: `मनुष्य एक समाजप्रिय प्राणी है, ऐसा हम कहते हैं। लेकिन, आजकल के भागदौड़ और प्रतियोगिता के सोशल मीडिया के युग में मनुष्य का खुद से, परिवार से और समाज से जो संवाद था वह कहीं लुप्त होता हुआ दिखाई दे रहा है। रिश्ते-नातों की उलझन, बदलती जीवनशैली, बढ़ती हुई प्रतियोगिता और सामाजिक प्रथा-परंपराओं का प्रभाव और इसके कारण पैदा होने वाले सवालों का सकारात्मक दृष्टिकोण से कैसे सामना करें, इसके बारे में मार्गदर्शन करना समय के चलते आवश्यक हो गया है।\n
+
+हमारे मित्र श्री सलील जव्हेरी जी ने स्वानुभव पर आधारित लिखी 'सामाजिक समानता के विचार' यह पुस्तक केवल विचारों का संचय नहीं, बल्कि मजबूत समाज निर्माण के लिए प्रस्तुत किया गया वस्तुनिष्ठ दृष्टिकोण है। इस पुस्तक की व्यापकता बच्चों से लेकर वृद्धों तक और व्यक्तिगत जीवन से लेकर सामाजिक जिम्मेदारी तक फैली हुई है।\n
+
+इस पुस्तक में बेटा-बेटी भेदभाव, दहेज पीड़िता, कन्यादान और विवाह जैसी सभी परंपराओं पर विवेचन करते हुए समाज की वास्तविकता का दर्शन कराया गया है। पति-पत्नी के बीच की अपेक्षाएँ, संवेदनशीलता और समानता इन बातों पर जोर देते हुए वैवाहिक जीवन सुखी करने के उपाय सुझाए गए हैं।\n
+
+इस पुस्तक की सबसे महत्त्वपूर्ण बात है, 'काउंसलिंग विवाहपूर्व, विवाह के पश्चात, बच्चों, खिलाड़ियों, यहाँ तक कि ऑफिस और गृहनिर्माण सोसायटी इन सभी का काउंसलिंग' ऐसे विविध स्तरों पर मार्गदर्शन करते हुए, मनुष्य के मन का स्वास्थ्य सुरक्षित रखने का प्रयास किया गया है। ट्रैफिक अनुशासन, साफ-सफाई, और सकारात्मक कार्यसंस्कृति ऐसे अनेक विषयों के माध्यम से एक जिम्मेदार नागरिक निर्माण के सूत्र प्रस्तुत किए गए हैं।\n
+
+जीवन के अंतिम पड़ाव पर भी 'देहदान' जैसी महान अवधारणा के माध्यम से समाज का ऋण कैसे चुका सकते हैं, इसका प्रेरणादायी विवेचन इस पुस्तक में दिखाई देता है।\n
+
+यह पुस्तक पाठक, विद्यार्थी, माता-पिता और समाज के प्रत्येक सदस्य को आत्मनिरीक्षण करने पर मजबूर करने वाली है। जीवन की छोटी-छोटी बातों की तरफ देखने का दृष्टिकोण सकारात्मक हो, तो हम एक आनंदमय और सुसंस्कृत समाज निर्माण कर सकते हैं, यह विश्वास इस पुस्तक से हमें मिलता है। पाठकों के लिए यह पुस्तक उनके जीवन के सफर में निश्चित ही मार्गदर्शक साबित होगी, इसका मुझे पूरा विश्वास है।`,
+      en: `We say that humans are social beings; however, in today's fast-paced, competitive social media era, human connection with oneself, family, and society is fading. Guiding people on how to positively address issues arising from complex relationships, changing lifestyles, increasing competition, and social traditions has become a necessity of our time.\n
+
+Written from personal experience by our friend Mr. Salil Jhaveri, 'Samanta Samajik Vicharanchi' is not merely a compilation of thoughts, but a multi-dimensional vision for building a healthy society. The scope of this book spans from childhood to old age, and from personal success to social responsibility.\n
+
+The book reflects social reality by discussing issues like gender discrimination, dowry victims, and traditions like Kanyadaan and marriage. By emphasizing expectations, sensitivity, and equality between spouses, it suggests ways to lead a happy married life.\n
+
+The most key feature of this book is 'Counseling'. By providing guidance at various levels for students, parents, and families, it strives to safeguard mental health. It lays down formulas for building responsible citizens through topics like traffic discipline, cleanliness, and work culture.\n
+
+Even at the final stage of life, the book presents an inspiring discussion on how one can repay society through noble concepts like body donation.\n
+
+This book compels readers, students, parents, and every member of society to reflect within. It inspires confidence that with a positive outlook on small aspects of life, we can create a happy and cultured society. I am confident this book will serve as a guiding light on the journey of life.`
     },
     rating: 5,
   },
   {
-    name: <LangText en="Mrs. Smita Pathak" hi="श्रीमती स्मिता पाठक" />,
+   name: (
+      <LangText
+        en="Mrs. Smita Pathak"
+        mr="श्रीमती स्मिता पाठक"
+        hi="श्रीमती स्मिता पाठक"
+      />
+    ),
     role: (
       <LangText
-        en="Retired Assistant Commissioner of Police Maharashtra Police, India"
-        hi="निवृत्त सहाय्याक पोलिस आयुक्त महाराष्ट्र पोलीस"
+        en="Retired Assistant Commissioner of Police, Maharashtra Police"
+        mr="निवृत्त सहाय्याक पोलिस आयुक्त महाराष्ट्र पोलीस"
+        hi="निवृत्त पोलिस सहाय्यक आयुक्त महाराष्ट्र पोलिस"
         className="notranslate"
       />
     ),
     date: "18 Dec, 2021",
     description: {
-      en: `I read “Thoughts on Social Equality”, written by Mr. Salil Javeri. The book reflects on the realities of society and presents the author’s thoughts on the issues that have deeply concerned him.\n\nTo begin with, the book’s cover is striking and expressive. Drawing from his observations of society, the author shares his perspectives on various topics. His thoughts are shaped and encouraged by meaningful conversations with his parents, wife, and daughters. He also presents everyday challenges from real life, along with practical ways to address them.\n\nThrough his work in various organizations and his leadership roles, he has closely observed how discrimination between boys and girls leads to significant harm in society. Using clear examples, he highlights differences in behavior, character, and the subordinate status assigned to women. Despite their intelligence and capability, women are frequently denied equal opportunities, yet they are fully capable of working alongside men and participating in decision- making, as he effectively demonstrates through his observations.\n\nHe also points out that in today’s competitive world, the rush to become wealthy quickly often leads people down unethical paths, resulting in erosion of mental well-being. The rising rate of crime, in many cases, reflects a lack of emotional grounding within families. Values such as love, affection, and meaningful communication are often missing.\n\nBy presenting such issues concisely and thoughtfully, Mr. Salil compels readers to reflect deeply.\n\nThe book brings forward fresh ideas and offers strong potential for social awareness and reform. I extend my best wishes for his courageous writing and his efforts toward social enlightenment.`,
-      hi: `श्री. सलील जव्हेरी लिखित 'सामाजिक समानता के विचार' अपने वि यह पुस्तक मैंने पढ़ी। समाज में रहते हुए उन्हें जो बातें अप्रिय लगीं, उन सभी विषयों पर उन्होंनेचार प्रस्तुत किए हैं।\n\nपुस्तक के विषय में बात करें तो पुस्तक का आवरण अत्यंत जीवंत और आकर्षक है। समाज के जो जो विषय उनके सामने आए, उन विषयों के बारे में अपने विचार इस पुस्तक में प्रस्तुत करते हुए उनके इन्ही विचारों को प्रोत्साहन देने वाले उनके माता-पिता, पत्नी और दोनों बेटियाँ इनसे की गई बातचीत और चर्चाओं के माध्यम से दैनिक जीवन की छोटी-छोटी कठिनाईयों और उनके समाधान को बहुत ही अच्छे ढंग से प्रस्तुत किया गया है।\n\nसाथ ही, अनेक संस्थाओं में उन्होंने प्रमुख पद की जिम्मेदारी बहुत अच्छे से निभाई है। उस समय उन्हें यह बात ध्यान में आई कि समाज में बेटा-बेटी में किए जाने वाले भेद के कारण उनका किस प्रकार नुकसान हो रहा है, और इस बात को उन्होंने उदाहरण सहित स्पष्ट किया है। स्त्री-पुरुष का व्यवहार, प्रथाएँ, स्त्री को समाज में दिया जाने वाला निम्न स्थान, स्त्री बुद्धिमान है, साथ ही वह पुरुषों के कंधे से कंधा मिलाकर काम करने और निर्णय लेने में कैसे सक्षम है, यह सब अपने उत्तम निरीक्षण की सहायता से प्रस्तुत किया है।\n\nसाथ ही, आज के प्रतियोगिता के युग में जल्द से जल्द धनवान होने का मार्ग आपराधिक प्रवृत्ति से होकर जाता है, इसलिए मानसिक संतुलन बिगड़ने का प्रमाण भी बढ़ गया है। समाज में आपराधिक प्रवृत्ति बढ़ने में घर के संस्कार, प्रेम, अपनापन, संवाद ऐसी मानसिक दृष्टिकोण से जुड़ी बातें भी जिम्मेदार होती हैं, यह वास्तविकता है।\n\nऐसे अनेक विषय संक्षिप्त में प्रस्तुत करके श्री. सलील जी ने पाठकों को विचार करने के लिए मजबूर कर दिया है।\n\nनए-नए विचार लेकर यह पुस्तक समाज के सामने रखी गई है। इससे समाज प्रबोधन होने की बहुत संभावना है। उनके इस साहसी लेखन और समाज प्रबोधन के लिए अनेकानेक शुभकामनाएँ।`,
+      mr: `श्री. सलील जव्हेरी लिखित 'समानता सामाजिक विचारांची' हे पुस्तक वाचले. समाजात वावरत असताना त्यांना ज्या ज्या गोष्टी खटकल्या, त्या त्या विषयांवर त्यांनी आपले विचार मांडले आहेत.\n
+
+पुस्तकाबद्दल बोलायचे, तर प्रथमत: पुस्तकाचे मुखपृष्ठ खूपच बोलके आणि देखणे आहे. त्यांच्या निदर्शनास समाजातील जे विषय आले, त्या विषयांबद्दल आपले विचार या पुस्तकात मांडत असताना त्यांच्या विचारांना प्रोत्साहन देणारे त्यांचे आई-वडील, पत्नी व मुली यांच्याशी केलेल्या संवादांमधून व चर्चांमधून दैनंदिन जीवनातील छोट्या छोट्या अडचणी व त्यावरील उपाय उत्तर प्रकारे मांडले आहेत.\n
+
+तसेच, बऱ्याच संस्थांमध्ये त्यांनी प्रमुखपद भूषवले आहे. त्या अनुषंगाने त्यांच्या निरीक्षणास आलेले, समाजात असलेल्या मुला-मुलींमधील फरकामुळे त्यांचे कसे नुकसान होते, हे उदाहरणासह स्पष्ट केले आहे. स्त्री-पुरुषांचे वागणे, चालिरीती, स्त्रीला समाजात मिळणारी दुय्यम वागणूक, स्त्री बुद्धिमान असणे, तसेच पुरुषांच्या बरोबरीने काम करण्यास व निर्णय घेण्यास स्त्री कशी सक्षम आहे, हे आपल्या उत्तम निरीक्षणातून नमूद केले आहे.\n
+
+तसेच, आजच्या ह्या स्पर्धेच्या युगात लवकरात लवकर श्रीमंत होण्याचा मार्ग गुन्हेगारी प्रवृत्तीतून जातो, त्यामुळे मानसिक संतुलन हरवण्याचे प्रमाणही खूप आहे. समाजात गुन्हेगारीचे प्रमाण वाढण्यास घरातील संस्कार, प्रेम, आपुलकी, संवाद अशा मानसिकदृष्ट्या निगडित असलेल्या गोष्टी कारणीभूत आहेत, हे खरे आहे.\n
+
+असे अनेक विषय थोडक्यात मांडून श्री. सलील यांनी वाचकांना विचार करायला लावले आहे. नवीन नवीन विचार घेऊन हे पुस्तक समाजापुढे आले आहे. यातून समाजबोधन होण्यासाठी खूप वाव आहे. त्यांच्या या धाडसी लिखाणासाठी आणि समाजप्रबोधनासाठी अनेक शुभेच्छा.`,
+      hi: `श्री. सलील जव्हेरी लिखित 'सामाजिक समानता के विचार' यह पुस्तक मैंने पढ़ी। समाज में रहते हुए उन्हें जो बातें अप्रिय लगीं, उन सभी विषयों पर उन्होंने अपने विचार प्रस्तुत किए हैं।\n
+
+पुस्तक के विषय में बात करें तो पुस्तक का आवरण अत्यंत जीवंत और आकर्षक है। समाज के जो जो विषय उनके सामने आए, उन विषयों के बारे में अपने विचार इस पुस्तक में प्रस्तुत करते हुए उनके इन्ही विचारों को प्रोत्साहन देने वाले उनके माता-पिता, पत्नी और दोनों बेटियाँ इनसे की गई बातचीत और चर्चाओं के माध्यम से दैनिक जीवन की छोटी-छोटी कठिनाईयों और उनके समाधान को बहुत ही अच्छे ढंग से प्रस्तुत किया गया है।\n
+
+साथ ही, अनेक संस्थाओं में उन्होंने प्रमुख पद की जिम्मेदारी बहुत अच्छे से निभाई है। उस समय उन्हें यह बात ध्यान में आई कि समाज में बेटा-बेटी में किए जाने वाले भेद के कारण उनका किस प्रकार नुकसान हो रहा है, और इस बात को उन्होंने उदाहरण सहित स्पष्ट किया है। स्त्री-पुरुष का व्यवहार, प्रथाएँ, स्त्री को समाज में दिया जाने वाला निम्न स्थान, स्त्री बुद्धिमान है, साथ ही वह पुरुषों के कंधे से कंधा मिलाकर काम करने और निर्णय लेने में कैसे सक्षम है, यह सब अपने उत्तम निरीक्षण की सहायता से प्रस्तुत किया है।\n
+
+साथ ही, आज के प्रतियोगिता के युग में जल्द से जल्द धनवान होने का मार्ग आपराधिक प्रवृत्ति से होकर जाता है, इसलिए मानसिक संतुलन बिगड़ने का प्रमाण भी बढ़ गया है। समाज में आपराधिक प्रवृत्ति बढ़ने में घर के संस्कार, प्रेम, अपनापन, संवाद ऐसी मानसिक दृष्टिकोण से जुड़ी बातें भी जिम्मेदार होती हैं, यह वास्तविकता है।\n
+
+ऐसे अनेक विषय संक्षिप्त में प्रस्तुत करके श्री. सलील जी ने पाठकों को विचार करने के लिए मजबूर कर दिया है। नवीन विचारों को लेकर यह पुस्तक समाज के सामने रखी गई है। इससे समाज प्रबोधन होने की बहुत संभावना है। उनके इस साहसी लेखन और समाज प्रबोधन के लिए अनेकानेक शुभकामनाएँ।`,
+      en: `I read the book 'Samanta Samajik Vicharanchi' written by Mr. Salil Jhaveri. He has expressed his thoughts on various issues that troubled him while observing society.\n
+
+Speaking of the book, first of all, the cover design is extremely vivid and appealing. While presenting his ideas on societal issues, he beautifully articulates daily life challenges and solutions through conversations with his parents, wife, and daughters who encouraged his vision.\n
+
+Having held leadership positions in various organizations, he observed firsthand how gender discrimination harms children, demonstrating this with clear examples. Through keen observation, he highlights gender dynamics, societal biases against women, and emphasizes how women are intelligent and fully capable of working alongside men and making decisions.\n
+
+Furthermore, in today's competitive world, the urge to get rich quick often leads to criminal tendencies, causing severe mental imbalance. It is a fact that lack of values, love, affection, and communication at home contributes to rising crime rates.\n
+
+By concisely presenting such diverse topics, Mr. Salil has compelled readers to think. This book offers fresh perspectives to society with vast scope for social awareness. Warm wishes for his courageous writing and social enlightenment.`
     },
     rating: 5,
   },
@@ -65,10 +135,6 @@ export default function Testimonials() {
   const [active, setActive] = useState(0);
   const t = testimonials[active];
 
-  // दोनों भाषाओँ के पैराग्राफ तैयार करना
-  const enLines = t.description.en.split("\n").filter((line) => line.trim() !== "");
-  const hiLines = t.description.hi.split("\n").filter((line) => line.trim() !== "");
-
   return (
     <section id="testimonials" className="relative bg-[#fdf8f2] overflow-hidden py-20 px-8 md:px-15 lg:px-16">
 
@@ -84,17 +150,17 @@ export default function Testimonials() {
             <h2
               className="relative inline-block pb-4 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:rounded-full after:bg-gradient-to-r after:from-[var(--primary)] after:to-transparent mb-4"
             >
-              <span className="text-[var(--primary)]">
-                <LangText
-                  en="Review"
-                  hi="हमारे पाठक क्या कहते हैं"
-                />
-              </span>
+              <LangText 
+                en={<>What Our <span className="text-[var(--primary)]">Readers Say</span></>}
+                mr={<>वाचक <span className="text-[var(--primary)]">काय म्हणतात</span></>}
+                hi={<>पाठकों की <span className="text-[var(--primary)]">प्रतिक्रियाएँ</span></>}
+              />
             </h2>
             <p className="max-w-3xl">
-              <LangText
+              <LangText 
                 en="Real experiences from readers who enjoy seamless eBook and audiobook access every day."
-                hi="उन पाठकों के वास्तविक अनुभव जानें, जो प्रतिदिन हमारी ई-पुस्तकों और ऑडियोबुक्स का सहजता से आनंद लेते हैं।"
+                mr="ई-बुक आणि ऑडिओबुकचा आनंद घेणाऱ्या वाचकांचे अनुभव."
+                hi="ई-बुक और ऑडियोबुक का आनंद लेने वाले पाठकों के वास्तविक अनुभव।"
               />
             </p>
           </div>
@@ -111,15 +177,18 @@ export default function Testimonials() {
               <div>
                 <QuoteIcon />
 
-                <div className="mt-4">
-                  {enLines.map((line, i) => (
-                    <p key={i} className="mb-4 text-justify leading-relaxed">
-                      <LangText
-                        en={line}
-                        hi={hiLines[i] || line}
-                      />
-                    </p>
-                  ))}
+                <div className="">
+                  <LangText
+                    en={t.description.en.split("\n").filter(line => line.trim() !== "").map((line, i) => (
+                      <p key={i} className="m-2 text-justify leading-relaxed">{line}</p>
+                    ))}
+                    mr={t.description.mr.split("\n").filter(line => line.trim() !== "").map((line, i) => (
+                      <p key={i} className="m-2 text-justify leading-relaxed">{line}</p>
+                    ))}
+                    hi={t.description.hi.split("\n").filter(line => line.trim() !== "").map((line, i) => (
+                      <p key={i} className="m-2 text-justify leading-relaxed">{line}</p>
+                    ))}
+                  />
                 </div>
               </div>
 
@@ -150,9 +219,8 @@ export default function Testimonials() {
                       <button
                         key={i}
                         onClick={() => setActive(i)}
-                        className={`rounded-full bg-[var(--primary)] transition-all duration-300 ${
-                          active === i ? "w-6 h-2 opacity-100" : "w-2 h-2 opacity-25"
-                        }`}
+                        className={`rounded-full bg-[var(--primary)] transition-all duration-300 ${active === i ? "w-6 h-2 opacity-100" : "w-2 h-2 opacity-25"
+                          }`}
                       />
                     ))}
                   </div>

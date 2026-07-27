@@ -9,10 +9,12 @@ import LangText from "./LangText";
 export default function Footer() {
   const pathname = usePathname();
   const [lang, setLang] = useState("en");
+
   const getCurrentLang = () => {
     const match = document.cookie.match(/googtrans=\/en\/(\w+)/);
     return match ? match[1] : "en";
   };
+
   useEffect(() => {
     setLang(getCurrentLang());
 
@@ -22,13 +24,14 @@ export default function Footer() {
 
     return () => clearInterval(interval);
   }, []);
+
   const navLinks = [
-    { name: <LangText en="Home" hi="होम" />, path: "/" },
-    { name: "About Us", path: "/#about" },
-    { name: <LangText en="What We Offer" hi="हम क्या प्रदान करते हैं" className="notranslate" />, path: "/#services" },
-    { name: <LangText en="Books" hi="पुस्तकें" className="notranslate" />, path: "/#Books" },
-    { name: <LangText en="Testimonials" hi="पाठकों की प्रतिक्रियाएँ" className="notranslate" />, path: "/#testimonials" },
-    { name: "FAQ", path: "/#faq" },
+    { name: <LangText en="Home" hi="होम" mr="मुख पृष्ठ" />, path: "/" },
+    { name: <LangText en="About Us" hi="हमारे बारे में" mr="आमच्याबद्दल" />, path: "/#about" },
+    { name: <LangText en="What We Offer" hi="हम क्या प्रदान करते हैं" mr="आम्ही काय देऊ शकतो" className="notranslate" />, path: "/#services" },
+    { name: <LangText en="Books" hi="पुस्तकें" mr="पुस्तके" className="notranslate" />, path: "/#Books" },
+    { name: <LangText en="Testimonials" hi="पाठकों की प्रतिक्रियाएँ" mr="प्रतिक्रिया" className="notranslate" />, path: "/#testimonials" },
+    { name: <LangText en="FAQ" hi="सामान्य प्रश्न" mr="वारंवार विचारले जाणारे प्रश्न" />, path: "/#faq" },
   ];
 
   const productLinks = [
@@ -39,7 +42,6 @@ export default function Footer() {
 
   return (
     <footer className="bg-[var(--primary)] text-white text-[13px]">
-
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-10 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
 
@@ -49,10 +51,15 @@ export default function Footer() {
             className="text-white font-bold text-xl tracking-wide mb-5 notranslate"
             translate="no"
           >
-            {lang === "hi" ? "सलील जव्हेरी" : "SALIL JAVERI"}
+            {lang === "hi" || lang === "mr" ? "सलील जव्हेरी" : "SALIL JAVERI"}
           </div>
           <p className="text-sm leading-7">
-            <LangText en="SALIL JAVERI" hi="सलील जव्हेरी" />  writes stories that explore human emotions, personal growth, and the journey of self-discovery.
+            <LangText en="SALIL JAVERI" hi="सलील जव्हेरी" mr="सलील जव्हेरी" />{" "}
+            <LangText
+              en="writes stories that explore human emotions, personal growth, and the journey of self-discovery."
+              hi="ऐसी कहानियाँ लिखते हैं जो मानवीय भावनाओं, व्यक्तिगत विकास और आत्म-खोज की यात्रा की खोज करती हैं।"
+              mr="मानवी भावना, वैयक्तिक विकास आणि आत्मशोधाच्या प्रवासाचा शोध घेणाऱ्या कथा लिहितात."
+            />
           </p>
           <a
             href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
@@ -60,24 +67,25 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="w-fit mt-6 block bg-white text-[color:var(--primary)] px-10 py-2 rounded-md font-semibold hover:opacity-90 transition"
           >
-            Download the App
+            <LangText en="Download the App" hi="ऐप डाउनलोड करें" mr="ॲप डाउनलोड करा" />
           </a>
         </div>
 
         {/* Quick Links */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-6">
-            <LangText en="Quick Links" hi="त्वरित लिंक" />
+            <LangText en="Quick Links" hi="त्वरित लिंक" mr="द्रुत लिंक" />
           </h3>
           <ul className="space-y-3">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <Link
                   href={link.path}
-                  className={`transition duration-300 pb-1 ${pathname === link.path
-                    ? "border-b-2 border-white text-white"
-                    : "hover:opacity-80"
-                    }`}
+                  className={`transition duration-300 pb-1 ${
+                    pathname === link.path
+                      ? "border-b-2 border-white text-white"
+                      : "hover:opacity-80"
+                  }`}
                 >
                   {link.name}
                 </Link>
@@ -86,43 +94,19 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Products / eBook Section */}
-        {/* <div>
-          <h3 className="text-white text-lg font-semibold mb-6">
-            Our Products
-          </h3>
-          <ul className="space-y-3">
-            {productLinks.map((product) => (
-              <li key={product.name}>
-                <Link
-                  href={product.path}
-                  className={`transition duration-300 pb-1 ${
-                    pathname === product.path
-                      ? "border-b-2 border-white text-white"
-                      : "hover:opacity-80"
-                  }`}
-                >
-                  {product.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div> */}
-
-        {/* Contact Information */}
         {/* Contact Information */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-6">
-            Contact Information
+            <LangText en="Contact Information" hi="संपर्क जानकारी" mr="संपर्क माहिती" />
           </h3>
 
           <ul className="space-y-4">
             <li className="flex items-center gap-2">
               <MapPin size={22} className="text-white flex-shrink-0" />
-              Mumbai, Maharashtra, India
+              <LangText en="Mumbai, Maharashtra, India" hi="मुंबई, महाराष्ट्र, भारत" mr="मुंबई, महाराष्ट्र, भारत" />
             </li>
 
-            {/* ✅ Clickable Phone */}
+            {/* Clickable Phone */}
             <li className="flex items-center gap-2">
               <Phone size={22} className="text-white flex-shrink-0" />
               <a
@@ -133,7 +117,7 @@ export default function Footer() {
               </a>
             </li>
 
-            {/* ✅ Clickable Email */}
+            {/* Clickable Email */}
             <li className="flex items-center gap-2">
               <Mail size={22} className="text-white flex-shrink-0" />
               <a
@@ -144,9 +128,6 @@ export default function Footer() {
               </a>
             </li>
           </ul>
-
-          {/* Social Media Links */}
-
         </div>
       </div>
 
@@ -154,19 +135,18 @@ export default function Footer() {
       <div className="border-t border-white/30">
         <div className="max-w-7xl mx-auto px-10 py-5 flex items-center justify-between text-sm text-white/70">
           <div className="notranslate" translate="no">
-            © {new Date().getFullYear()} {lang === "hi" ? "सलील जव्हेरी" : "SALIL JAVERI"}.
+            © {new Date().getFullYear()} {lang === "hi" || lang === "mr" ? "सलील जव्हेरी" : "SALIL JAVERI"}.
           </div>
           <div className="flex gap-3">
             <Link scroll={false} href="/terms-and-conditions" className="hover:underline">
-              Terms & Conditions
+              <LangText en="Terms & Conditions" hi="नियम और शर्तें" mr="नियम आणि अटी" />
             </Link>
             <Link scroll={false} href="privacy-policy" className="hover:underline">
-              Privacy Policy
+              <LangText en="Privacy Policy" hi="गोपनीयता नीति" mr="गोपनीयता धोरण" />
             </Link>
           </div>
         </div>
       </div>
-
     </footer>
   );
 }

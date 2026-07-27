@@ -9,7 +9,7 @@ export default function GoogleTranslateScript() {
         new window.google.translate.TranslateElement(
           {
             pageLanguage: "en",
-            includedLanguages: "en,hi", // ✅ English and Hindi only
+            includedLanguages: "en,hi,mr", // ✅ Added Marathi (mr)
           },
           "google_translate_element"
         );

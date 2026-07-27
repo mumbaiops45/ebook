@@ -11,6 +11,7 @@ const AboutSection = () => {
   const [lang, setLang] = useState("en");
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
   const controls = useAnimation();
+
   useEffect(() => {
     const cookies = document.cookie.split("; ");
     const langCookie = cookies.find((row) =>
@@ -32,6 +33,19 @@ const AboutSection = () => {
     }
   }, [inView, controls]);
 
+  // Helper function to get image src based on language
+  const getImage1 = () => {
+    if (lang === "hi") return "/aboutHindi1.png";
+    if (lang === "mr") return "/writter1.png";
+    return "/WritterEnglish1.jpg";
+  };
+
+  const getImage2 = () => {
+    if (lang === "hi") return "/aboutHindi2.png";
+    if (lang === "mr") return "/writter2.png";
+    return "/WritterEnglish2.jpg";
+  };
+
   return (
     <section
       id="about"
@@ -50,7 +64,7 @@ const AboutSection = () => {
           </h2>
 
           <p className="max-w-2xl mb-6">
-            <LangText en="SALIL JAVERI" hi="सलील जव्हेरी" />  writes stories that explore human emotions, personal growth, and the journey of self-discovery.
+            <LangText en="SALIL JAVERI" hi="सलील जव्हेरी" mr="सलील जव्हेरी" /> writes stories that explore human emotions, personal growth, and the journey of self-discovery.
           </p>
 
           <p className="flex gap-2">
@@ -68,30 +82,28 @@ const AboutSection = () => {
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={controls}
-            className="grid  md:grid-cols-2 grid-cols-1 gap-4"
+            className="grid md:grid-cols-2 grid-cols-1 gap-4"
           >
             {/* Column 1 */}
             <div className="">
               <Image
-                src={lang === "hi" ? "/aboutHindi1.png" : "/WritterEnglish1.jpg"}
+                src={getImage1()}
                 alt="author image 1"
                 width={300}
                 height={200}
                 className={`h-[55vh] w-full object-fit`}
               />
-
             </div>
 
             {/* Column 2 */}
             <div className="">
               <Image
-                src={lang === "hi" ? "/aboutHindi2.png" : "/WritterEnglish2.jpg"}
-                alt="author image 1"
+                src={getImage2()}
+                alt="author image 2"
                 width={300}
                 height={200}
                 className="h-[55vh] w-full object-fit"
               />
-
             </div>
           </motion.div>
         </div>

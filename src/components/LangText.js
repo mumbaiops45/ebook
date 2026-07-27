@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export default function LangText({ en, hi, className = "" }) {
+export default function LangText({ en, hi, mr, className = "" }) {
   const [lang, setLang] = useState("en");
 
   useEffect(() => {
@@ -19,9 +19,16 @@ export default function LangText({ en, hi, className = "" }) {
     return () => clearInterval(interval);
   }, []);
 
+  // ✅ Check for Hindi
   if (lang === "hi" && hi) {
     return <span className={`notranslate ${className}`}>{hi}</span>;
   }
 
+  // ✅ Check for Marathi
+  if (lang === "mr" && mr) {
+    return <span className={`notranslate ${className}`}>{mr}</span>;
+  }
+
+  // Default to English
   return <span className={className}>{en}</span>;
 }

@@ -3,11 +3,22 @@ import { useEffect, useState } from "react";
 
 export default function LanguageSwitcher() {
   const [scriptLoaded, setScriptLoaded] = useState(false);
+  const [currentLang, setCurrentLang] = useState("en");
+
+  // Helper to get active language code
+  const getCurrentLang = () => {
+    if (typeof document === "undefined") return "en";
+    const match = document.cookie.match(/googtrans=\/en\/(\w+)/);
+    return match ? match[1] : "en";
+  };
 
   useEffect(() => {
     const domain = window.location.hostname;
 
-    // ✅ Default English only first time
+    // Set current active language from cookie
+    setCurrentLang(getCurrentLang());
+
+    // Default English only first time
     if (!document.cookie.includes("googtrans")) {
       document.cookie = `googtrans=/en/en; path=/; domain=${domain}`;
       document.cookie = `googtrans=/en/en; path=/`;
@@ -31,7 +42,7 @@ export default function LanguageSwitcher() {
       new window.google.translate.TranslateElement(
         {
           pageLanguage: "en",
-          includedLanguages: "en,hi",
+          includedLanguages: "en,hi,mr",
           layout:
             window.google.translate.TranslateElement.InlineLayout.SIMPLE,
         },
@@ -66,15 +77,15 @@ export default function LanguageSwitcher() {
         }}
       ></div>
 
-      {/* Custom dropdown */}
+      {/* Custom dropdown showing current active language */}
       <select
+        value={currentLang}
         onChange={(e) => changeLanguage(e.target.value)}
         className="bg-white/10 text-white border border-white/30 rounded-md px-3 py-1 text-sm cursor-pointer hover:bg-white/20 transition"
-        defaultValue=""
       >
-        <option className="text-black hidden" value="" disabled>Language</option>
         <option className="text-black" value="en">English</option>
         <option className="text-black" value="hi">हिंदी (Hindi)</option>
+        <option className="text-black" value="mr">मराठी (Marathi)</option>
       </select>
     </div>
   );
