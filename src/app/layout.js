@@ -14,7 +14,21 @@ export async function generateMetadata() {
 
   return {
     title: t("meta_title"),
-    description: t("meta_description"),
+    description: t("meta_description"), 
+    keywords: [
+      "Salil Javeri",
+      "Salil Javeri Books",
+      "Samanta Samajik Vicharanchi",
+      "Thoughts on Social Equality",
+      "Social Equality Book",
+      "eBooks",
+      "Audiobooks",
+      "Marathi Books",
+      "Hindi Books",
+      "English Books",
+      "Self Discovery Stories",
+      "Human Emotions Books"
+    ],
     icons: {
       icon: "/WeServe/hindi.png",
       shortcut: "/WeServe/hindi.png",

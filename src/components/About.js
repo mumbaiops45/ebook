@@ -64,9 +64,12 @@ const AboutSection = () => {
           </h2>
 
           <p className="max-w-2xl mb-6">
-            <LangText en="SALIL JAVERI" hi="सलील जव्हेरी" mr="सलील जव्हेरी" /> writes stories that explore human emotions, personal growth, and the journey of self-discovery.
+            <LangText
+              en="SALIL JAVERI writes stories that explore human emotions, personal growth, and the journey of self-discovery."
+              hi="सलील जव्हेरी ऐसी कहानियाँ लिखते हैं जो मानवीय भावनाओं, व्यक्तिगत विकास और आत्म-खोज की यात्रा को दर्शाती हैं।"
+              mr="सलील जव्हेरी अशा कथा लिहितात ज्या मानवी भावना, वैयक्तिक विकास आणि आत्मशोध : स्वतःचा शोध घेण्याच्या प्रवासाचा वेध घेतात."
+            />
           </p>
-
           <p className="flex gap-2">
             <FaQuoteLeft className="text-[var(--primary)]" />
             Sometimes the quietest moments reveal the loudest truths.
