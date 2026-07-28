@@ -37,6 +37,7 @@ const Home = () => {
           <span className="text-[var(--primary)] font-semibold">
             <LangText
               en="Currently, the Audio Book and E-book of 'Samanta Samajik Vicharanchi' are available in Marathi, Hindi and English languages."
+              hi="वर्तमान में, 'समानता सामाजिक विचारंची' की ऑडियो बुक और ई-बुक मराठी, हिंदी और अंग्रेजी भाषाओं में उपलब्ध हैं।"
               mr="सध्या 'समानता - सामाजिक विचारांची' या पुस्तकाचे ऑडिओ बुक आणि ई-बुक मराठी, हिंदी आणि इंग्रजी भाषांमध्ये उपलब्ध आहेत."
             />
           </span>

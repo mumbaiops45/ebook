@@ -19,9 +19,9 @@ const books = [
     rating: 4.7,
 description: (
   <LangText
-    en="Currently, the Audio Book and E-book of 'Samanta Samajik Vicharanchi(Thoughts on Social Equality)' are available in Hindi and English languages."
-    hi="वर्तमान में 'समानता सामाजिक विचारांची(सामाजिक समानता पर विचार)' पुस्तक की ऑडियोबुक और ई-बुक हिंदी और अंग्रेज़ी भाषाओं में उपलब्ध हैं।"
-    mr="सध्या 'समांता सामाजिक विचारांची' या पुस्तकाचे ऑडिओबुक आणि ई-बुक मराठी, हिंदी आणि इंग्रजी भाषांमध्ये उपलब्ध आहेत."
+    en="Currently, the Audio Book and E-book of 'Samanta Samajik Vicharanchi(Thoughts on Social Equality)' are available in Marathi, Hindi and English languages."
+    hi="वर्तमान में 'समानता सामाजिक विचारांची(सामाजिक समानता पर विचार)' पुस्तक की ऑडियोबुक और ई-बुक मराठी, हिंदी और अंग्रेजी भाषाओं में उपलब्ध हैं।"
+    mr="सध्या 'समानता सामाजिक विचारांची' या पुस्तकाचे ऑडिओबुक आणि ई-बुक मराठी, हिंदी आणि इंग्रजी भाषांमध्ये उपलब्ध आहेत."
   />
 ),
   },
