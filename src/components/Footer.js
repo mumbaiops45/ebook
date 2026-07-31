@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import LangText from "./LangText";
+import { FaAndroid, FaApple } from "react-icons/fa";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -61,14 +62,31 @@ export default function Footer() {
               mr="मानवी भावना, वैयक्तिक विकास आणि आत्मशोधाच्या प्रवासाचा शोध घेणाऱ्या कथा लिहितात."
             />
           </p>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-fit mt-6 block bg-white text-[color:var(--primary)] px-10 py-2 rounded-md font-semibold hover:opacity-90 transition"
-          >
-            <LangText en="Download the App" hi="ऐप डाउनलोड करें" mr="ॲप डाउनलोड करा" />
-          </a>
+
+          {/* Dual App Buttons Group */}
+          <div className="mt-6 flex flex-wrap gap-3 items-center">
+            {/* Android App Button */}
+            <a
+              href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-white text-[color:var(--primary)] px-5 py-2 rounded-md font-semibold hover:opacity-90 transition"
+            >
+              <FaAndroid className="text-base text-green-600" />
+              <LangText en="Android App" hi="एंड्रॉइड ऐप" mr="एंड्रॉइड ॲप" />
+            </a>
+
+            {/* iOS App Button */}
+            <a
+              href="https://apps.apple.com/in/app/salil-javeri/id6788735047"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-white text-[color:var(--primary)] px-5 py-2 rounded-md font-semibold hover:opacity-90 transition"
+            >
+              <FaApple className="text-base text-black" />
+              <LangText en="iOS App" hi="आईओएस ऐप" mr="iOS ॲप" />
+            </a>
+          </div>
         </div>
 
         {/* Quick Links */}
@@ -81,11 +99,10 @@ export default function Footer() {
               <li key={index}>
                 <Link
                   href={link.path}
-                  className={`transition duration-300 pb-1 ${
-                    pathname === link.path
+                  className={`transition duration-300 pb-1 ${pathname === link.path
                       ? "border-b-2 border-white text-white"
                       : "hover:opacity-80"
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </Link>

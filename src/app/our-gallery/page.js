@@ -2,6 +2,11 @@
 import Image from "next/image";
 
 const Images = [
+  // new
+  { src: "/newGallery/Commissioner.jpeg", colSpan: 2, rowSpan: 4, fit: "cover", position: "center" },
+  { src: "/newGallery/DeputyCommissioner.jpeg", colSpan: 3, rowSpan: 4, fit: "cover", position: "center" },
+  { src: "/newGallery/news.jpeg", colSpan: 2, rowSpan: 4, fit: "cover", position: "center" },
+  // old
   { src: "/gallery/WhatsApp Image 2026-03-31 at 1.00.15 PM (1).jpeg", colSpan: 3, rowSpan: 3, fit: "cover", position: "center" },
   { src: "/gallery/WhatsApp Image 2026-03-31 at 1.00.15 PM (2).jpeg", colSpan: 2, rowSpan: 2, fit: "cover", position: "center" },
   { src: "/gallery/WhatsApp Image 2026-03-31 at 1.00.15 PM.jpeg", colSpan: 4, rowSpan: 3, fit: "cover", position: "center" },
@@ -151,11 +156,11 @@ const Images = [
 export default function ZigZagGallery() {
   return (
     <div className="p-4 md:p-15  min-h-screen">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl font-semibold">
-            Our <span className="text-[var(--primary)]">Gallery</span>
-          </h2>
-        </div>
+      <div className="text-center mb-12">
+        <h2 className="text-2xl font-semibold">
+          Our <span className="text-[var(--primary)]">Gallery</span>
+        </h2>
+      </div>
       <div
         className="grid gap-2 md:gap-4"
         style={{
@@ -176,7 +181,7 @@ export default function ZigZagGallery() {
             `}
             style={{
               // Use CSS variables to control spans per device
-              "--col-tablet": Math.min(img.colSpan, 4), 
+              "--col-tablet": Math.min(img.colSpan, 4),
               "--col-desktop": img.colSpan,
               gridRow: `span ${img.rowSpan}`,
             }}

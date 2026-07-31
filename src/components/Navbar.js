@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaAndroid, FaApple } from "react-icons/fa";
 import LanguageSwitcher from "./LanguageSwitcher";
 import LangText from "./LangText";
 
@@ -58,6 +58,7 @@ export default function Navbar() {
   ];
 
   const getCurrentLang = () => {
+    if (typeof document === "undefined") return "en";
     const match = document.cookie.match(/googtrans=\/en\/(\w+)/);
     return match ? match[1] : "en";
   };
@@ -96,7 +97,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center space-x-6">
+        <div className="hidden lg:flex items-center space-x-4">
           {navLinks.map((link, index) => (
             <Link
               key={index}
@@ -115,21 +116,36 @@ export default function Navbar() {
           {/* Custom language dropdown */}
           <LanguageSwitcher />
 
-          {/* Download App CTA */}
-          <a
-            href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white text-[color:var(--primary)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition cursor-pointer"
-          >
-            <LangText en="Download the App" hi="ऐप डाउनलोड करें" mr="ॲप डाउनलोड करा" />
-          </a>
+          {/* App Buttons Group */}
+          <div className="flex items-center space-x-2">
+            {/* Download Android App CTA */}
+            <a
+              href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 bg-white text-[color:var(--primary)] px-3 py-2 rounded-md font-semibold hover:opacity-90 transition cursor-pointer"
+            >
+              <FaAndroid className="text-base text-green-600" />
+              <LangText en="Android App" hi="एंड्रॉइड ऐप" mr="एंड्रॉइड ॲप" />
+            </a>
+
+            {/* Download iOS App CTA */}
+            <a
+              href="https://apps.apple.com/in/app/salil-javeri/id6788735047"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 bg-white text-[color:var(--primary)] px-3 py-2 rounded-md font-semibold hover:opacity-90 transition cursor-pointer"
+            >
+              <FaApple className="text-base text-black" />
+              <LangText en="iOS App" hi="आईओएस ऐप" mr="iOS ॲप" />
+            </a>
+          </div>
         </div>
 
         {/* Mobile Toggle */}
-        <div className="lg:hidden flex gap-4">
+        <div className="lg:hidden flex gap-4 items-center">
           <LanguageSwitcher />
-          <button onClick={() => setIsOpen(!isOpen)}>
+          <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
             {isOpen ? (
               <FaTimes size={22} className="text-white" />
             ) : (
@@ -141,7 +157,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden px-6 pb-4 space-y-4 bg-[color:var(--primary)]">
+        <div className="lg:hidden px-6 pb-6 space-y-4 bg-[color:var(--primary)]">
           {navLinks.map((link, index) => (
             <Link
               key={index}
@@ -160,15 +176,30 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <a
-            href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setIsOpen(false)}
-            className="block w-fit bg-white text-[color:var(--primary)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition"
-          >
-            <LangText en="Download the App" hi="ऐप डाउनलोड करें" mr="ॲप डाउनलोड करा" />
-          </a>
+          {/* Mobile Buttons Stack */}
+          <div className="pt-2 space-y-2">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center justify-center gap-2 w-full bg-white text-[color:var(--primary)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition"
+            >
+              <FaAndroid className="text-lg text-green-600" />
+              <LangText en="Download Android App" hi="एंड्रॉइड ऐप डाउनलोड करें" mr="एंड्रॉइड ॲप डाउनलोड करा" />
+            </a>
+
+            <a
+              href="https://apps.apple.com/in/app/salil-javeri/id6788735047"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center justify-center gap-2 w-full bg-white text-[color:var(--primary)] px-4 py-2 rounded-md font-semibold hover:opacity-90 transition"
+            >
+              <FaApple className="text-lg text-black" />
+              <LangText en="Download iOS App" hi="आईओएस ऐप डाउनलोड करें" mr="iOS ॲप डाउनलोड करा" />
+            </a>
+          </div>
         </div>
       )}
     </nav>

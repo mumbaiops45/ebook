@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LangText from "./LangText";
 import { Noto_Sans_Devanagari } from "next/font/google";
+import { FaAndroid, FaApple } from "react-icons/fa";
 
 const devFont = Noto_Sans_Devanagari({
   subsets: ["devanagari"],
@@ -299,16 +300,33 @@ export default function WeServe() {
                   </p>
                 </div>
 
+                {/* Android App Button */}
                 <a
                   href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="primary-btn px-6 py-2 rounded-lg text-center mb-4"
+                  className="primary-btn flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg text-center mb-3 font-medium transition hover:opacity-90"
                 >
+                  <FaAndroid className="text-lg text-green-400" />
                   <LangText
-                    en="Download the App"
-                    hi="ऐप डाउनलोड करें"
-                    mr="ॲप डाउनलोड करा"
+                    en="Download Android App"
+                    hi="एंड्रॉइड ऐप डाउनलोड करें"
+                    mr="एंड्रॉइड ॲप डाउनलोड करा"
+                  />
+                </a>
+
+                {/* iOS App Button */}
+                <a
+                  href="https://apps.apple.com/in/app/salil-javeri/id6788735047"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="primary-btn flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg text-center font-medium transition hover:bg-gray-800"
+                >
+                  <FaApple className="text-lg text-white" />
+                  <LangText
+                    en="Download iOS App"
+                    hi="आईओएस ऐप डाउनलोड करें"
+                    mr="iOS ॲप डाउनलोड करा"
                   />
                 </a>
               </div>

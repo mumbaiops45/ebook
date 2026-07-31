@@ -1,6 +1,7 @@
 "use client";
 import LangText from "./LangText";
 import Link from "next/link";
+import { FaAndroid, FaApple } from "react-icons/fa";
 
 export default function FinalCTA() {
   return (
@@ -28,17 +29,34 @@ export default function FinalCTA() {
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          {/* Android App Button */}
           <a
             href="https://play.google.com/store/apps/details?id=com.saliljaveri&hl=en_IN"
             target="_blank"
             rel="noopener noreferrer"
-            className="primary-btn px-8 py-3 rounded-lg cursor-pointer inline-block"
+            className="primary-btn flex items-center justify-center gap-2 px-8 py-3 rounded-lg cursor-pointer font-medium transition hover:opacity-90 w-full sm:w-auto"
           >
+            <FaAndroid className="text-lg text-green-400" />
             <LangText
-              en="Download the App"
-              hi="ऐप डाउनलोड करें"
-              mr="ॲप डाउनलोड करा"
+              en="Download Android App"
+              hi="एंड्रॉइड ऐप डाउनलोड करें"
+              mr="एंड्रॉइड ॲप डाउनलोड करा"
+            />
+          </a>
+
+          {/* iOS App Button */}
+          <a
+            href="https://apps.apple.com/in/app/salil-javeri/id6788735047"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="primary-btn  flex items-center justify-center gap-2 px-8 py-3 rounded-lg cursor-pointer font-medium transition hover:bg-gray-800 w-full sm:w-auto"
+          >
+            <FaApple className="text-lg text-white" />
+            <LangText
+              en="Download iOS App"
+              hi="आईओएस ऐप डाउनलोड करें"
+              mr="iOS ॲप डाउनलोड करा"
             />
           </a>
         </div>
