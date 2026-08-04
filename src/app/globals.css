@@ -260,3 +260,42 @@ title{
 select option:nth-child(3) {
   color: black;
 } */
+
+
+/* 
+scroll bar design */
+/* ==========================================
+   1. Standard Scrollbar Styles (Modern Browsers)
+   ========================================== */
+* {
+  scrollbar-width: thin; /* Options: auto | thin | none */
+  scrollbar-color: var(--primary) var(--secondary); /* thumb | track */
+}
+
+/* ==========================================
+   2. WebKit Scrollbar Styles (Chrome, Edge, Safari)
+   ========================================== */
+/* Entire scrollbar container background */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background-color: var(--secondary);
+}
+
+/* Scrollbar Track (the background path) */
+::-webkit-scrollbar-track {
+  background-color: var(--secondary);
+  border-radius: 0px;
+}
+
+/* Scrollbar Thumb (the draggable bar) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 6px; /* Smooth rounded corners for thumb */
+  border: 2px solid var(--secondary); /* Creates padding around the thumb */
+}
+
+/* Thumb state on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #522600; /* Darker shade of primary on hover */
+}
